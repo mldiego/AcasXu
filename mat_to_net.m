@@ -21,7 +21,9 @@ net.layers{m}.size = layer_sizes(m);
 % Add bias to net layers
 for i=1:m
     net.b{i} = b{i};
+    net.layers{i}.transferFcn = 'poslin';
 end
+net.layers{m}.transferFcn = 'purelin';
 % Add weights to net layers
 net.IW{1} = W{1};
 for i=2:m

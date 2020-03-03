@@ -321,8 +321,8 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "neural/Transfer Functions/tansig"
-      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 1/tansig"
+      Reference		      "neural/Transfer Functions/poslin"
+      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 1/poslin"
       SID		      "26"
       Type		      "LIBRARY_BLOCK"
     }
@@ -627,8 +627,8 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "neural/Transfer Functions/tansig"
-      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 2/tansig"
+      Reference		      "neural/Transfer Functions/poslin"
+      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 2/poslin"
       SID		      "140"
       Type		      "LIBRARY_BLOCK"
     }
@@ -933,8 +933,8 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "neural/Transfer Functions/tansig"
-      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 3/tansig"
+      Reference		      "neural/Transfer Functions/poslin"
+      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 3/poslin"
       SID		      "254"
       Type		      "LIBRARY_BLOCK"
     }
@@ -1239,8 +1239,8 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "neural/Transfer Functions/tansig"
-      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 4/tansig"
+      Reference		      "neural/Transfer Functions/poslin"
+      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 4/poslin"
       SID		      "368"
       Type		      "LIBRARY_BLOCK"
     }
@@ -1545,8 +1545,8 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "neural/Transfer Functions/tansig"
-      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 5/tansig"
+      Reference		      "neural/Transfer Functions/poslin"
+      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 5/poslin"
       SID		      "482"
       Type		      "LIBRARY_BLOCK"
     }
@@ -1851,8 +1851,8 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "neural/Transfer Functions/tansig"
-      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 6/tansig"
+      Reference		      "neural/Transfer Functions/poslin"
+      Path		      "ACASXU_run2a_1_7_batch_2000/Feed-Forward Neural Network/Layer 6/poslin"
       SID		      "596"
       Type		      "LIBRARY_BLOCK"
     }
@@ -1979,19 +1979,19 @@ Model {
 	Dimension		0
 	PropName		"PersistedApps"
       }
-      WindowUuid	      "1cd84006-74be-486a-a2ad-060ccf159118"
+      WindowUuid	      "267713ea-8b48-47f6-bf8d-5b1d3d432991"
     }
     BDUuid		    ""
   }
   HideAutomaticNames	  on
-  Created		  "Fri Feb 21 15:06:03 2020"
+  Created		  "Tue Mar 03 10:33:51 2020"
   Creator		  "manzand"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "manzand"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Feb 21 15:06:05 2020"
-  RTWModifiedTimeStamp	  504198365
+  LastModifiedDate	  "Tue Mar 03 10:33:53 2020"
+  RTWModifiedTimeStamp	  505132433
   ModelVersionFormat	  "1.%<AutoIncrement:1>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -6131,14 +6131,14 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "tansig"
+	      Name		      "poslin"
 	      SID		      "26"
 	      Ports		      [1, 1]
 	      Position		      [340, 70, 380, 110]
 	      ZOrder		      2
 	      LibraryVersion	      "1.100"
-	      SourceBlock	      "neural/Transfer Functions/tansig"
-	      SourceType	      "TANSIG"
+	      SourceBlock	      "neural/Transfer Functions/poslin"
+	      SourceType	      "POSLIN"
 	      SourceProductName	      "Deep Learning Toolbox"
 	      SourceProductBaseCode   "NN"
 	      ContentPreviewEnabled   off
@@ -6194,12 +6194,12 @@ Model {
 	      ZOrder		      5
 	      SrcBlock		      "netsum"
 	      SrcPort		      1
-	      DstBlock		      "tansig"
+	      DstBlock		      "poslin"
 	      DstPort		      1
 	    }
 	    Line {
 	      ZOrder		      6
-	      SrcBlock		      "tansig"
+	      SrcBlock		      "poslin"
 	      SrcPort		      1
 	      DstBlock		      "a{1}"
 	      DstPort		      1
@@ -10289,14 +10289,14 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "tansig"
+	      Name		      "poslin"
 	      SID		      "140"
 	      Ports		      [1, 1]
 	      Position		      [340, 70, 380, 110]
 	      ZOrder		      2
 	      LibraryVersion	      "1.100"
-	      SourceBlock	      "neural/Transfer Functions/tansig"
-	      SourceType	      "TANSIG"
+	      SourceBlock	      "neural/Transfer Functions/poslin"
+	      SourceType	      "POSLIN"
 	      SourceProductName	      "Deep Learning Toolbox"
 	      SourceProductBaseCode   "NN"
 	      ContentPreviewEnabled   off
@@ -10352,12 +10352,12 @@ Model {
 	      ZOrder		      5
 	      SrcBlock		      "netsum"
 	      SrcPort		      1
-	      DstBlock		      "tansig"
+	      DstBlock		      "poslin"
 	      DstPort		      1
 	    }
 	    Line {
 	      ZOrder		      6
-	      SrcBlock		      "tansig"
+	      SrcBlock		      "poslin"
 	      SrcPort		      1
 	      DstBlock		      "a{2}"
 	      DstPort		      1
@@ -14448,14 +14448,14 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "tansig"
+	      Name		      "poslin"
 	      SID		      "254"
 	      Ports		      [1, 1]
 	      Position		      [340, 70, 380, 110]
 	      ZOrder		      2
 	      LibraryVersion	      "1.100"
-	      SourceBlock	      "neural/Transfer Functions/tansig"
-	      SourceType	      "TANSIG"
+	      SourceBlock	      "neural/Transfer Functions/poslin"
+	      SourceType	      "POSLIN"
 	      SourceProductName	      "Deep Learning Toolbox"
 	      SourceProductBaseCode   "NN"
 	      ContentPreviewEnabled   off
@@ -14511,12 +14511,12 @@ Model {
 	      ZOrder		      5
 	      SrcBlock		      "netsum"
 	      SrcPort		      1
-	      DstBlock		      "tansig"
+	      DstBlock		      "poslin"
 	      DstPort		      1
 	    }
 	    Line {
 	      ZOrder		      6
-	      SrcBlock		      "tansig"
+	      SrcBlock		      "poslin"
 	      SrcPort		      1
 	      DstBlock		      "a{3}"
 	      DstPort		      1
@@ -18606,14 +18606,14 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "tansig"
+	      Name		      "poslin"
 	      SID		      "368"
 	      Ports		      [1, 1]
 	      Position		      [340, 70, 380, 110]
 	      ZOrder		      2
 	      LibraryVersion	      "1.100"
-	      SourceBlock	      "neural/Transfer Functions/tansig"
-	      SourceType	      "TANSIG"
+	      SourceBlock	      "neural/Transfer Functions/poslin"
+	      SourceType	      "POSLIN"
 	      SourceProductName	      "Deep Learning Toolbox"
 	      SourceProductBaseCode   "NN"
 	      ContentPreviewEnabled   off
@@ -18669,12 +18669,12 @@ Model {
 	      ZOrder		      5
 	      SrcBlock		      "netsum"
 	      SrcPort		      1
-	      DstBlock		      "tansig"
+	      DstBlock		      "poslin"
 	      DstPort		      1
 	    }
 	    Line {
 	      ZOrder		      6
-	      SrcBlock		      "tansig"
+	      SrcBlock		      "poslin"
 	      SrcPort		      1
 	      DstBlock		      "a{4}"
 	      DstPort		      1
@@ -22762,14 +22762,14 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "tansig"
+	      Name		      "poslin"
 	      SID		      "482"
 	      Ports		      [1, 1]
 	      Position		      [340, 70, 380, 110]
 	      ZOrder		      2
 	      LibraryVersion	      "1.100"
-	      SourceBlock	      "neural/Transfer Functions/tansig"
-	      SourceType	      "TANSIG"
+	      SourceBlock	      "neural/Transfer Functions/poslin"
+	      SourceType	      "POSLIN"
 	      SourceProductName	      "Deep Learning Toolbox"
 	      SourceProductBaseCode   "NN"
 	      ContentPreviewEnabled   off
@@ -22825,12 +22825,12 @@ Model {
 	      ZOrder		      5
 	      SrcBlock		      "netsum"
 	      SrcPort		      1
-	      DstBlock		      "tansig"
+	      DstBlock		      "poslin"
 	      DstPort		      1
 	    }
 	    Line {
 	      ZOrder		      6
-	      SrcBlock		      "tansig"
+	      SrcBlock		      "poslin"
 	      SrcPort		      1
 	      DstBlock		      "a{5}"
 	      DstPort		      1
@@ -26933,14 +26933,14 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Reference
-	      Name		      "tansig"
+	      Name		      "poslin"
 	      SID		      "596"
 	      Ports		      [1, 1]
 	      Position		      [340, 70, 380, 110]
 	      ZOrder		      2
 	      LibraryVersion	      "1.100"
-	      SourceBlock	      "neural/Transfer Functions/tansig"
-	      SourceType	      "TANSIG"
+	      SourceBlock	      "neural/Transfer Functions/poslin"
+	      SourceType	      "POSLIN"
 	      SourceProductName	      "Deep Learning Toolbox"
 	      SourceProductBaseCode   "NN"
 	      ContentPreviewEnabled   off
@@ -26996,12 +26996,12 @@ Model {
 	      ZOrder		      5
 	      SrcBlock		      "netsum"
 	      SrcPort		      1
-	      DstBlock		      "tansig"
+	      DstBlock		      "poslin"
 	      DstPort		      1
 	    }
 	    Line {
 	      ZOrder		      6
-	      SrcBlock		      "tansig"
+	      SrcBlock		      "poslin"
 	      SrcPort		      1
 	      DstBlock		      "a{6}"
 	      DstPort		      1
@@ -28163,7 +28163,7 @@ Model {
       SID		      "1"
       Position		      [30, 65, 80, 115]
       ZOrder		      1
-      Value		      "[0.17;0.51;0.14;0.69;0.14]"
+      Value		      "[0.41;0.95;0.77;0.47;0.55]"
       SampleTime	      "1"
       Object {
 	$PropName		"MaskObject"

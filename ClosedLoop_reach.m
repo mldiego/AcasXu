@@ -5,3 +5,4 @@
 
 ownship = NonLinearODE(3,1,@dubindynamics);
 intruder = NonLinearODE(3,1,@dubindynamics);
+controller = LoadAcasXu('networks/ACASXU...');
