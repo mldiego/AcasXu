@@ -1,0 +1,5 @@
+For a far away intruder, the network advises COC.
+
+– Input constraints: 36000 ≤ ρ ≤ 60760, 0.7 ≤ θ ≤ 3.141592, −3.141592 ≤
+ψ ≤ −3.141592 + 0.01, 900 ≤ vown ≤ 1200, 600 ≤ vint ≤ 1200.
+– Desired output property: the score for COC is minimal.

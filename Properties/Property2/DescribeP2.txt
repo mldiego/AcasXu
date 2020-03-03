@@ -1,0 +1,5 @@
+Description: If the intruder is distant and is significantly slower than the
+ownship, the score of a COC advisory will never be maximal.
+
+– Input constraints: ρ ≥ 55947.691, v_own ≥ 1145, v_int ≤ 60.
+– Desired output property: the score for COC is not the maximal score.

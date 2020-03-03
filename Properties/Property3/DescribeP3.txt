@@ -1,0 +1,6 @@
+If the intruder is directly ahead and is moving towards the
+ownship, the score for COC will not be minimal.
+
+– Input constraints: 1500 ≤ ρ ≤ 1800, −0.06 ≤ θ ≤ 0.06, ψ ≥ 3.10, v_own ≥ 980,
+v_int ≥ 960.
+– Desired output property: the score for COC is not the minimal score.

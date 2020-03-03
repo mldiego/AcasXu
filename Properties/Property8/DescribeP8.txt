@@ -1,0 +1,6 @@
+For a large vertical separation and a previous “weak left” advisory, the network will either output COC or continue advising “weak left”.
+
+– Input constraints: 0 ≤ ρ ≤ 60760, −3.141592 ≤ θ ≤ −0.75·3.141592, −0.1 ≤
+ψ ≤ 0.1, 600 ≤ vown ≤ 1200, 600 ≤ vint ≤ 1200.
+– Desired output property: the score for “weak left” is minimal or the score
+for COC is minimal.

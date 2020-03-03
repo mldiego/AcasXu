@@ -1,0 +1,7 @@
+Even if the previous advisory was “weak right”, the presence of
+a nearby intruder will cause the network to output a “strong left” advisory
+instead.
+
+– Input constraints: 2000 ≤ ρ ≤ 7000, −0.4 ≤ θ ≤ −0.14, −3.141592 ≤ ψ ≤
+−3.141592 + 0.01, 100 ≤ vown ≤ 150, 0 ≤ vint ≤ 150.
+– Desired output property: the score for “strong left” is minimal.

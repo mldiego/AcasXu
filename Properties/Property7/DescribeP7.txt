@@ -1,0 +1,7 @@
+If vertical separation is large, the network will never advise a
+strong turn.
+
+– Input constraints: 0 ≤ ρ ≤ 60760, −3.141592 ≤ θ ≤ 3.141592, −3.141592 ≤
+ψ ≤ 3.141592, 100 ≤ v_own ≤ 1200, 0 ≤ v_int ≤ 1200.
+– Desired output property: the scores for “strong right” and “strong left” are
+never the minimal scores.

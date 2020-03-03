@@ -1,0 +1,6 @@
+If the intruder is near and approaching from the left, the network
+advises “strong right”.
+
+– Input constraints: 250 ≤ ρ ≤ 400, 0.2 ≤ θ ≤ 0.4, −3.141592 ≤ ψ ≤
+−3.141592 + 0.005, 100 ≤ v_own ≤ 400, 0 ≤ v_int ≤ 400.
+– Desired output property: the score for “strong right” is the minimal score.
