@@ -1932,7 +1932,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [75.0, 34.0, 1855.0, 1056.0]
+      Location		      [85.0, 44.0, 1815.0, 1016.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -1959,32 +1959,32 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1467.0, 812.0]
+	  Extents		  [1467.0, 784.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-105.1015625, -25.25]
-	  SceneRectInView	  [-105.1015625, -25.25, 1467.0, 812.0]
+	  Offset		  [-102.0, -35.25]
+	  SceneRectInView	  [-102.0, -35.25, 1467.0, 784.0]
 	}
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [0]
-	  IsTabbed		  [1]
+	  IsTabbed		  [0]
 	  ViewObjType		  "StateflowChart"
 	  LoadSaveID		  "741"
 	  Extents		  [1755.0, 852.0]
 	  ZoomFactor		  [1.000250062515629]
 	  Offset		  [0.0, 0.0]
-	  SceneRectInView	  [0.0, 0.0, 1754.56125, 851.78699999999992]
+	  SceneRectInView	  [0.0, 0.0, 0.0, 0.0]
 	}
 	Object {
 	  $ObjectID		  7
 	  IsActive		  [0]
-	  IsTabbed		  [1]
+	  IsTabbed		  [0]
 	  ViewObjType		  "StateflowChart"
 	  LoadSaveID		  "740"
 	  Extents		  [1755.0, 852.0]
 	  ZoomFactor		  [1.1574074074074074]
 	  Offset		  [0.0, -73.346]
-	  SceneRectInView	  [0.0, -73.346, 1516.32, 736.12799999999993]
+	  SceneRectInView	  [0.0, 0.0, 0.0, 0.0]
 	}
 	PropName		"EditorsInfo"
       }
@@ -2000,22 +2000,22 @@ Model {
 	Floating		[0]
 	DockPosition		"Right"
 	Width			[300]
-	Height			[845]
+	Height			[817]
 	Minimized		"Unset"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAP///wAAAAEAAAEwAAADafwCA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAP///wAAAAEAAAEwAAADTfwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAQAAAHkAAANpAAAAkAD///8AAAXhAAADaQAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAAAAAAAAQAAAAAAAAADAAAAAA=="
+      "QBjAHQAbwByAQAAAHkAAANNAAAAkAD///8AAAXhAAADTQAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAAAAAAAAQAAAAAAAAADAAAAAA=="
       Array {
 	Type			"Cell"
 	Dimension		0
 	PropName		"PersistedApps"
       }
-      WindowUuid	      "f26dcfff-5421-4239-a881-658704f93a65"
+      WindowUuid	      "5c999983-488f-4a8c-a997-2dc64fbefc74"
     }
-    BDUuid		    "214e9674-dce7-499e-892d-d7279fc37119"
+    BDUuid		    "f5c99ae0-d694-432b-9588-88303e7c9f71"
   }
   HideAutomaticNames	  on
   Created		  "Tue Mar 03 14:46:30 2020"
@@ -2024,8 +2024,8 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "manzand"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Mar 04 09:50:13 2020"
-  RTWModifiedTimeStamp	  505216205
+  LastModifiedDate	  "Wed Mar 04 10:22:20 2020"
+  RTWModifiedTimeStamp	  505218134
   ModelVersionFormat	  "1.%<AutoIncrement:5>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -3125,7 +3125,7 @@ Model {
   }
   System {
     Name		    "AcasXuClosedLoop_P6_comp2017b"
-    Location		    [75, 34, 1930, 1090]
+    Location		    [85, 44, 1900, 1060]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -28208,7 +28208,7 @@ Model {
       Name		      "Add2"
       SID		      "732"
       Ports		      [2, 1]
-      Position		      [640, 527, 670, 558]
+      Position		      [640, 547, 670, 578]
       ZOrder		      1061
       BlockMirror	      on
       NamePlacement	      "alternate"
@@ -28611,8 +28611,8 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"DubinsPlant\nOwnship"
-	Location		[75, 34, 1910, 1070]
-	Open			on
+	Location		[65, 24, 1920, 1080]
+	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
 	ExecutionDomainType	"Deduce"
@@ -28774,8 +28774,8 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"DubinsPlant\nintruder"
-	Location		[75, 34, 1910, 1070]
-	Open			on
+	Location		[65, 24, 1920, 1080]
+	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
 	ExecutionDomainType	"Deduce"
@@ -29179,7 +29179,7 @@ Model {
       Name		      "Set angle ranges"
       SID		      "764"
       Ports		      [1, 1]
-      Position		      [570, 634, 615, 656]
+      Position		      [570, 554, 615, 576]
       ZOrder		      2125
       BlockMirror	      on
       ErrorFcn		      "Stateflow.Translate.translate"
@@ -29295,7 +29295,7 @@ Model {
       Name		      "Set angle ranges1"
       SID		      "765"
       Ports		      [1, 1]
-      Position		      [570, 534, 615, 556]
+      Position		      [570, 634, 615, 656]
       ZOrder		      2126
       BlockMirror	      on
       ErrorFcn		      "Stateflow.Translate.translate"
@@ -29503,7 +29503,7 @@ Model {
       ZOrder		      3
       SrcBlock		      "Add2"
       SrcPort		      1
-      DstBlock		      "Set angle ranges1"
+      DstBlock		      "Set angle ranges"
       DstPort		      1
     }
     Line {
@@ -29599,7 +29599,7 @@ Model {
       }
       Branch {
 	ZOrder			16
-	Points			[0, 55; 300, 0; 0, 80]
+	Points			[0, 55; 302, 0; 0, 100]
 	DstBlock		"Add2"
 	DstPort			2
       }
@@ -29729,15 +29729,15 @@ Model {
       }
       Branch {
 	ZOrder			40
-	Points			[0, 27; 320, 0; 0, 53]
+	Points			[0, 27; 325, 0; 0, 73]
 	Branch {
-	  ZOrder		  67
-	  Points		  [0, 45; 87, 0; 0, 55]
+	  ZOrder		  65
+	  Points		  [82, 0; 0, 80]
 	  DstBlock		  "Add3"
 	  DstPort		  1
 	}
 	Branch {
-	  ZOrder		  38
+	  ZOrder		  64
 	  DstBlock		  "Add2"
 	  DstPort		  1
 	}
@@ -29833,7 +29833,7 @@ Model {
       }
       Branch {
 	ZOrder			55
-	DstBlock		"Set angle ranges"
+	DstBlock		"Set angle ranges1"
 	DstPort			1
       }
     }
@@ -29854,27 +29854,27 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      64
+      ZOrder		      84
       SrcBlock		      "Set angle ranges"
       SrcPort		      1
-      DstBlock		      "Mux"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      69
-      SrcBlock		      "Set angle ranges1"
-      SrcPort		      1
-      Points		      [-25, 0; 0, 135]
+      Points		      [-37, 0; 0, 115]
       Branch {
-	ZOrder			68
-	DstBlock		"Heading angle\ndiff viz"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			66
+	ZOrder			2
 	DstBlock		"Mux"
 	DstPort			3
       }
+      Branch {
+	ZOrder			1
+	DstBlock		"Heading angle\ndiff viz"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      85
+      SrcBlock		      "Set angle ranges1"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
     }
     Annotation {
       SID		      "762"
@@ -29897,7 +29897,7 @@ Model {
       "nt-weight:600; color:#00b050;\" align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:12px; mar"
       "gin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12px;\">Strong right (-3.0)</span"
       "></li></ol></body></html>"
-      Position		      [1039, 442, 1185, 528]
+      Position		      [1089, 424, 1235, 510]
       InternalMargins	      [0, 0, 0, 0]
       Interpreter	      "rich"
       ZOrder		      2
@@ -29923,7 +29923,7 @@ Model {
       "ip</span></li>\n<li style=\" font-size:12px; font-weight:600; color:#0070c0;\" align=\"left\" style=\" margin-to"
       "p:0px; margin-bottom:0px; margin-left:12px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style"
       "=\" font-size:12px;\">Velocity of intruder</span></li></ol></body></html>"
-      Position		      [1039, 546, 1344, 632]
+      Position		      [1089, 527, 1394, 613]
       InternalMargins	      [0, 0, 0, 0]
       Interpreter	      "rich"
       ZOrder		      1
@@ -29946,7 +29946,7 @@ Stateflow {
     id			    2
     machine		    1
     name		    "DubinsPlant\nintruder"
-    windowPosition	    [199.5 216.75 417 348.75]
+    windowPosition	    [65 24 1855 1056]
     viewLimits		    [0 1754.561 0 851.787]
     zoomFactor		    1.333
     screen		    [1 1 3200 1200 1.25]
@@ -30189,6 +30189,9 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 14 0 0]
     viewObj		    13
+    visible		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -30309,7 +30312,7 @@ Stateflow {
     id			    20
     machine		    1
     name		    "DubinsPlant\nOwnship"
-    windowPosition	    [199.5 216.75 417 348.75]
+    windowPosition	    [65 24 1855 1056]
     viewLimits		    [0 1516.32 -73.346 662.782]
     zoomFactor		    1.152
     screen		    [1 1 3200 1200 1.25]
