@@ -8,9 +8,9 @@ x1_i = 0; x2_i = 25000; x3_i = -pi/2;
 x1_o = 0; x2_o = 0; x3_o = pi/2;
 
 % Run simulation
-sim('simulation/AcasXuClosedLoop_m_1.mdl');
+sim('../simulation/AcasXuClosedLoop_m_1.mdl');
 % Plot results
-figure('visible','off');
+figure('units', 'normalized','visible','on');
 plot(x_own,y_own,'b');
 hold on;
 plot(x_int,y_int,'r');
@@ -21,14 +21,39 @@ xlabel('X position (ft)');
 ylabel('Y position (ft)');
 grid;
 title('AcasXu Closed-Loop');
+pause(0.5);
+axis equal
 saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'jpeg');
 % Save simulation info
 save(['../data_sim/m_1/exp' int2str(1)]);
 
-clc;clear;
+% Scenario 2
+x1_i = 0; x2_i = 25000; x3_i = -pi/2; 
+x1_o = 25000; x2_o = 0; x3_o = pi;
+
+% Run simulation
+sim('../simulation/AcasXuClosedLoop_m_1.mdl');
+% Plot results
+figure('units', 'normalized','visible','on');
+plot(x_own,y_own,'b');
+hold on;
+plot(x_int,y_int,'r');
+scatter(x1_o,x2_o,'b');
+scatter(x1_i,x2_i,'r');
+legend('ownship','intruder');
+xlabel('X position (ft)');
+ylabel('Y position (ft)');
+grid;
+title('AcasXu Closed-Loop');
+pause(0.5);
+axis equal
+saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'jpeg');
+% Save simulation info
+save(['../data_sim/m_1/exp' int2str(1)]);
+
 rng = 23; % Set random seed
 % Run batch of experiments
-for i=2:100
+for i=3:200
     disp('Simulating experiment '+string(i));
     % Randomly initialize state variables of intruder and ownship
     x1_i = randi([-20000,20000]);
@@ -38,10 +63,9 @@ for i=2:100
     x3_o = rand*2*pi-pi;
     x3_i = rand*2*pi-pi;
     % Run simulation
-    sim('AcasXuClosedLoop_m_1.mdl');
+    sim('../simulation/AcasXuClosedLoop_m_1.mdl');
     %Plot results
-    figure;
-    % figure('visible','off'); % Uncomment to see plot 
+    figure('units', 'normalized','visible','on'); % Uncomment to see plot 
     plot(x_own,y_own,'b');
     hold on;
     plot(x_int,y_int,'r');
@@ -52,6 +76,8 @@ for i=2:100
     ylabel('Y position (ft)');
     grid;
     title('AcasXu Closed-Loop');
+    pause(1);
+    axis equal
     % Save figure
     saveas(gcf,['../data_sim/m_1/exp' int2str(i)],'jpeg');
     % Save simulation info
