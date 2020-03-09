@@ -5,10 +5,10 @@ n = length(b);
 Layers = [];
 for i=1:n
     if i == n
-        L = LayerS(W{i}, b{i},'poslin');
+        L = LayerS(W{i}, b{i},'purelin');
         Layers = [Layers L];
     else
-        L = LayerS(W{i}, b{i},'purelin');
+        L = LayerS(W{i}, b{i},'poslin');
         Layers = [Layers L];
     end
 end
