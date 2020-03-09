@@ -8,7 +8,7 @@ x1_i = 0; x2_i = 25000; x3_i = -pi/2;
 x1_o = 0; x2_o = 0; x3_o = pi/2;
 
 % Run simulation
-sim('AcasXuClosedLoop_m_1.mdl');
+sim('simulation/AcasXuClosedLoop_m_1.mdl');
 % Plot results
 figure('visible','off');
 plot(x_own,y_own,'b');
@@ -21,9 +21,9 @@ xlabel('X position (ft)');
 ylabel('Y position (ft)');
 grid;
 title('AcasXu Closed-Loop');
-saveas(gcf,['data_sim/m_1/exp' int2str(1)],'jpeg');
+saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'jpeg');
 % Save simulation info
-save(['data_sim/m_1/exp' int2str(1)]);
+save(['../data_sim/m_1/exp' int2str(1)]);
 
 clc;clear;
 rng = 23; % Set random seed
@@ -53,7 +53,7 @@ for i=2:100
     grid;
     title('AcasXu Closed-Loop');
     % Save figure
-    saveas(gcf,['data_sim/m_1/exp' int2str(i)],'jpeg');
+    saveas(gcf,['../data_sim/m_1/exp' int2str(i)],'jpeg');
     % Save simulation info
-    save(['data_sim/m_1/exp' int2str(i)]);
+    save(['../data_sim/m_1/exp' int2str(i)]);
 end
