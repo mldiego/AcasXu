@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.5"
+    ComputedModelVersion    "1.7"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -1932,7 +1932,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [85.0, 44.0, 1835.0, 1036.0]
+      Location		      [1993.0, 64.0, 1815.0, 1016.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -1959,10 +1959,10 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1735.0, 804.0]
+	  Extents		  [1715.0, 784.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-140.6015625, -45.25]
-	  SceneRectInView	  [-140.6015625, -45.25, 1735.0, 804.0]
+	  Offset		  [-140.6015625, -35.25]
+	  SceneRectInView	  [-140.6015625, -35.25, 1715.0, 784.0]
 	}
 	Object {
 	  $ObjectID		  6
@@ -2007,7 +2007,7 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAAf//wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAbtAAADYQAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
+      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAbZAAADTQAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiA"
       "GwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA=="
@@ -2027,9 +2027,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "manzand"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Mar 04 09:57:40 2020"
-  RTWModifiedTimeStamp	  505216161
-  ModelVersionFormat	  "1.%<AutoIncrement:5>"
+  LastModifiedDate	  "Tue Mar 10 10:02:59 2020"
+  RTWModifiedTimeStamp	  505735378
+  ModelVersionFormat	  "1.%<AutoIncrement:7>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -3128,7 +3128,7 @@ Model {
   }
   System {
     Name		    "AcasXuClosedLoop_P6"
-    Location		    [85, 44, 1920, 1080]
+    Location		    [1993, 64, 3808, 1080]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -28216,7 +28216,7 @@ Model {
       BlockMirror	      on
       NamePlacement	      "alternate"
       Priority		      "9"
-      Inputs		      "+-"
+      Inputs		      "-+"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -30758,6 +30758,9 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 42 0 0]
     viewObj		    41
+    visible		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -30882,6 +30885,9 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 49 0 0]
     viewObj		    48
+    visible		    1
+    subviewS {
+    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

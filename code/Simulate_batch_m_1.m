@@ -8,7 +8,7 @@ x1_i = 0; x2_i = 25000; x3_i = -pi/2;
 x1_o = 0; x2_o = 0; x3_o = pi/2;
 
 % Run simulation
-sim('../simulation/AcasXuClosedLoop_m_1.mdl');
+sim('../simulation/AcasXuClosedLoop_m_1_batch.mdl');
 % Plot results
 figure('units', 'normalized','visible','on');
 plot(x_own,y_own,'b');
