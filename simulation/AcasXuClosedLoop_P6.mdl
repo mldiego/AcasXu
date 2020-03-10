@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.7"
+    ComputedModelVersion    "1.8"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -1959,10 +1959,10 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1715.0, 784.0]
+	  Extents		  [1715.0, 812.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-140.6015625, -35.25]
-	  SceneRectInView	  [-140.6015625, -35.25, 1715.0, 784.0]
+	  Offset		  [-140.6015625, -25.25]
+	  SceneRectInView	  [-140.6015625, -25.25, 1715.0, 812.0]
 	}
 	Object {
 	  $ObjectID		  6
@@ -2007,7 +2007,7 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAAf//wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAbZAAADTQAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
+      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAbZAAADaQAAAAEAAAACAAAAAQAAAAL8AAAAAwAAAAAAAAABAAAANgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIATABlAGYAdAMAAAAA/////wAAAAAAAAAAAAAAAQAAAAEAAAA4AGMAbwBsAGwAYQBwAHMAaQBiA"
       "GwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBSAGkAZwBoAHQDAAAAAP////8AAAAAAAAAAAAAAAMAAAABAAAAOgBjAG8AbABsAGEAcABzAGkAY"
       "gBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAQgBvAHQAdABvAG0AAAAAAP////8AAAAAAAAAAA=="
@@ -2027,9 +2027,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "manzand"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Mar 10 10:02:59 2020"
-  RTWModifiedTimeStamp	  505735378
-  ModelVersionFormat	  "1.%<AutoIncrement:7>"
+  LastModifiedDate	  "Tue Mar 10 13:23:57 2020"
+  RTWModifiedTimeStamp	  505747419
+  ModelVersionFormat	  "1.%<AutoIncrement:8>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -2947,24 +2947,6 @@ Model {
       PreserveConstantTs      off
     }
     Block {
-      BlockType		      Delay
-      DelayLengthSource	      "Dialog"
-      DelayLength	      "2"
-      DelayLengthUpperLimit   "100"
-      InitialConditionSource  "Dialog"
-      InitialCondition	      "0.0"
-      ExternalReset	      "None"
-      ShowEnablePort	      off
-      PreventDirectFeedthrough off
-      DiagnosticForDelayLength "None"
-      RemoveDelayLengthCheckInGeneratedCode off
-      InputProcessing	      "Elements as channels (sample based)"
-      UseCircularBuffer	      off
-      SampleTime	      "-1"
-      StateMustResolveToSignalObject off
-      CodeGenStateStorageClass "Auto"
-    }
-    Block {
       BlockType		      Demux
       Outputs		      "4"
       DisplayOption	      "none"
@@ -3048,6 +3030,15 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      RateTransition
+      Integrity		      on
+      Deterministic	      on
+      InitialCondition	      "0"
+      OutPortSampleTimeOpt    "Specify"
+      OutPortSampleTimeMultiple	"1"
+      OutPortSampleTime	      "-1"
+    }
+    Block {
       BlockType		      S-Function
       FunctionName	      "system"
       SFunctionModules	      "''"
@@ -3118,6 +3109,15 @@ Model {
       BlockType		      Terminator
     }
     Block {
+      BlockType		      TransportDelay
+      DelayTime		      "1"
+      InitialOutput	      "0"
+      BufferSize	      "1024"
+      FixedBuffer	      off
+      TransDelayFeedthrough   off
+      PadeOrder		      "0"
+    }
+    Block {
       BlockType		      Trigonometry
       Operator		      "sin"
       ApproximationMethod     "None"
@@ -3145,7 +3145,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "765"
+    SIDHighWatermark	    "767"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      SubSystem
@@ -28408,18 +28408,6 @@ Model {
       }
     }
     Block {
-      BlockType		      Delay
-      Name		      "Delay"
-      SID		      "737"
-      Ports		      [1, 1]
-      Position		      [5, 328, 40, 362]
-      ZOrder		      1066
-      Priority		      "1"
-      InputPortMap	      "u0"
-      DelayLength	      "1"
-      InitialCondition	      "0"
-    }
-    Block {
       BlockType		      SubSystem
       Name		      "Distance"
       SID		      "738"
@@ -29160,6 +29148,14 @@ Model {
       Floating		      off
     }
     Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition"
+      SID		      "766"
+      Position		      [-45, 324, -5, 366]
+      ZOrder		      2139
+      OutPortSampleTime	      "0.2"
+    }
+    Block {
       BlockType		      Constant
       Name		      "Scaling_means"
       SID		      "754"
@@ -29413,6 +29409,15 @@ Model {
       }
     }
     Block {
+      BlockType		      TransportDelay
+      Name		      "Transport\nDelay"
+      SID		      "767"
+      Ports		      [1, 1]
+      Position		      [20, 325, 60, 365]
+      ZOrder		      2140
+      DelayTime		      "0.0001"
+    }
+    Block {
       BlockType		      Constant
       Name		      "V int"
       SID		      "756"
@@ -29526,14 +29531,6 @@ Model {
       Points		      [-40, 0; 0, -55]
       DstBlock		      "Add1"
       DstPort		      2
-    }
-    Line {
-      ZOrder		      6
-      SrcBlock		      "Argmin_Advisory_Output"
-      SrcPort		      1
-      Points		      [0, -25]
-      DstBlock		      "Delay"
-      DstPort		      1
     }
     Line {
       ZOrder		      9
@@ -29707,10 +29704,10 @@ Model {
       }
     }
     Line {
-      ZOrder		      37
-      SrcBlock		      "Delay"
+      ZOrder		      88
+      SrcBlock		      "Transport\nDelay"
       SrcPort		      1
-      Points		      [21, 0]
+      Points		      [18, 0]
       Branch {
 	ZOrder			36
 	DstBlock		"DubinsPlant\nOwnship"
@@ -29882,6 +29879,21 @@ Model {
       SrcPort		      1
       DstBlock		      "Mux"
       DstPort		      2
+    }
+    Line {
+      ZOrder		      87
+      SrcBlock		      "Rate Transition"
+      SrcPort		      1
+      DstBlock		      "Transport\nDelay"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      89
+      SrcBlock		      "Argmin_Advisory_Output"
+      SrcPort		      1
+      Points		      [0, -25]
+      DstBlock		      "Rate Transition"
+      DstPort		      1
     }
     Annotation {
       SID		      "762"
@@ -30758,9 +30770,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 42 0 0]
     viewObj		    41
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -30885,9 +30894,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 49 0 0]
     viewObj		    48
-    visible		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    5
     decomposition	    CLUSTER_CHART
     type		    EML_CHART

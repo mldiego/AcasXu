@@ -1,12 +1,12 @@
 Model {
-  Name			  "AcasXuClosedLoop_P2017b"
+  Name			  "AcasXuClosedLoop_P6_2017b"
   Version		  9.0
   SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.8"
+    ComputedModelVersion    "1.9"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -19,1885 +19,1885 @@ Model {
     NumExternalFileReferences 314
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod1"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod1"
       SID		      "68"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod10"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod10"
       SID		      "69"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod11"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod11"
       SID		      "70"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod12"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod12"
       SID		      "71"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod13"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod13"
       SID		      "72"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod14"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod14"
       SID		      "73"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod15"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod15"
       SID		      "74"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod16"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod16"
       SID		      "75"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod17"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod17"
       SID		      "76"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod18"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod18"
       SID		      "77"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod19"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod19"
       SID		      "78"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod2"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod2"
       SID		      "79"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod20"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod20"
       SID		      "80"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod21"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod21"
       SID		      "81"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod22"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod22"
       SID		      "82"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod23"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod23"
       SID		      "83"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod24"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod24"
       SID		      "84"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod25"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod25"
       SID		      "85"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod26"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod26"
       SID		      "86"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod27"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod27"
       SID		      "87"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod28"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod28"
       SID		      "88"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod29"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod29"
       SID		      "89"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod3"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod3"
       SID		      "90"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod30"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod30"
       SID		      "91"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod31"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod31"
       SID		      "92"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod32"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod32"
       SID		      "93"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod33"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod33"
       SID		      "94"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod34"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod34"
       SID		      "95"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod35"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod35"
       SID		      "96"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod36"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod36"
       SID		      "97"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod37"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod37"
       SID		      "98"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod38"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod38"
       SID		      "99"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod39"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod39"
       SID		      "100"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod4"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod4"
       SID		      "101"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod40"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod40"
       SID		      "102"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod41"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod41"
       SID		      "103"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod42"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod42"
       SID		      "104"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod43"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod43"
       SID		      "105"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod44"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod44"
       SID		      "106"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod45"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod45"
       SID		      "107"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod46"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod46"
       SID		      "108"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod47"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod47"
       SID		      "109"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod48"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod48"
       SID		      "110"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod49"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod49"
       SID		      "111"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod5"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod5"
       SID		      "112"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod50"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod50"
       SID		      "113"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod6"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod6"
       SID		      "114"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod7"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod7"
       SID		      "115"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod8"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod8"
       SID		      "116"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod9"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/IW{1,1}/dotprod9"
       SID		      "117"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Transfer Functions/poslin"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 1/poslin"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 1/poslin"
       SID		      "121"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod1"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod1"
       SID		      "182"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod10"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod10"
       SID		      "183"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod11"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod11"
       SID		      "184"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod12"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod12"
       SID		      "185"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod13"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod13"
       SID		      "186"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod14"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod14"
       SID		      "187"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod15"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod15"
       SID		      "188"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod16"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod16"
       SID		      "189"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod17"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod17"
       SID		      "190"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod18"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod18"
       SID		      "191"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod19"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod19"
       SID		      "192"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod2"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod2"
       SID		      "193"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod20"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod20"
       SID		      "194"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod21"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod21"
       SID		      "195"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod22"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod22"
       SID		      "196"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod23"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod23"
       SID		      "197"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod24"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod24"
       SID		      "198"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod25"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod25"
       SID		      "199"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod26"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod26"
       SID		      "200"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod27"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod27"
       SID		      "201"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod28"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod28"
       SID		      "202"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod29"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod29"
       SID		      "203"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod3"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod3"
       SID		      "204"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod30"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod30"
       SID		      "205"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod31"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod31"
       SID		      "206"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod32"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod32"
       SID		      "207"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod33"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod33"
       SID		      "208"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod34"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod34"
       SID		      "209"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod35"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod35"
       SID		      "210"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod36"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod36"
       SID		      "211"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod37"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod37"
       SID		      "212"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod38"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod38"
       SID		      "213"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod39"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod39"
       SID		      "214"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod4"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod4"
       SID		      "215"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod40"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod40"
       SID		      "216"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod41"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod41"
       SID		      "217"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod42"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod42"
       SID		      "218"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod43"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod43"
       SID		      "219"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod44"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod44"
       SID		      "220"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod45"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod45"
       SID		      "221"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod46"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod46"
       SID		      "222"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod47"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod47"
       SID		      "223"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod48"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod48"
       SID		      "224"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod49"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod49"
       SID		      "225"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod5"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod5"
       SID		      "226"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod50"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod50"
       SID		      "227"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod6"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod6"
       SID		      "228"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod7"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod7"
       SID		      "229"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod8"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod8"
       SID		      "230"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod9"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/LW{2,1}/dotprod9"
       SID		      "231"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Transfer Functions/poslin"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 2/poslin"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 2/poslin"
       SID		      "235"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod1"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod1"
       SID		      "296"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod10"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod10"
       SID		      "297"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod11"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod11"
       SID		      "298"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod12"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod12"
       SID		      "299"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod13"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod13"
       SID		      "300"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod14"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod14"
       SID		      "301"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod15"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod15"
       SID		      "302"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod16"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod16"
       SID		      "303"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod17"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod17"
       SID		      "304"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod18"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod18"
       SID		      "305"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod19"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod19"
       SID		      "306"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod2"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod2"
       SID		      "307"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod20"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod20"
       SID		      "308"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod21"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod21"
       SID		      "309"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod22"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod22"
       SID		      "310"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod23"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod23"
       SID		      "311"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod24"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod24"
       SID		      "312"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod25"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod25"
       SID		      "313"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod26"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod26"
       SID		      "314"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod27"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod27"
       SID		      "315"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod28"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod28"
       SID		      "316"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod29"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod29"
       SID		      "317"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod3"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod3"
       SID		      "318"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod30"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod30"
       SID		      "319"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod31"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod31"
       SID		      "320"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod32"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod32"
       SID		      "321"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod33"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod33"
       SID		      "322"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod34"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod34"
       SID		      "323"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod35"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod35"
       SID		      "324"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod36"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod36"
       SID		      "325"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod37"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod37"
       SID		      "326"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod38"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod38"
       SID		      "327"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod39"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod39"
       SID		      "328"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod4"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod4"
       SID		      "329"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod40"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod40"
       SID		      "330"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod41"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod41"
       SID		      "331"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod42"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod42"
       SID		      "332"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod43"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod43"
       SID		      "333"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod44"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod44"
       SID		      "334"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod45"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod45"
       SID		      "335"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod46"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod46"
       SID		      "336"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod47"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod47"
       SID		      "337"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod48"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod48"
       SID		      "338"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod49"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod49"
       SID		      "339"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod5"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod5"
       SID		      "340"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod50"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod50"
       SID		      "341"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod6"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod6"
       SID		      "342"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod7"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod7"
       SID		      "343"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod8"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod8"
       SID		      "344"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod9"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/LW{3,2}/dotprod9"
       SID		      "345"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Transfer Functions/poslin"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 3/poslin"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 3/poslin"
       SID		      "349"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod1"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod1"
       SID		      "410"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod10"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod10"
       SID		      "411"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod11"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod11"
       SID		      "412"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod12"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod12"
       SID		      "413"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod13"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod13"
       SID		      "414"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod14"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod14"
       SID		      "415"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod15"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod15"
       SID		      "416"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod16"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod16"
       SID		      "417"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod17"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod17"
       SID		      "418"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod18"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod18"
       SID		      "419"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod19"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod19"
       SID		      "420"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod2"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod2"
       SID		      "421"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod20"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod20"
       SID		      "422"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod21"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod21"
       SID		      "423"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod22"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod22"
       SID		      "424"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod23"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod23"
       SID		      "425"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod24"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod24"
       SID		      "426"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod25"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod25"
       SID		      "427"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod26"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod26"
       SID		      "428"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod27"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod27"
       SID		      "429"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod28"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod28"
       SID		      "430"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod29"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod29"
       SID		      "431"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod3"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod3"
       SID		      "432"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod30"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod30"
       SID		      "433"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod31"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod31"
       SID		      "434"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod32"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod32"
       SID		      "435"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod33"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod33"
       SID		      "436"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod34"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod34"
       SID		      "437"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod35"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod35"
       SID		      "438"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod36"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod36"
       SID		      "439"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod37"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod37"
       SID		      "440"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod38"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod38"
       SID		      "441"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod39"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod39"
       SID		      "442"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod4"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod4"
       SID		      "443"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod40"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod40"
       SID		      "444"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod41"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod41"
       SID		      "445"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod42"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod42"
       SID		      "446"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod43"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod43"
       SID		      "447"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod44"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod44"
       SID		      "448"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod45"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod45"
       SID		      "449"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod46"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod46"
       SID		      "450"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod47"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod47"
       SID		      "451"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod48"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod48"
       SID		      "452"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod49"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod49"
       SID		      "453"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod5"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod5"
       SID		      "454"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod50"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod50"
       SID		      "455"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod6"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod6"
       SID		      "456"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod7"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod7"
       SID		      "457"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod8"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod8"
       SID		      "458"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod9"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/LW{4,3}/dotprod9"
       SID		      "459"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Transfer Functions/poslin"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 4/poslin"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 4/poslin"
       SID		      "463"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod1"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod1"
       SID		      "524"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod10"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod10"
       SID		      "525"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod11"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod11"
       SID		      "526"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod12"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod12"
       SID		      "527"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod13"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod13"
       SID		      "528"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod14"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod14"
       SID		      "529"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod15"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod15"
       SID		      "530"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod16"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod16"
       SID		      "531"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod17"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod17"
       SID		      "532"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod18"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod18"
       SID		      "533"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod19"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod19"
       SID		      "534"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod2"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod2"
       SID		      "535"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod20"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod20"
       SID		      "536"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod21"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod21"
       SID		      "537"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod22"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod22"
       SID		      "538"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod23"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod23"
       SID		      "539"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod24"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod24"
       SID		      "540"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod25"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod25"
       SID		      "541"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod26"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod26"
       SID		      "542"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod27"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod27"
       SID		      "543"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod28"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod28"
       SID		      "544"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod29"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod29"
       SID		      "545"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod3"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod3"
       SID		      "546"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod30"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod30"
       SID		      "547"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod31"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod31"
       SID		      "548"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod32"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod32"
       SID		      "549"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod33"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod33"
       SID		      "550"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod34"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod34"
       SID		      "551"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod35"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod35"
       SID		      "552"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod36"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod36"
       SID		      "553"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod37"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod37"
       SID		      "554"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod38"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod38"
       SID		      "555"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod39"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod39"
       SID		      "556"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod4"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod4"
       SID		      "557"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod40"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod40"
       SID		      "558"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod41"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod41"
       SID		      "559"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod42"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod42"
       SID		      "560"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod43"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod43"
       SID		      "561"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod44"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod44"
       SID		      "562"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod45"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod45"
       SID		      "563"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod46"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod46"
       SID		      "564"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod47"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod47"
       SID		      "565"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod48"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod48"
       SID		      "566"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod49"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod49"
       SID		      "567"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod5"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod5"
       SID		      "568"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod50"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod50"
       SID		      "569"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod6"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod6"
       SID		      "570"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod7"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod7"
       SID		      "571"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod8"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod8"
       SID		      "572"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod9"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/LW{5,4}/dotprod9"
       SID		      "573"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Transfer Functions/poslin"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 5/poslin"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 5/poslin"
       SID		      "577"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod1"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod1"
       SID		      "638"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod10"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod10"
       SID		      "639"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod11"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod11"
       SID		      "640"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod12"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod12"
       SID		      "641"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod13"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod13"
       SID		      "642"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod14"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod14"
       SID		      "643"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod15"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod15"
       SID		      "644"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod16"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod16"
       SID		      "645"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod17"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod17"
       SID		      "646"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod18"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod18"
       SID		      "647"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod19"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod19"
       SID		      "648"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod2"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod2"
       SID		      "649"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod20"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod20"
       SID		      "650"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod21"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod21"
       SID		      "651"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod22"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod22"
       SID		      "652"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod23"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod23"
       SID		      "653"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod24"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod24"
       SID		      "654"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod25"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod25"
       SID		      "655"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod26"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod26"
       SID		      "656"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod27"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod27"
       SID		      "657"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod28"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod28"
       SID		      "658"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod29"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod29"
       SID		      "659"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod3"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod3"
       SID		      "660"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod30"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod30"
       SID		      "661"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod31"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod31"
       SID		      "662"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod32"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod32"
       SID		      "663"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod33"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod33"
       SID		      "664"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod34"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod34"
       SID		      "665"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod35"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod35"
       SID		      "666"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod36"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod36"
       SID		      "667"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod37"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod37"
       SID		      "668"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod38"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod38"
       SID		      "669"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod39"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod39"
       SID		      "670"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod4"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod4"
       SID		      "671"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod40"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod40"
       SID		      "672"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod41"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod41"
       SID		      "673"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod42"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod42"
       SID		      "674"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod43"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod43"
       SID		      "675"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod44"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod44"
       SID		      "676"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod45"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod45"
       SID		      "677"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod46"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod46"
       SID		      "678"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod47"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod47"
       SID		      "679"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod48"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod48"
       SID		      "680"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod49"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod49"
       SID		      "681"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod5"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod5"
       SID		      "682"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod50"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod50"
       SID		      "683"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod6"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod6"
       SID		      "684"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod7"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod7"
       SID		      "685"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod8"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod8"
       SID		      "686"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod9"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/LW{6,5}/dotprod9"
       SID		      "687"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Transfer Functions/poslin"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 6/poslin"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 6/poslin"
       SID		      "691"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod1"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod1"
       SID		      "707"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod2"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod2"
       SID		      "708"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod3"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod3"
       SID		      "709"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod4"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod4"
       SID		      "710"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Weight Functions/dotprod"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod5"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 7/LW{7,6}/dotprod5"
       SID		      "711"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "neural/Transfer Functions/purelin"
-      Path		      "AcasXuClosedLoop_P2017b/AcasXu_1_1/Layer 7/purelin"
+      Path		      "AcasXuClosedLoop_P6_2017b/AcasXu_1_1/Layer 7/purelin"
       SID		      "715"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Sinks/XY Graph"
-      Path		      "AcasXuClosedLoop_P2017b/Intruder Position"
+      Path		      "AcasXuClosedLoop_P6_2017b/Intruder Position"
       SID		      "746"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "simulink/Sinks/XY Graph"
-      Path		      "AcasXuClosedLoop_P2017b/Ownship Position"
+      Path		      "AcasXuClosedLoop_P6_2017b/Ownship Position"
       SID		      "752"
       Type		      "LIBRARY_BLOCK"
     }
@@ -2005,9 +2005,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "manzand"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Mar 10 10:18:17 2020"
-  RTWModifiedTimeStamp	  505736296
-  ModelVersionFormat	  "1.%<AutoIncrement:8>"
+  LastModifiedDate	  "Tue Mar 10 13:24:23 2020"
+  RTWModifiedTimeStamp	  505747463
+  ModelVersionFormat	  "1.%<AutoIncrement:9>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -2058,12 +2058,12 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    9
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "AcasXuClosedLoop_P2017b"
+    model_		    "AcasXuClosedLoop_P6_2017b"
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "AcasXuClosedLoop_P2017b"
+      Cell		      "AcasXuClosedLoop_P6_2017b"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -2878,24 +2878,6 @@ Model {
       PreserveConstantTs      off
     }
     Block {
-      BlockType		      Delay
-      DelayLengthSource	      "Dialog"
-      DelayLength	      "2"
-      DelayLengthUpperLimit   "100"
-      InitialConditionSource  "Dialog"
-      InitialCondition	      "0.0"
-      ExternalReset	      "None"
-      ShowEnablePort	      off
-      PreventDirectFeedthrough off
-      DiagnosticForDelayLength "None"
-      RemoveDelayLengthCheckInGeneratedCode off
-      InputProcessing	      "Elements as channels (sample based)"
-      UseCircularBuffer	      off
-      SampleTime	      "-1"
-      StateMustResolveToSignalObject off
-      CodeGenStateStorageClass "Auto"
-    }
-    Block {
       BlockType		      Demux
       Outputs		      "4"
       DisplayOption	      "none"
@@ -2979,6 +2961,15 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      RateTransition
+      Integrity		      on
+      Deterministic	      on
+      InitialCondition	      "0"
+      OutPortSampleTimeOpt    "Specify"
+      OutPortSampleTimeMultiple	"1"
+      OutPortSampleTime	      "-1"
+    }
+    Block {
       BlockType		      S-Function
       FunctionName	      "system"
       SFunctionModules	      "''"
@@ -3042,6 +3033,15 @@ Model {
       BlockType		      Terminator
     }
     Block {
+      BlockType		      TransportDelay
+      DelayTime		      "1"
+      InitialOutput	      "0"
+      BufferSize	      "1024"
+      FixedBuffer	      off
+      TransDelayFeedthrough   off
+      PadeOrder		      "0"
+    }
+    Block {
       BlockType		      Trigonometry
       Operator		      "sin"
       ApproximationMethod     "None"
@@ -3051,7 +3051,7 @@ Model {
     }
   }
   System {
-    Name		    "AcasXuClosedLoop_P2017b"
+    Name		    "AcasXuClosedLoop_P6_2017b"
     Location		    [1993, 64, 3808, 1080]
     Open		    off
     PortBlocksUseCompactNotation off
@@ -3067,7 +3067,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "765"
+    SIDHighWatermark	    "767"
     Block {
       BlockType		      SubSystem
       Name		      "AcasXu_1_1"
@@ -28192,7 +28192,7 @@ Model {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
 	  SID			  "736::19"
-	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P2017b 2"
+	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P6_2017b 2"
 	  Ports			  [1, 2]
 	  Position		  [180, 100, 230, 160]
 	  ZOrder		  10
@@ -28252,18 +28252,6 @@ Model {
 	  DstPort		  1
 	}
       }
-    }
-    Block {
-      BlockType		      Delay
-      Name		      "Delay"
-      SID		      "737"
-      Ports		      [1, 1]
-      Position		      [5, 328, 40, 362]
-      ZOrder		      1066
-      Priority		      "1"
-      InputPortMap	      "u0"
-      DelayLength	      "1"
-      InitialCondition	      "0"
     }
     Block {
       BlockType		      SubSystem
@@ -28344,7 +28332,7 @@ Model {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
 	  SID			  "738::19"
-	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P2017b 4"
+	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P6_2017b 4"
 	  Ports			  [4, 2]
 	  Position		  [180, 102, 230, 203]
 	  ZOrder		  10
@@ -28494,7 +28482,7 @@ Model {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
 	  SID			  "740::93"
-	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P2017b 3"
+	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P6_2017b 3"
 	  Ports			  [1, 4]
 	  Position		  [180, 102, 230, 203]
 	  ZOrder		  73
@@ -28654,7 +28642,7 @@ Model {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
 	  SID			  "741::93"
-	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P2017b 1"
+	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P6_2017b 1"
 	  Ports			  [1, 4]
 	  Position		  [180, 102, 230, 203]
 	  ZOrder		  73
@@ -28995,6 +28983,14 @@ Model {
       Floating		      off
     }
     Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition"
+      SID		      "766"
+      Position		      [-45, 324, -5, 366]
+      ZOrder		      2139
+      OutPortSampleTime	      "0.2"
+    }
+    Block {
       BlockType		      Constant
       Name		      "Scaling_means"
       SID		      "754"
@@ -29067,7 +29063,7 @@ Model {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
 	  SID			  "764::22"
-	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P2017b 5"
+	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P6_2017b 5"
 	  Ports			  [1, 2]
 	  Position		  [180, 100, 230, 160]
 	  ZOrder		  13
@@ -29180,7 +29176,7 @@ Model {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
 	  SID			  "765::22"
-	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P2017b 6"
+	  Tag			  "Stateflow S-Function AcasXuClosedLoop_P6_2017b 6"
 	  Ports			  [1, 2]
 	  Position		  [180, 100, 230, 160]
 	  ZOrder		  13
@@ -29240,6 +29236,15 @@ Model {
 	  DstPort		  1
 	}
       }
+    }
+    Block {
+      BlockType		      TransportDelay
+      Name		      "Transport\nDelay"
+      SID		      "767"
+      Ports		      [1, 1]
+      Position		      [20, 325, 60, 365]
+      ZOrder		      2140
+      DelayTime		      "0.0001"
     }
     Block {
       BlockType		      Constant
@@ -29355,14 +29360,6 @@ Model {
       Points		      [-40, 0; 0, -55]
       DstBlock		      "Add1"
       DstPort		      2
-    }
-    Line {
-      ZOrder		      6
-      SrcBlock		      "Argmin_Advisory_Output"
-      SrcPort		      1
-      Points		      [0, -25]
-      DstBlock		      "Delay"
-      DstPort		      1
     }
     Line {
       ZOrder		      9
@@ -29536,10 +29533,10 @@ Model {
       }
     }
     Line {
-      ZOrder		      37
-      SrcBlock		      "Delay"
+      ZOrder		      88
+      SrcBlock		      "Transport\nDelay"
       SrcPort		      1
-      Points		      [21, 0]
+      Points		      [18, 0]
       Branch {
 	ZOrder			36
 	DstBlock		"DubinsPlant\nOwnship"
@@ -29712,6 +29709,21 @@ Model {
       DstBlock		      "Mux"
       DstPort		      2
     }
+    Line {
+      ZOrder		      87
+      SrcBlock		      "Rate Transition"
+      SrcPort		      1
+      DstBlock		      "Transport\nDelay"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      89
+      SrcBlock		      "Argmin_Advisory_Output"
+      SrcPort		      1
+      Points		      [0, -25]
+      DstBlock		      "Rate Transition"
+      DstPort		      1
+    }
     Annotation {
       SID		      "762"
       Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -29774,7 +29786,7 @@ Model {
 Stateflow {
   machine {
     id			    1
-    name		    "AcasXuClosedLoop_P2017b"
+    name		    "AcasXuClosedLoop_P6_2017b"
     created		    "03-Mar-2020 14:46:30"
     isLibrary		    0
     sfVersion		    80000012
