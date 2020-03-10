@@ -10,7 +10,7 @@ x1_o = 0; x2_o = 0; x3_o = pi/2;
 % Run simulation
 sim('../simulation/AcasXuClosedLoop_m_1_batch.mdl');
 % Plot results
-figure('units', 'normalized','visible','on');
+figure('units', 'normalized','visible','off');
 plot(x_own,y_own,'b');
 hold on;
 plot(x_int,y_int,'r');
@@ -32,9 +32,9 @@ x1_i = 0; x2_i = 25000; x3_i = -pi/2;
 x1_o = 25000; x2_o = 0; x3_o = pi;
 
 % Run simulation
-sim('../simulation/AcasXuClosedLoop_m_1.mdl');
+sim('../simulation/AcasXuClosedLoop_m_1_batch.mdl');
 % Plot results
-figure('units', 'normalized','visible','on');
+figure('units', 'normalized','visible','off');
 plot(x_own,y_own,'b');
 hold on;
 plot(x_int,y_int,'r');
@@ -63,9 +63,9 @@ for i=3:200
     x3_o = rand*2*pi-pi;
     x3_i = rand*2*pi-pi;
     % Run simulation
-    sim('../simulation/AcasXuClosedLoop_m_1.mdl');
+    sim('../simulation/AcasXuClosedLoop_m_1_batch.mdl');
     %Plot results
-    figure('units', 'normalized','visible','on'); % Uncomment to see plot 
+    figure('units', 'normalized','visible','off'); % Uncomment to see plot 
     plot(x_own,y_own,'b');
     hold on;
     plot(x_int,y_int,'r');
