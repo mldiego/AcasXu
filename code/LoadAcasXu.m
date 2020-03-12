@@ -3,13 +3,22 @@ function controller = LoadAcasXu(inputpath)
 load(inputpath);
 n = length(b);
 Layers = [];
-for i=1:n
-    if i == n
-        L = LayerS(W{i}, b{i},'purelin');
-        Layers = [Layers L];
-    else
-        L = LayerS(W{i}, b{i},'poslin');
-        Layers = [Layers L];
+try
+    if act_fcns
+        for i=1:n
+            L = LayerS(W{i}, b{i},act_fcns{i});
+            Layers = [Layers L];
+        end
+    end
+catch    
+    for i=1:n
+        if i == n
+            L = LayerS(W{i}, b{i},'purelin');
+            Layers = [Layers L];
+        else
+            L = LayerS(W{i}, b{i},'poslin');
+            Layers = [Layers L];
+        end
     end
 end
 controller = FFNNS(Layers);
