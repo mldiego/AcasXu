@@ -32,7 +32,7 @@ for i=1:m
     % Switch
     out_sw(:,i) = netp([test_in(4,i); in6_pos(indx(i))]);
     % Main acasxu (after switch)
-    out_big(:,i) = neta([test_in(:,1);out_sw(:,i)]);
+    out_big(:,i) = neta([test_in(:,i);out_sw(:,i)]);
     % Smaller networks
     out_small(1:5,i) = acasxu11.evaluate(test_in(:,i));
     out_small(6:10,i) = acasxu21.evaluate(test_in(:,i));
@@ -45,20 +45,46 @@ end
 % We cannot compare the outputs straightforward, but we can see the output
 % advisory is the same in each case.
 
-%% Compare outputs
+%% Compare outputs (decision)
 tot_err = 0;
+mb = zeros(1,m);
+ms = zeros(1,m);
+ib = zeros(1,m);
+ism = zeros(1,m);
 for i=1:m
-    [~,ib] = min(out_big(indx(i)*5-4:indx(i)*5));
-    [~,ism] = min(out_small(indx(i)*5-4:indx(i)*5));
-    if ib ~= ism
-        disp('We have a problem mate');
+    [mb(i),ib(i)] = min(out_big(indx(i)*5-4:indx(i)*5,i));
+    [ms(i),ism(i)] = min(out_small(indx(i)*5-4:indx(i)*5,i));
+    if ib(i) ~= ism(i) || mb(i) > 15
         tot_err = tot_err + 1;
     end
+    
 end
- warning('We had a total of ' + string(tot_err) + ' errors');
+disp('')
+warning('We had a total of ' + string(tot_err) + ' errors in the output advisory index');
+disp('')
 
 % It only returns numerical errors, but they are actually the same, just
 % need to figure a different way of comparing them
 % Comparing the minimum values works, but I also need to check that it is
 % actually the network that corresponds to the inputs
     
+% To avoid numerical errors, substract values from each other and make sure
+% the difference between them is minimal ( < 0.0001)
+
+% Make a copy of the outputs and set everything else thatn the correct
+% outputs to 0
+
+out_small_mod = zeros(25,m);
+out_big_mod = zeros(25,m);
+for i=1:m
+    out_small_mod(indx(i)*5-4:indx(i)*5,i) =  out_small(indx(i)*5-4:indx(i)*5,i);
+    out_big_mod(indx(i)*5-4:indx(i)*5,i) =  out_big(indx(i)*5-4:indx(i)*5,i);
+end
+
+out_diff_mod = out_big_mod - out_small_mod;
+if max(max(out_diff_mod)) < 0.0001 && min(min(out_diff_mod)) > -0.0001
+    warning('There are no errors in the outputs of the large AcasXu1 Neural Network')
+else
+    warning('There are some errors, check out all the output variables and analyze them to see what the problem is');
+end
+
