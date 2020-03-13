@@ -6,11 +6,25 @@ Before executing any code, please install [NNV](https://github.com/verivital/nnv
 
 Run [startup_nnv.m](https://github.com/verivital/nnv/blob/master/code/nnv/startup_nnv.m) before running any files.
 
+Copy all the files under the [utils](https://github.com/dieman95/AcasXu/tree/master/utils) folder, and copy into the your MATLAB root folder under the specific toolbox. An example of this is, in my case: */usr/local/MATLAB/R2018b/toolbox/nnet/nnet/nntransfer* .
+
 ### Requirements
 
-First, copy all the files under the **utils** folder, and copy into the your MATLAB root folder under the specific toolbox. An example of this is, in my case: */usr/local/MATLAB/R2018b/toolbox/nnet/nnet/nntransfer* .
+These are
 
-In order to execute the [Simulink models](https://github.com/dieman95/AcasXu/tree/master/simulation), the version must be MATLAB 2017b or newer. 
+- MATLAB
+
+- Deep Learning Toolbox
+
+- Simulink (>9.0)
+
+- Stateflow
+
+- MATLAB (2017b)
+
+The last 3 are only needed in order to execute the [Simulink models](https://github.com/dieman95/AcasXu/tree/master/simulation). 
+
+
 
 ### Contact
 
