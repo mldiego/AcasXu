@@ -116,8 +116,8 @@ w(:,2) = 10;
 net.IW{1} = w;
 net.b{1} = b;
 
-save('switch_acasxu1_net','net');
-net_to_mat('switch_acasxu1_net.mat','switch_acasxu1.mat');
+save('nn_new/switch_acasxu1_net','net');
+net_to_mat('nn_new/switch_acasxu1_net.mat','nn_new/switch_acasxu1.mat');
 
 % This works (had to change the the dublim function to 
 % x in (-0.1,0.1), return 1, else 0.

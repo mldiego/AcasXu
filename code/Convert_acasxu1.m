@@ -115,7 +115,7 @@ net.b{7}(16:20) = acasxu41.Layers(7).b;
 net.b{7}(21:25) = acasxu51.Layers(7).b;
 
 % This network is like simulating in parallel all the networks
-save('pre_big_acasxu1','net');
+save('nn_new/pre_big_acasxu1','net');
 
 
 % In order to build a bigger network that behaves the "same" way, we need

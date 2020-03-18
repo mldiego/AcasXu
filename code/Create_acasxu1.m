@@ -162,8 +162,8 @@ net.b{8} = ones(25,1)*(20);
 % not be using are large positive numbers, whereas the ones we care about
 % are small (the actual outputs of the NNs)
 
-save('acasxu1_afterswitch_net','net');
-net_to_mat('acasxu1_afterswitch_net.mat','acasxu1_afterswitch.mat')
+save('nn_new/acasxu1_afterswitch_net','net');
+net_to_mat('nn_new/acasxu1_afterswitch_net.mat','nn_new/acasxu1_afterswitch.mat')
 
 
 

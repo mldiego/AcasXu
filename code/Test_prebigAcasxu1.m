@@ -4,7 +4,7 @@
 % ones to ensure correct functioning.
 
 % Load all the networks
-bigacasxu1 = LoadAcasXu('pre_big_acasxu1.mat');
+bigacasxu1 = LoadAcasXu('nn_new/pre_big_acasxu1.mat');
 acasxu11 = LoadAcasXu('../networks/ACASXU_run2a_1_1_batch_2000.mat');
 acasxu21 = LoadAcasXu('../networks/ACASXU_run2a_2_1_batch_2000.mat');
 acasxu31 = LoadAcasXu('../networks/ACASXU_run2a_3_1_batch_2000.mat');

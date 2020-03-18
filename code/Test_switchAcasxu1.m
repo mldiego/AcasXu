@@ -5,9 +5,9 @@
 % simulation under the assumption that both speeds are always constant (inputs 4 and 5)
 
 % Load all the networks
-netp = load('switch_acasxu1_net.mat');
+netp = load('nn_new/switch_acasxu1_net.mat');
 netp = netp.net;
-neta = load('acasxu1_afterswitch_net.mat');
+neta = load('nn_new/acasxu1_afterswitch_net.mat');
 neta = neta.net;
 acasxu11 = LoadAcasXu('../networks/ACASXU_run2a_1_1_batch_2000.mat');
 acasxu21 = LoadAcasXu('../networks/ACASXU_run2a_2_1_batch_2000.mat');
