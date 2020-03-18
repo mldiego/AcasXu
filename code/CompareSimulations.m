@@ -26,10 +26,10 @@ acasxu31 = LoadAcasXu('../networks/ACASXU_run2a_3_1_batch_2000.mat');
 acasxu41 = LoadAcasXu('../networks/ACASXU_run2a_4_1_batch_2000.mat');
 acasxu51 = LoadAcasXu('../networks/ACASXU_run2a_5_1_batch_2000.mat');
 % Controller (2)
-acasxu1 = LoadAcasXu('acasxu1_afterswitch.mat');
-neta = load('acasxu1_afterswitch_net.mat');
+acasxu1 = LoadAcasXu('nn_new/acasxu1_afterswitch.mat');
+neta = load('nn_new/acasxu1_afterswitch_net.mat');
 awnet = neta.net;
-netb = load('switch_acasxu1_net.mat');
+netb = load('nn_new/switch_acasxu1_net.mat');
 swnet = netb.net;
 
 %% Section 2. Simulation
