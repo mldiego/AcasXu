@@ -8,12 +8,13 @@ if ~exist('../data_sim/m_1','dir')
     mkdir('data_sim/m_1')
 end
 
-% This scenario returns an error for consecutive zero-crossings
-x1_i = -3928; x2_i = -16962; x3_i = -1.633926469911444; 
-x1_o = -10404; x2_o = -15068; x3_o = -1.986065940377818;
-% Run simulation
-sim('../simulation/AcasXuClosedLoop_m_1_batch_2017b.mdl');
-pause;
+% % This scenario may return an error for consecutive zero-crossings
+% % Zero-crossing detection has been disabled to prevent this
+% x1_i = -3928; x2_i = -16962; x3_i = -1.633926469911444; 
+% x1_o = -10404; x2_o = -15068; x3_o = -1.986065940377818;
+% % Run simulation
+% sim('../simulation/AcasXuClosedLoop_m_1_batch_2017b.mdl');
+% pause;
 
 % Initial scenario
 x1_i = 0; x2_i = 25000; x3_i = -pi/2; 
