@@ -163,3 +163,25 @@ for i=1:length(time)-1
     data = [comb_init' uN prev_adv, adv_own, yNN'];
     data3(i,:) = data; % store data
 end
+
+
+
+%% Visualize simulations
+
+% Check for folder to store simulation data
+if ~exist('../data_sim/compareSims','dir')
+    mkdir('../data_sim/compareSims')
+end
+
+% Plot ownship trajectories
+f = figure;
+plot(data1(:,1),data1(:,2),'-');
+hold on;
+plot(data2(:,1),data2(:,2),'o');
+plot(data3(:,1),data3(:,2), '--');
+title('Ownship Trajectories');
+xlabel('X Position (ft)');
+ylabel('Y Position (ft)');
+legend('Simulation 1','Simulation 2','Simulation 3');
+saveas(f,'../data_sim/compareSims/ownshipTrajectory','png'); % Save Plot
+save('../data_sim/compareSims/dataCP','data1','data2','data3'); % Save simulation data

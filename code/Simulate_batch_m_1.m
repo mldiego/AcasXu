@@ -3,6 +3,18 @@ clc;clear;
 % Export data from Simulink to workspace
 % https://www.mathworks.com/help/simulink/ug/export-simulation-data-1.html
 
+% Check for folder to store simulation data
+if ~exist('../data_sim/m_1','dir')
+    mkdir('data_sim/m_1')
+end
+
+% This scenario returns an error for consecutive zero-crossings
+x1_i = -3928; x2_i = -16962; x3_i = -1.633926469911444; 
+x1_o = -10404; x2_o = -15068; x3_o = -1.986065940377818;
+% Run simulation
+sim('../simulation/AcasXuClosedLoop_m_1_batch_2017b.mdl');
+pause;
+
 % Initial scenario
 x1_i = 0; x2_i = 25000; x3_i = -pi/2; 
 x1_o = 0; x2_o = 0; x3_o = pi/2;
@@ -23,7 +35,7 @@ grid;
 title('AcasXu Closed-Loop');
 pause(0.5);
 axis equal
-saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'jpeg');
+saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'png');
 % Save simulation info
 save(['../data_sim/m_1/exp' int2str(1)]);
 
@@ -47,7 +59,7 @@ grid;
 title('AcasXu Closed-Loop');
 pause(0.5);
 axis equal
-saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'jpeg');
+saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'png');
 % Save simulation info
 save(['../data_sim/m_1/exp' int2str(1)]);
 
@@ -79,7 +91,7 @@ for i=3:200
     pause(1);
     axis equal
     % Save figure
-    saveas(gcf,['../data_sim/m_1/exp' int2str(i)],'jpeg');
+    saveas(gcf,['../data_sim/m_1/exp' int2str(i)],'png');
     % Save simulation info
     save(['../data_sim/m_1/exp' int2str(i)]);
 end
