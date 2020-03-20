@@ -115,24 +115,8 @@ net.b{7}(16:20) = acasxu41.Layers(7).b;
 net.b{7}(21:25) = acasxu51.Layers(7).b;
 
 % This network is like simulating in parallel all the networks
-save('nn_new/pre_big_acasxu1','net');
+save('nn_new/simple_acasxu1_net','net');
+net_to_mat('nn_new/simple_acasxu1_net.mat','nn_new/simple_acasxu1.mat');
 
 
-% In order to build a bigger network that behaves the "same" way, we need
-% to make some assumptions/restirction on the inputs
-
-% Given that for our case the plane velocities are constant, all the inputs
-% are bounded (-1 to 1, although different inputs have different ranges and we will exploit such) except for the distance.
-% Therefore, in this case, I will limit the maximum distance between
-% aircrafts to be <= 80000 ft (which is more than enough, aircrafts do not
-% change directions if the intruder is at closer than 60000 ft usually)
-
-% To do this, we will create extra layers that combine each input with the
-% previous advisory, and then combine them with the "result" that would
-% return if that network should be chosen so that is that was the case, the
-% original input would be preserved. By using a "delta" activation function
-% in the second layer, we would only pass the inputs corresponding to the
-% correct NN, and all other would be 0 (If this does not work, then we are
-% screwed, because 0 is a very valid input to all 5 inputs, so I am not
-% sure how the other NNs would respond to this)
 

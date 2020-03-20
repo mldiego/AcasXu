@@ -4,8 +4,8 @@ function a = apply(n,param)
 % Copyright 2012-2015 The MathWorks, Inc.
 
 
-  b = double(n >= -0.1);
-  c = double(n <= 0.1);
+  b = double(n >= -0.0001);
+  c = double(n <= 0.0001);
   a = double(b == c);
   a(isnan(n)) = nan;
 end

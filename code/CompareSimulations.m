@@ -118,7 +118,7 @@ for i=1:length(time)-1
     uNN = uNN';
     % NN controller
     % (2) Execute both switch NNs    
-    yNNs = swnet([uNN(4); prev_adv]);
+    yNNs = swnet(prev_adv);
     yNN = awnet([uNN;yNNs]); % Same thing, not sure the reason tho
     % yNN = acasxu1.evaluate([yNNs; uNN]); % Not working for some reason
     % Normalize outputs (Do not really need it, the order is the same)
@@ -155,7 +155,7 @@ for i=1:length(time)-1
     uNN = uNN';
     % NN controller
     % (2) Execute both switch NNs
-    yNNs = swnet([uNN(4); prev_adv]);
+    yNNs = swnet(prev_adv);
     yNN = awnet([uNN;yNNs]); % Same thing, not sure the reason tho
     % yNN = acasxu1.evaluate([yNNs; uNN]); % Not working for some reason
     % Normalize outputs (Do not really need it, the order is the same)

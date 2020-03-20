@@ -4,7 +4,7 @@
 % ones to ensure correct functioning.
 
 % Load all the networks
-bigacasxu1 = LoadAcasXu('nn_new/pre_big_acasxu1.mat');
+bigacasxu1 = LoadAcasXu('nn_new/simple_acasxu1.mat');
 acasxu11 = LoadAcasXu('../networks/ACASXU_run2a_1_1_batch_2000.mat');
 acasxu21 = LoadAcasXu('../networks/ACASXU_run2a_2_1_batch_2000.mat');
 acasxu31 = LoadAcasXu('../networks/ACASXU_run2a_3_1_batch_2000.mat');
@@ -36,7 +36,7 @@ if out_big == out_small
     disp('CORRECT')
     disp('The large network represents the behavior of the smaller ones')
 else
-    warning('There is something wrong with the large network');
+    warning('There is something wrong with the simple large network');
 end
 
 
@@ -139,9 +139,9 @@ else
     disp('The approximate method return an output of the first NN that is not a subset of the larger one');
 end
 
-% Check AcasXu_1_1
+% Check AcasXu_2_1
 if out1_smallS.isSubSet(out_bigS.affineMap(m1,[]))  
-    disp('First NN is a subset of large NN')
+    disp('Second NN is a subset of large NN')
     figure;
     subplot(1,3,1);
     Star.plotBoxes_2D_noFill(out1_smallS,1,1,'b');
@@ -162,9 +162,9 @@ else
     disp('The approximate method return an output of the first NN that is not a subset of the larger one');
 end
 
-% Check AcasXu_1_1
+% Check AcasXu_3_1
 if out1_smallS.isSubSet(out_bigS.affineMap(m1,[]))  
-    disp('First NN is a subset of large NN')
+    disp('Third NN is a subset of large NN')
     figure;
     subplot(1,3,1);
     Star.plotBoxes_2D_noFill(out1_smallS,1,1,'b');
@@ -185,9 +185,9 @@ else
     disp('The approximate method return an output of the first NN that is not a subset of the larger one');
 end
 
-% Check AcasXu_1_1
+% Check AcasXu_4_1
 if out1_smallS.isSubSet(out_bigS.affineMap(m1,[]))  
-    disp('First NN is a subset of large NN')
+    disp('Fourth NN is a subset of large NN')
     figure;
     subplot(1,3,1);
     Star.plotBoxes_2D_noFill(out1_smallS,1,1,'b');
@@ -210,7 +210,7 @@ end
 
 % Check AcasXu_5_1
 if out5_smallS.isSubSet(out_bigS.affineMap(m5,[]))  
-    disp('First NN is a subset of large NN')
+    disp('Fifth NN is a subset of large NN')
     figure;
     subplot(1,3,1);
     Star.plotBoxes_2D_noFill(out5_smallS,1,1,'b');

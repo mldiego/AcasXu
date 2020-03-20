@@ -30,7 +30,7 @@ out_small = zeros(25,m);
 % Run the tests
 for i=1:m
     % Switch
-    out_sw(:,i) = netp([test_in(4,i); in6_pos(indx(i))]);
+    out_sw(:,i) = netp(in6_pos(indx(i)));
     % Main acasxu (after switch)
     out_big(:,i) = neta([test_in(:,i);out_sw(:,i)]);
     % Smaller networks
