@@ -5,7 +5,7 @@ clc;clear;
 
 % Check for folder to store simulation data
 if ~exist('../data_sim/m_1','dir')
-    mkdir('data_sim/m_1')
+    mkdir('../data_sim/m_1')
 end
 
 % % This scenario may return an error for consecutive zero-crossings
