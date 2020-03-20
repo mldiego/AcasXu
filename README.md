@@ -10,8 +10,6 @@ Copy all the files under the [utils](https://github.com/dieman95/AcasXu/tree/mas
 
 ### Requirements
 
-These are
-
 - MATLAB
 
 - Deep Learning Toolbox
@@ -24,7 +22,17 @@ These are
 
 The last 3 are only needed in order to execute the [Simulink models](https://github.com/dieman95/AcasXu/tree/master/simulation). 
 
+### Repository Overview
 
+- **Properties**: contains descriptions of 10 safety properties to verify.
+
+- **code**: core of this work. Contains testing, simulation (MATLAB), and NN generation files.
+
+- **networks**: all 45 AcasXu NNs in NNV format and as Simulink blocks.
+
+- **simulation**: Simulink models of the AcasXu closedloop system.
+
+- **utils**: extra functions and required scripts.
 
 ### Contact
 
