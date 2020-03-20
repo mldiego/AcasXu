@@ -3,11 +3,11 @@
 % the AcasXu system into a single NN
 
 % Controllers
-acasxu11 = LoadAcasXu('../networks/ACASXU_run2a_1_1_batch_2000.mat');
-acasxu21 = LoadAcasXu('../networks/ACASXU_run2a_2_1_batch_2000.mat');
-acasxu31 = LoadAcasXu('../networks/ACASXU_run2a_3_1_batch_2000.mat');
-acasxu41 = LoadAcasXu('../networks/ACASXU_run2a_4_1_batch_2000.mat');
-acasxu51 = LoadAcasXu('../networks/ACASXU_run2a_5_1_batch_2000.mat');
+acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
+acasxu21 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_2_1_batch_2000.mat');
+acasxu31 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_3_1_batch_2000.mat');
+acasxu41 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_4_1_batch_2000.mat');
+acasxu51 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_5_1_batch_2000.mat');
 
 % Create big net (acasxu_big_1)
 net = feedforwardnet([250 250 250 250 250 250]);

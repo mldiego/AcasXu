@@ -20,11 +20,11 @@ intruder = NonLinearODE(3,1,@dubindynamics, tr, tc, outC);
 outCp = [-1 0 0 1 0 0 ; 0 -1 0 0 1 0; 0 0 1 0 0 0 ; 0 0 -1 0 0 1]; % Output matrix (xdiff,ydiff,own_head,head_diff)
 comb = NonLinearODE(6,1,@combinedDub, tr, tc, outCp);
 % Controllers (1)
-acasxu11 = LoadAcasXu('../networks/ACASXU_run2a_1_1_batch_2000.mat');
-acasxu21 = LoadAcasXu('../networks/ACASXU_run2a_2_1_batch_2000.mat');
-acasxu31 = LoadAcasXu('../networks/ACASXU_run2a_3_1_batch_2000.mat');
-acasxu41 = LoadAcasXu('../networks/ACASXU_run2a_4_1_batch_2000.mat');
-acasxu51 = LoadAcasXu('../networks/ACASXU_run2a_5_1_batch_2000.mat');
+acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
+acasxu21 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_2_1_batch_2000.mat');
+acasxu31 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_3_1_batch_2000.mat');
+acasxu41 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_4_1_batch_2000.mat');
+acasxu51 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_5_1_batch_2000.mat');
 % Controller (2)
 acasxu1 = LoadAcasXu('nn_new/acasxu1_afterswitch.mat');
 neta = load('nn_new/acasxu1_afterswitch_net.mat');
