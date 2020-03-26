@@ -17,8 +17,8 @@ tc = 0.2; % control period of the plant
 outC = [1 0 0; 0 1 0; 0 0 1]; % Output matrix
 ownship = NonLinearODE(3,1,@dubindynamics, tr, tc, outC);
 intruder = NonLinearODE(3,1,@dubindynamics, tr, tc, outC);
-outCp = [-1 0 0 1 0 0 ; 0 -1 0 0 1 0; 0 0 1 0 0 0 ; 0 0 -1 0 0 1]; % Output matrix (xdiff,ydiff,own_head,head_diff)
-comb = NonLinearODE(6,1,@combinedDub, tr, tc, outCp);
+outCp = [0,0,0,0,0,0,1,0,0;0,0,0,0,0,0,0,1,0;0,0,0,0,0,0,0,0,1]; % Output matrix (distance,theta,head_diff)
+comb = NonLinearODE(9,1,@combinedDub, tr, tc, outCp);
 % Controllers (1)
 acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
 acasxu21 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_2_1_batch_2000.mat');
@@ -46,7 +46,8 @@ st = 0.2; % Step size
 time = 0:st:tf; % Time to simulate
 
 % ------------------ Simulation 1 --------------------
-
+tic;
+disp('Simulation 1');
 % Setup scenario
 own_init = [0; 25000; -pi/2]; % initial state
 int_init = [0; 0; pi/2]; % Initial state
@@ -92,9 +93,11 @@ for i=1:length(time)-1
     data = [own_init' int_init' uN prev_adv, adv_own, yNN'];
     data1(i,:) = data; % store data
 end
+toc;
 
 % --------------------- Simulation 2 --------------------
-
+tic;
+disp('Simulation 2');
 % Setup the scenario
 own_init = [0; 25000; -pi/2]; % initial state
 int_init = [0; 0; pi/2]; % Initial state
@@ -126,15 +129,17 @@ for i=1:length(time)-1
     data = [own_init' int_init' uN prev_adv, adv_own, yNN'];
     data2(i,:) = data; % store data
 end
-
+toc;
 % --------------------- Simulation 3 --------------------
-
+tic;
+disp('Simulation 3')
 % Setup the scenario
 own_init = [0; 25000; -pi/2]; % initial state
 int_init = [0; 0; pi/2]; % Initial state
-comb_init = [own_init; int_init];
+env_init = [25000; -pi/2; pi];
+comb_init = [own_init; int_init; env_init];
 adv_own = 0; % Initial advisory
-data3 = zeros(length(time)-1,38); % Memory allocation
+data3 = zeros(length(time)-1,41); % Memory allocation
 
 % Begin simulation
 for i=1:length(time)-1
@@ -145,9 +150,9 @@ for i=1:length(time)-1
     % Compute inputs
     ycp =  outCp*comb_init;
     % Computing u1 and u2 are key steps in reachability analysis
-    u1 = sqrt(ycp(1)^2 + ycp(2)^2); % Except for sqrt, everything else could be done with AffineMap
-    u2 = set_angleRange(atan2(ycp(1),ycp(2)) - ycp(3)); % atan2?
-    u3 = set_angleRange(ycp(4)); % All ready for reachability analysis
+    u1 = ycp(1); % Except for sqrt, everything else could be done with AffineMap
+    u2 = set_angleRange(ycp(2)); % atan2?
+    u3 = set_angleRange(ycp(3)); % All ready for reachability analysis
     % Normalize inputs
     uN = [u1 u2 u3 u4 u5];
     uNN = uN - scale_mean;
@@ -163,7 +168,7 @@ for i=1:length(time)-1
     data = [comb_init' uN prev_adv, adv_own, yNN'];
     data3(i,:) = data; % store data
 end
-
+toc;
 
 
 %% Visualize simulations
