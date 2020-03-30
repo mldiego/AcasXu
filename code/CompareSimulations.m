@@ -49,8 +49,12 @@ time = 0:st:tf; % Time to simulate
 tic;
 disp('Simulation 1');
 % Setup scenario
-own_init = [0; 25000; -pi/2]; % initial state
-int_init = [0; 0; pi/2]; % Initial state
+own_init = [1400; 4300; 0.5]; % initial state
+int_init = [14750; 0; 1.65]; % Initial state
+% own_init = [0; 25000; -pi/2]; % initial state
+% int_init = [0; 0; pi/2]; % Initial state
+% own_init = [500; 25000; -pi/2]; % initial state
+% int_init = [100; 2000; pi/2]; % Initial state
 adv_own = 0; % Initial advisory
 data1 = zeros(length(time)-1, 18); %memory allocation
 
@@ -99,8 +103,12 @@ toc;
 tic;
 disp('Simulation 2');
 % Setup the scenario
-own_init = [0; 25000; -pi/2]; % initial state
-int_init = [0; 0; pi/2]; % Initial state
+own_init = [1400; 4300; 0.5]; % initial state
+int_init = [14750; 0; 1.65]; % Initial state
+% own_init = [0; 25000; -pi/2]; % initial state
+% int_init = [0; 0; pi/2]; % Initial state
+% own_init = [500; 25000; -pi/2]; % initial state
+% int_init = [100; 2000; pi/2]; % Initial state
 adv_own = 0; % Initial advisory
 data2 = zeros(length(time)-1,38); % Memory allocation
 
@@ -134,9 +142,15 @@ toc;
 tic;
 disp('Simulation 3')
 % Setup the scenario
-own_init = [0; 25000; -pi/2]; % initial state
-int_init = [0; 0; pi/2]; % Initial state
-env_init = [25000; -pi/2; pi];
+own_init = [1400; 4300; 0.5]; % initial state
+int_init = [14750; 0; 1.65]; % Initial state
+env_init = [1.402542334476931e+04 ; 1.382400667932294 ; 1.150000000000000];
+% own_init = [0; 25000; -pi/2]; % initial state
+% int_init = [0; 0; pi/2]; % Initial state
+% env_init = [25000; -pi/2; pi];
+% own_init = [500; 25000; -pi/2]; % initial state
+% int_init = [100; 2000; pi/2]; % Initial state
+% env_init = [2.300347799790284e+04 ; -1.553406775505566; 3.141592653589793];
 comb_init = [own_init; int_init; env_init];
 adv_own = 0; % Initial advisory
 data3 = zeros(length(time)-1,41); % Memory allocation
@@ -167,7 +181,7 @@ for i=1:length(time)-1
     adv_own = argmin_advise(yNN); % Key step in reachability analysis
     data = [comb_init' uN prev_adv, adv_own, yNN'];
     data3(i,:) = data; % store data
-end
+end 
 toc;
 
 
@@ -180,13 +194,16 @@ end
 
 % Plot ownship trajectories
 f = figure;
-plot(data1(:,1),data1(:,2),'-');
+plot(data1(:,1),data1(:,2),'-r');
 hold on;
-plot(data2(:,1),data2(:,2),'o');
-plot(data3(:,1),data3(:,2), '--');
+plot(data2(:,1),data2(:,2),'ob');
+plot(data3(:,1),data3(:,2), '--g');
+plot(data1(:,4),data1(:,5),'--k');
+scatter(data1(1,1),data1(1,2), 200, 'x', 'r', 'LineWidth',5);
+scatter(data1(1,4),data1(1,5), 200, 'x', 'k','LineWidth',5);
 title('Ownship Trajectories');
 xlabel('X Position (ft)');
 ylabel('Y Position (ft)');
-legend('Simulation 1','Simulation 2','Simulation 3');
+legend('Simulation 1','Simulation 2','Simulation 3','intruder');
 saveas(f,'../data_sim/compareSims/ownshipTrajectory','png'); % Save Plot
 save('../data_sim/compareSims/dataCP','data1','data2','data3'); % Save simulation data
