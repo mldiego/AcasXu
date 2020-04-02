@@ -21,7 +21,10 @@ x1_i = 0; x2_i = 25000; x3_i = -pi/2;
 x1_o = 0; x2_o = 0; x3_o = pi/2;
 
 % Run simulation
-sim('../simulation/AcasXuClosedLoop_m_1_batch.mdl');
+sim('../simulation/AcasXuClosedLoop_m_1_batch_2017b.mdl');
+ if any(dist <= 500)
+    warning('Safety property violated in simulation 1')
+end
 % Plot results
 figure('units', 'normalized','visible','off');
 plot(x_own,y_own,'b');
@@ -45,7 +48,10 @@ x1_i = 0; x2_i = 25000; x3_i = -pi/2;
 x1_o = 25000; x2_o = 0; x3_o = pi;
 
 % Run simulation
-sim('../simulation/AcasXuClosedLoop_m_1_batch.mdl');
+sim('../simulation/AcasXuClosedLoop_m_1_batch_2017b.mdl');
+ if any(dist <= 500)
+    warning('Safety property violated in simulation 2')
+end
 % Plot results
 figure('units', 'normalized','visible','off');
 plot(x_own,y_own,'b');
@@ -60,13 +66,41 @@ grid;
 title('AcasXu Closed-Loop');
 pause(0.5);
 axis equal
-saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'png');
+saveas(gcf,['../data_sim/m_1/exp' int2str(2)],'png');
 % Save simulation info
-save(['../data_sim/m_1/exp' int2str(1)]);
+save(['../data_sim/m_1/exp' int2str(2)]);
 
+% Scenario 3
+x1_i = 100; x2_i = 2000; x3_i = pi/2;
+x1_o = 500; x2_o = 25000; x3_o = -pi/2;
+
+% Run simulation
+sim('../simulation/AcasXuClosedLoop_m_1_batch_2017b.mdl');
+ if any(dist <= 500)
+    warning('Safety property violated in simulation 3')
+end
+% Plot results
+figure('units', 'normalized','visible','off');
+plot(x_own,y_own,'b');
+hold on;
+plot(x_int,y_int,'r');
+scatter(x1_o,x2_o,'b');
+scatter(x1_i,x2_i,'r');
+legend('ownship','intruder');
+xlabel('X position (ft)');
+ylabel('Y position (ft)');
+grid;
+title('AcasXu Closed-Loop');
+pause(0.5);
+axis equal
+saveas(gcf,['../data_sim/m_1/exp' int2str(3)],'png');
+% Save simulation info
+save(['../data_sim/m_1/exp' int2str(3)]);
+
+pause;
 rng = 23; % Set random seed
 % Run batch of experiments
-for i=3:200
+for i=4:200
     disp('Simulating experiment '+string(i));
     % Randomly initialize state variables of intruder and ownship
     x1_i = randi([-20000,20000]);
@@ -76,7 +110,7 @@ for i=3:200
     x3_o = rand*2*pi-pi;
     x3_i = rand*2*pi-pi;
     % Run simulation
-    sim('../simulation/AcasXuClosedLoop_m_1_batch.mdl');
+    sim('../simulation/AcasXuClosedLoop_m_1_batch_2017b.mdl');
     %Plot results
     figure('units', 'normalized','visible','off'); % Uncomment to see plot 
     plot(x_own,y_own,'b');
@@ -95,4 +129,7 @@ for i=3:200
     saveas(gcf,['../data_sim/m_1/exp' int2str(i)],'png');
     % Save simulation info
     save(['../data_sim/m_1/exp' int2str(i)]);
+    if any(dist <= 500)
+        warning('Safety property violated in simulation %f', i)
+    end
 end
