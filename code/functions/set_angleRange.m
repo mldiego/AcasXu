@@ -1,9 +1,4 @@
 function ang = set_angleRange(angle)
-    if angle > pi
-        ang = -2*pi + angle;
-    elseif angle < -pi
-        ang = 2*pi + angle;
-    else
-        ang = angle;
-    end
+% Compute angle in interval [-pi,pi)
+ang = angle - floor(angle/(2*pi) + 0.5)*2*pi;
 end
