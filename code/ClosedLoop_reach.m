@@ -49,8 +49,24 @@ Unn45 = Star([0.142727;0.142727],[0.142727;0.142727]);
 
 %% Setup verification scenario
 
+% % Ownship
+% x1 = 25000; x2 = 10234; x3 = 0.3;
+% % Intruder
+% x4 = 10030; x5 = 3450; x6 = 0.7;
+% % "Environment"
+% [x7, x8, x9] = environment([x1 x2 x3],[x4 x5 x6]);
+% % Initial state set
+% LB = [x1;x2;x3;x4;x5;x6;x7;x8;x9] - 0.00001;
+% UB = [x1;x2;x3;x4;x5;x6;x7;x8;x9] + 0.00001;
+% init_set = Star(LB,UB);
+% % Input set (COC)
+% lb = 0;
+% ub = 0;
+% Up = Star(lb,ub);
+% minIdx = 1;
+
 % Ownship
-x1 = 25000; x2 = 10234; x3 = 0.3;
+x1 = 10000; x2 = 5234; x3 = 0.7;
 % Intruder
 x4 = 10030; x5 = 3450; x6 = 0.7;
 % "Environment"
@@ -100,6 +116,7 @@ for k=times-controlPeriod
     Unn = Unn.concatenate(Unn45);
     % Compute NN outputs
     yNN = reachAcasXu(minIdx,Unn,acasxuNNs);
+    acasout(k*5) = yNN;
     % Compute advisory command
     minIdx = getMinIndexes(yNN);
     Uown = advisoryACAS(minIdx);
@@ -116,8 +133,8 @@ Star.plotBoxes_2D(allReach(1),4,5,'b');
 Star.plotBoxes_2D_noFill(allReach,1,2,'r');
 Star.plotBoxes_2D_noFill(allReach,4,5,'b');
 grid;
-xlabel('X Position (m)');
-ylabel('Y position (m)');
+xlabel('X Position (ft)');
+ylabel('Y position (ft)');
 legend('Ownship','Intruder')
 title('AcasXu Trajectories');
 % Plot distance
@@ -139,9 +156,9 @@ if ~exist('../data_reach','dir')
     mkdir('../data_reach')
 end
 
-saveas(f1,'../data_reach/exp1_trajectories','png');
-saveas(f2,'../data_reach/exp1_distance','png');
-save('../data_reach/exp1reach.mat', 'allReach','LB','UB');
+saveas(f1,'../data_reach/exp2_trajectories','png');
+saveas(f2,'../data_reach/exp2_distance','png');
+save('../data_reach/exp2reach.mat', 'allReach','LB','UB');
 
 
 
