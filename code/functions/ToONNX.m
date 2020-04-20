@@ -59,4 +59,4 @@ net = assembleNetwork(newlgraph);
 % deepNetworkDesigner % Opens visualizer for Series Network
 
 %% Convert to ONNX
-exportONNXNetwork(net,string(outpath))
+exportONNXNetwork(net,string(outpath),'OpsetVersion',8)
