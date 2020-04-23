@@ -2,7 +2,7 @@
 % There are 2 main components required:
 % - Dubins plant x2 (ownship and intruder)
 % - AcasXu networks x5 (choose based on t=0 and previous advisory)
-
+clc;clear;close all;
 %% Load components
 
 % Plant dynamics
@@ -66,14 +66,14 @@ Unn45 = Star([0.142727;0.142727],[0.142727;0.142727]);
 % minIdx = 1;
 
 % Ownship
-x1 = 10000; x2 = 5234; x3 = 0.7;
+x1 = 10000; x2 = 5234; x3 = 0.2;
 % Intruder
 x4 = 10030; x5 = 3450; x6 = 0.7;
 % "Environment"
 [x7, x8, x9] = environment([x1 x2 x3],[x4 x5 x6]);
 % Initial state set
-LB = [x1;x2;x3;x4;x5;x6;x7;x8;x9] - 0.00001;
-UB = [x1;x2;x3;x4;x5;x6;x7;x8;x9] + 0.00001;
+LB = [x1;x2;x3;x4;x5;x6;x7;x8;x9] - 0.0001;
+UB = [x1;x2;x3;x4;x5;x6;x7;x8;x9] + 0.0001;
 init_set = Star(LB,UB);
 % Input set (COC)
 lb = 0;
@@ -101,10 +101,11 @@ minIdx = 1;
 % % End cycle
 
 %% Reachability analysis (Multiple steps)
-allReach = [];
 tf = 10; % Final time (seconds)
 times = 0:controlPeriod:tf+controlPeriod;
-for k=times-controlPeriod
+allReach = [];
+acasout = cell(1,length(times));
+for k=times(1:end-1)
     % First reachability step
     init_set =  plant.stepReachStar(init_set,Up);
     allReach = [allReach init_set];
@@ -116,7 +117,7 @@ for k=times-controlPeriod
     Unn = Unn.concatenate(Unn45);
     % Compute NN outputs
     yNN = reachAcasXu(minIdx,Unn,acasxuNNs);
-    acasout(k*5) = yNN;
+    acasout{int64(k*5+1)}= yNN;
     % Compute advisory command
     minIdx = getMinIndexes(yNN);
     Uown = advisoryACAS(minIdx);
@@ -139,7 +140,9 @@ legend('Ownship','Intruder')
 title('AcasXu Trajectories');
 % Plot distance
 pdSet = [];
-for i=1:length(times)
+timeSet = [];
+distSet = [];
+for i=1:length(times)-1
     X = Star(times(i),times(i)+1);
     timeSet= [timeSet X];
     Y = allReach(i).affineMap([0 0 0 0 0 0 1 0 0],[]);
@@ -156,9 +159,9 @@ if ~exist('../data_reach','dir')
     mkdir('../data_reach')
 end
 
-saveas(f1,'../data_reach/exp2_trajectories','png');
-saveas(f2,'../data_reach/exp2_distance','png');
-save('../data_reach/exp2reach.mat', 'allReach','LB','UB');
+saveas(f1,'../data_reach/exp1_trajectories','png');
+saveas(f2,'../data_reach/exp1_distance','png');
+save('../data_reach/exp1reach.mat', 'allReach','LB','UB');
 
 
 
@@ -166,10 +169,7 @@ save('../data_reach/exp2reach.mat', 'allReach','LB','UB');
 % Get min index for AcasXu networks (advisory command)
 function idxs = getMinIndexes(star_set)
     if length(star_set) > 1
-        X = star_set(1);
-        for i=2:length(star_set)
-            X = X.merge_stars(star_set(i),1,'parallel');
-        end
+        X = Star.merge_stars(star_set,1,'parallel');
     else
         X = star_set;
     end
@@ -192,7 +192,7 @@ function y = advisoryACAS(r)
         y = deg2rad(-1.5);
     elseif r == 4
         y = deg2rad(3.0);
-    elseif r == 0
+    elseif r == 5
         y = deg2rad(-3.0);
     end
 end
@@ -206,7 +206,7 @@ function y = reachAcasXu(advise,Unn,acasNNs)
         y = acasNNs.n31.reach(Unn,'exact-star');
     elseif advise == 4
         y = acasNNs.n41.reach(Unn,'exact-star');
-    elseif advise == 0
+    elseif advise == 5
         y = acasNNs.n51.reach(Unn,'exact-star');
     end
 end
