@@ -1,4 +1,5 @@
 %% Run multiple scenarios using NNV reachability analysis
+% Compare both dynamical functions for fater executions
 clc;clear;close all;
 % --- Setup scenarios ---
 lb1 = [10000; 5234; 0.2; 10030; 3450; 0.7; 17783; -1.7540; 0.4900];
@@ -11,16 +12,19 @@ init_set2 = Star(lb2,up2);
 init_set = [init_set1 init_set2];
 m = size(init_set,1);
 %% Simulate all
-AllSets = cell(1,2*m);
-timing = cell(1,2*m);
-for i=2:m
+SetsO = cell(1,m);
+timingO = cell(1,m);
+Sets2D = cell(1,m);
+timing2D = cell(1,m);
+
+parfor i=1:m
     disp('     Scenario ' + string(i));
     disp('-------------------------');
     t = tic;
-    AllSets{i} = SetSimulationNNCS(init_set(i),1,1,'exact-star');
-    timing{i} = toc(t);
+    SetsO{i} = SetSimulationNNCS(init_set(i),1,1,'approx-star');
+    timingO{i} = toc(t);
     t = tic;
-    AllSets{m+i} = SetSimulationNNCS(init_set(i),1,1,'approx-star');
-    timing{m+1} = toc(t);
+    Sets2D{i} = ReachACASXuNNCS(init_set(i),1,1,'approx-star');
+    timing2D{i} = toc(t);
     disp(' ');
 end

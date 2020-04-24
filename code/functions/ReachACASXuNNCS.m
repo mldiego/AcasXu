@@ -1,4 +1,4 @@
-function [allReach] = SetSimulationNNCS(init_set, minIdx,tf,reachMethod)
+function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
 %% Reachability analysis of the closedLoop system of AcasXu with Dubins model
 % We use the original 5 NNs corresponding to the vertical time = 0
 % 
@@ -21,7 +21,7 @@ function [allReach] = SetSimulationNNCS(init_set, minIdx,tf,reachMethod)
     controlPeriod = 0.2;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
-    plant = NonLinearODE(9,1,@combinedDub,reachStep,controlPeriod,outputMat);
+    plant = NonLinearODE(9,1,@dynamics2D,reachStep,controlPeriod,outputMat);
 
     % Controllers
     acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
