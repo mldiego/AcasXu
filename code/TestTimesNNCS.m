@@ -13,7 +13,7 @@ init_set = Star(lb2,up2);
 % init_set = [init_set1 init_set2];
 % m = size(init_set,1);
 %% Simulate all
-tf = [0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8];
+tf = [0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4];
 m = length(tf);
 % AllTestSets = cell(4,m);
 % for i=1:m
@@ -32,10 +32,12 @@ parfor i=1:m
     disp('     Scenario ' + string(i));
     disp('-------------------------');
     t = tic;
-    ExactSets{i} = SetSimulationNNCS(init_set,1,tf(i),'exact-star');
-    ExactTimes{i} = toc(t);
+    ExactSets{i} = ReachACASXuNNCS(init_set,1,tf(i),'exact-star');
+    ExactTimes(i) = toc(t);
     t = tic;
-    ApproxSets{i} = SetSimulationNNCS(init_set,1,tf(i),'approx-star');
-    ApproxTimes{i} = toc(t);
+    ApproxSets{i} = ReachACASXuNNCS(init_set,1,tf(i),'approx-star');
+    ApproxTimes(i) = toc(t);
     disp(' ');
 end
+
+save('../data_reach/comparison/TestTimes.mat');

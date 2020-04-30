@@ -24,12 +24,12 @@ parfor i=1:m
     disp('     Scenario ' + string(i));
     disp('-------------------------');
     t = tic;
-    SetsO{i} = SetSimulationNNCS(init_set(i),1,1.8,'approx-star');
+    SetsO{i} = SetSimulationNNCS(init_set(i),1,2,'approx-star');
     timingO{i} = toc(t);
     t = tic;
-    Sets2D{i} = ReachACASXuNNCS(init_set(i),1,1.8,'approx-star');
+    Sets2D{i} = ReachACASXuNNCS(init_set(i),1,2,'approx-star');
     timing2D{i} = toc(t);
     disp(' ');
 end
 
-% save('../data_reach/comparison/TestSets_dynamics');
+save('../data_reach/comparison/TestSets_dynamics');
