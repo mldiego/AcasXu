@@ -10,7 +10,7 @@ reachStep = 0.01;
 controlPeriod = 0.2;
 outputMat = eye(9);
 outputMat = outputMat(7:9,:);
-plant = NonLinearODE(9,1,@combinedDub,reachStep,controlPeriod,outputMat);
+plant = NonLinearODE(9,1,@dynamics2D,reachStep,controlPeriod,outputMat);
 
 % Controllers
 acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');

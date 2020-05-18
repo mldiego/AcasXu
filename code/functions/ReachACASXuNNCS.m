@@ -6,19 +6,22 @@ function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
 %   1) init_set: initial state set for the plant (9 dimensional StarSet)
 %   2) minIdx: previous advisory (index) of the ACASXu NNs
 %   3) tf: final time for the set simulations (seconds)
+%   4) reachMethod: reachability method for the neural networks 
+%                  (exact-star or approx-star)
 % --- OUTPUT ---
-%   1) allReach: all reachable sets of the plant states  during the set simulation
+%   1) allReach: all reachable sets of the plant states during the set
+%   simulation and summary of the reach computation (splits, advisories...)
 %
 % --- EXAMPLE ---
 %   lb  = [x1;x2;x3;x4;x5;x6;x7;x8;x9];         (lower bound vector)
 %   ub = [X1;X2;X3;X4;X5;X6;X7;X8;X9];   (upper bound vector)
-%   allReach = SetSimulationNNCS(Star(lb,ub), 1, 5);
+%   allReach = ReachACASXuNNCS(Star(lb,ub), 1, 5, 'approx-star');
 
     %% Load components
 
     % Plant dynamics
-    reachStep = 0.01;
-    controlPeriod = 0.2;
+    reachStep = 0.02;
+    controlPeriod = 1;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
     plant = NonLinearODE(9,1,@dynamics2D,reachStep,controlPeriod,outputMat);
@@ -38,8 +41,15 @@ function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
     %% Reachability analysis (Multiple steps)
     Up = advisoryACAS(minIdx);
     times = 0:controlPeriod:tf+controlPeriod;
+    % Initialize variables
+    allReach.init_set = cell(1,length(times));
+    allReach.Ro = cell(1,length(times));
+    allReach.Unn = cell(1,length(times));
+    allReach.yNN = cell(1,length(times));
+    allReach.minIdx = cell(1,length(times));
+    allReach.Up = cell(1,length(times));
     % Start reachability loop
-    for k=times(1:end-1)
+    for k=1:length(times)-1
         % First reachability step
         init_set = plantReach(plant, init_set, Up);
         % Output set
@@ -52,9 +62,15 @@ function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
         minIdx = getMinIndexes(yNN);
         Up = advisoryACAS(minIdx);
         % End cycle
+        allReach.init_set{k} = init_set;
+        allReach.Ro{k} = Ro;
+        allReach.Unn{k} = Unn;
+        allReach.yNN{k} = yNN;
+        allReach.minIdx{k} = minIdx;
+        allReach.Up{k} = Up;
     end
 
-    allReach = plant.intermediate_reachSet;
+    allReach.int_reachSet = plant.intermediate_reachSet;
     %% Helper functions (simplify main code)
     % Compute state sets for the plant (all possible combs)
     function stateSet = plantReach(plant, init_set, Up)
@@ -66,10 +82,26 @@ function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
         end    
     end
 % Compute plant outputs
-    function Rout = PlantOutSet(init_set,outputMat)
+    function Routf = PlantOutSet(init_set,outputMat)
         Rout = [];
         for o=1:length(init_set)
             Rout =[Rout init_set(o).affineMap(outputMat,[])];
+        end
+        % Limit ranges in angles
+        Routf = [];
+        for oi=1:length(Rout)
+%           % Get correct ranges for inputs 2 and 3 (theta and psi)
+            theta = limitAngleSet(Rout(oi).affineMap([0 1 0],[]));
+            psi = limitAngleSet(Rout(oi).affineMap([0 0 1],[]));
+            % Create new output sets based on correct input ranges
+            [mdis,Mdis] = Rout(oi).getRange(1);
+            for ko=1:length(theta)
+                [mth,Mth] = theta.getRanges;
+                for kp=1:length(psi)
+                    [mps,Mps] = psi.getRanges;
+                    Routf = [Routf Star([mdis;mth;mps],[Mdis;Mth;Mps])];
+                end
+            end                  
         end
     end
 % Normalize inputs
