@@ -25,10 +25,17 @@ for i=1:n
         lgraph = addLayers(lgraph,layer);
 %         disp('Linear layer')
     elseif strcmp(a(1),"tansig") || strcmp(a(1),"tanh")
-%         layer = [fullyConnectedLayer(size(W{i},1),'Name','Operation_'+string(i)) 
-%         tanhLayer('Name','tanh_'+string(i))];
-        layer = [fullyConnectedLayer(size(W{i},1),'Name','Operation_'+string(i)) 
-        nnet.keras.layer.TanhLayer('tanh_'+string(i))];
+        try
+            layer = [fullyConnectedLayer(size(W{i},1),'Name','Operation_'+string(i)) 
+            tanhLayer('Name','tanh_'+string(i))];
+        catch
+            try
+                layer = [fullyConnectedLayer(size(W{i},1),'Name','Operation_'+string(i)) 
+                nnet.keras.layer.TanhLayer('tanh_'+string(i))];
+            catch
+                error('Unknown tanh layer');
+            end
+        end
         lgraph = addLayers(lgraph,layer);
     elseif strcmp(a(1),"sigmoid") || strcmp(a(1),"logsig")
         layer = [fullyConnectedLayer(size(W{i},1),'Name','Operation_'+string(i)) 
