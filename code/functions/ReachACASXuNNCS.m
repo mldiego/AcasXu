@@ -20,11 +20,11 @@ function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
     %% Load components
 
     % Plant dynamics
-    reachStep = 0.02;
+    reachStep = 0.1;
     controlPeriod = 1;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
-    plant = NonLinearODE(9,1,@dynamics2D,reachStep,controlPeriod,outputMat);
+    plant = NonLinearODE(9,1,@dynamics2D_dt_eps,reachStep,controlPeriod,outputMat);
 
     % Controllers
     acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');

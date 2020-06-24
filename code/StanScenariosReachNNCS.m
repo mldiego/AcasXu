@@ -91,7 +91,7 @@ init_set6 = Star(lb6,up6);
 Init_Set4 = [init_set1 init_set2 init_set3 init_set4 init_set5 init_set6];
 
 % Number of simulations
-init_set = [Init_Set1 Init_Set2];% Init_Set3]; % Init_Set4];
+init_set = [Init_Set1 Init_Set2 Init_Set3];% Init_Set4];
 m = size(init_set,2);
 %% Simulate all
 Experiments = cell(1,m);
@@ -102,7 +102,7 @@ parfor i=1:m
     disp('     Scenario ' + string(i));
     disp('-------------------------');
     t = tic;
-    Experiments{i} = ReachACASXuNNCS(init_set(i),1,6,'approx-star');
+    Experiments{i} = ReachACASXuNNCS(init_set(i),1,4,'approx-star');
     timing{i} = toc(t);
     disp(' ');
 end
@@ -130,17 +130,17 @@ grid;
 title('ACAS Xu aircraft set trajectories');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
-% % Scenarios 3
-% f3 = figure;
-% Star.plotBoxes_2D_noFill(Experiments{13}.int_reachSet,4,5,'k')
-% for i=13:18
-%     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i-12));
-% end
-% grid;
-% title('ACAS Xu aircraft set trajectories');
-% xlabel('X position (ft)');
-% ylabel('Y position (ft)');
-% % Scenarios 4
+% Scenarios 3
+f3 = figure;
+Star.plotBoxes_2D_noFill(Experiments{13}.int_reachSet,4,5,'k')
+for i=13:18
+    Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i-12));
+end
+grid;
+title('ACAS Xu aircraft set trajectories');
+xlabel('X position (ft)');
+ylabel('Y position (ft)');
+% Scenarios 4
 % f4 = figure;
 % Star.plotBoxes_2D_noFill(Experiments{19}.int_reachSet,4,5,'k')
 % for i=19:24
@@ -151,11 +151,13 @@ ylabel('Y position (ft)');
 % xlabel('X position (ft)');
 % ylabel('Y position (ft)');
 % Save resutls
-% if ~exist('../data_reach','dir')
-%     mkdir('../data_reach')
-% end
-% saveas(f1,'../data_reach/StanSets25000.png');
-% saveas(f2,'../data_reach/StanSets15000.png');
-% save('../data_reach/StanSets','Experiments','timing','init_set');
+if ~exist('../data_reach','dir')
+    mkdir('../data_reach')
+end
+saveas(f1,'../data_reach/StanSets25000.png');
+saveas(f2,'../data_reach/StanSets15000.png');
+saveas(f3,'../data_reach/StanSets10000.png');
+% saveas(f4,'../data_reach/StanSets5000.png');
+save('../data_reach/StanSets','Experiments','timing','init_set');
 
 

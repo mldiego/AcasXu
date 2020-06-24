@@ -123,12 +123,13 @@ title('ACAS Xu aircraft set trajectories');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
 
-% % Save resutls
-% if ~exist('../data_reach','dir')
-%     mkdir('../data_reach')
-% end
-% saveas(f1,'../data_reach/Asets25000.png');
-% saveas(f2,'../data_reach/Asets15000.png');
-% save('../data_reach/ASets','Experiments','timing','init_set');
+% Save resutls
+if ~exist('../data_reach','dir')
+    mkdir('../data_reach')
+end
+saveas(f1,'../data_reach/Asets25000.png');
+saveas(f2,'../data_reach/Asets15000.png');
+saveas(f3,'../data_reach/Asets35000.png');
+save('../data_reach/ASets','Experiments','timing','init_set');
 
 

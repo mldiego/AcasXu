@@ -328,8 +328,8 @@ function compareSimulations(own_init, int_init, time, sn)
     xlabel('X Position (ft)');
     ylabel('Y Position (ft)');
     legend('Env','dyn2D','dyn2d_dt','dyn2d_dt_eps','intruder');
-%     saveas(f,['../data_sim/compareSims/ownshipTrajectory' num2str(sn)],'png'); % Save Plot
-%     save(['../data_sim/compareSims/dataCP' num2str(sn)],'data1','data2','data3'); % Save simulation data
+    saveas(f,['../data_sim/compareSims/ownshipTrajectory' num2str(sn)],'png'); % Save Plot
+    save(['../data_sim/compareSims/dataCP' num2str(sn)],'data1','data2','data3'); % Save simulation data
 
 % % Check if any simulation has violated the safety property (distance < 500ft)
 % if any(data1(:,7) <= 500)

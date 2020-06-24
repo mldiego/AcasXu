@@ -24,11 +24,11 @@ function [allReach] = SetSimulationNNCS(init_set, minIdx,tf,reachMethod)
     plant = NonLinearODE(9,1,@combinedDub,reachStep,controlPeriod,outputMat);
 
     % Controllers
-    acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
-    acasxu21 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_2_1_batch_2000.mat');
-    acasxu31 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_3_1_batch_2000.mat');
-    acasxu41 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_4_1_batch_2000.mat');
-    acasxu51 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_5_1_batch_2000.mat');
+    acasxu11 = LoadAcasXu('../../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
+    acasxu21 = LoadAcasXu('../../networks/nnv_format/ACASXU_run2a_2_1_batch_2000.mat');
+    acasxu31 = LoadAcasXu('../../networks/nnv_format/ACASXU_run2a_3_1_batch_2000.mat');
+    acasxu41 = LoadAcasXu('../../networks/nnv_format/ACASXU_run2a_4_1_batch_2000.mat');
+    acasxu51 = LoadAcasXu('../../networks/nnv_format/ACASXU_run2a_5_1_batch_2000.mat');
     acasxuNNs.n11 = acasxu11;
     acasxuNNs.n21 = acasxu21;
     acasxuNNs.n31 = acasxu31;
