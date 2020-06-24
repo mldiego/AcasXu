@@ -36,6 +36,9 @@ function compareSimulations(own_init, int_init, time, sn)
     intruder = NonLinearODE(3,1,@dubindynamics, tr, tc, outC);
     outCp = [0,0,0,0,0,0,1,0,0;0,0,0,0,0,0,0,1,0;0,0,0,0,0,0,0,0,1]; % Output matrix (distance,theta,head_diff)
     comb = NonLinearODE(9,1,@combinedDub, tr, tc, outCp);
+    dyn2D = NonLinearODE(9,1,@dynamics2D, tr, tc, outCp);
+    dyn2D_dt = NonLinearODE(9,1,@dynamics2D_dt,tr,tc,outCp);
+    dyn2D_dt_eps = NonLinearODE(9,1,@dynamics2D_dt_eps,tr,tc,outCp);
     % Controllers (1)
     acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
     acasxu21 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_2_1_batch_2000.mat');
@@ -61,6 +64,7 @@ function compareSimulations(own_init, int_init, time, sn)
     int0 = int_init;
     
     % ------------------ Simulation 1 --------------------
+    % Two aircraft + environment simulation
     tic;
     disp('Simulation 1');
     % Setup scenario
@@ -114,36 +118,50 @@ function compareSimulations(own_init, int_init, time, sn)
     tic;
     disp('Simulation 2');
     % Setup the scenario
-    own_init = own0;
-    int_init = int0;
+    [a,b,c] = environment(own0,int0); 
+    comb_init = [own0; int0; a; b; c];
     adv_own = 0; % Initial advisory
-    data2 = zeros(length(time)-1,38); % Memory allocation
+    data2 = zeros(length(time)-1,21); % Memory allocation
 
     % Begin simulation
     for i=1:length(time)-1
-        prev_adv = adv_own;
+    prev_adv = adv_own;
         % plants
-        [~, yo] = ownship.evaluate([time(i) time(i+1)], own_init, adv_own);
-        own_init = yo(end,:)'; 
-        [~, yi] = intruder.evaluate([time(i) time(i+1)], int_init, adv_int);
-        int_init = yi(end,:)';
-        % Compute inputs of NN
-        [u1,u2,u3] = environment(own_init,int_init);
+         [~, yp] = dyn2D.evaluate([time(i) time(i+1)], comb_init, adv_own);
+        comb_init = yp(end,:)';
+        % Compute inputs
+        ycp =  outCp*comb_init;
+        % Computing u1 and u2 are key steps in reachability analysis
+        u1 = ycp(1); % Except for sqrt, everything else could be done with AffineMap
+        u2 = set_angleRange(ycp(2)); % atan2?
+        u3 = set_angleRange(ycp(3)); % All ready for reachability analysis
         % Normalize inputs
-        uN =  [u1 u2 u3 u4 u5];
+        uN = [u1 u2 u3 u4 u5];
         uNN = uN - scale_mean;
         uNN = uNN./scale_range;
         uNN = uNN';
         % NN controller
-        % (2) Execute both switch NNs    
-        yNNs = swnet(prev_adv);
-        yNN = awnet([uNN;yNNs]); % Same thing, not sure the reason tho
+        % 4) Compute outputs of NN controller
+        if prev_adv == 0
+            yNN = acasxu11.evaluate(uNN);
+        elseif prev_adv == deg2rad(1.5)
+            yNN = acasxu21.evaluate(uNN);
+        elseif prev_adv == deg2rad(-1.5)
+            yNN = acasxu31.evaluate(uNN);
+        elseif prev_adv == deg2rad(3.0)
+            yNN = acasxu41.evaluate(uNN);
+        elseif prev_adv == deg2rad(-3.0)
+            yNN = acasxu51.evaluate(uNN);
+        else
+            error('The previous advisory to the ownship is invalid')
+        end
         % Normalize outputs (Do not really need it, the order is the same)
-        adv_own = argmin_advise(yNN);
-        data = [own_init' int_init' uN prev_adv, adv_own, yNN'];
+        adv_own = argmin_advise(yNN); % Key step in reachability analysis
+        data = [comb_init' uN prev_adv, adv_own, yNN'];
         data2(i,:) = data; % store data
     end
     toc;
+    
     % --------------------- Simulation 3 --------------------
     tic;
     disp('Simulation 3')
@@ -151,7 +169,7 @@ function compareSimulations(own_init, int_init, time, sn)
     [a,b,c] = environment(own0,int0); 
     comb_init = [own0; int0; a; b; c];
     adv_own = 0; % Initial advisory
-    data3 = zeros(length(time)-1,41); % Memory allocation
+    data3 = zeros(length(time)-1,21); % Memory allocation
 
     % Begin simulation
     for i=1:length(time)-1
@@ -171,10 +189,19 @@ function compareSimulations(own_init, int_init, time, sn)
         uNN = uNN./scale_range;
         uNN = uNN';
         % NN controller
-        % (2) Execute both switch NNs
-        yNNs = swnet(prev_adv);
-        yNN = awnet([uNN;yNNs]); % Same thing, not sure the reason tho
-        % yNN = acasxu1.evaluate([yNNs; uNN]); % Not working for some reason
+        if prev_adv == 0
+            yNN = acasxu11.evaluate(uNN);
+        elseif prev_adv == deg2rad(1.5)
+            yNN = acasxu21.evaluate(uNN);
+        elseif prev_adv == deg2rad(-1.5)
+            yNN = acasxu31.evaluate(uNN);
+        elseif prev_adv == deg2rad(3.0)
+            yNN = acasxu41.evaluate(uNN);
+        elseif prev_adv == deg2rad(-3.0)
+            yNN = acasxu51.evaluate(uNN);
+        else
+            error('The previous advisory to the ownship is invalid')
+        end
         % Normalize outputs (Do not really need it, the order is the same)
         adv_own = argmin_advise(yNN); % Key step in reachability analysis
         data = [comb_init' uN prev_adv, adv_own, yNN'];
@@ -182,6 +209,102 @@ function compareSimulations(own_init, int_init, time, sn)
     end 
     toc;
 
+        % --------------------- Simulation 4 --------------------
+    tic;
+    disp('Simulation 4');
+    % Setup the scenario
+    [a,b,c] = environment(own0,int0); 
+    comb_init = [own0; int0; a; b; c];
+    adv_own = 0; % Initial advisory
+    data4 = zeros(length(time)-1,21); % Memory allocation
+
+    % Begin simulation
+    for i=1:length(time)-1
+    prev_adv = adv_own;
+        % plants
+         [~, yp] = dyn2D_dt.evaluate([time(i) time(i+1)], comb_init, adv_own);
+        comb_init = yp(end,:)';
+        % Compute inputs
+        ycp =  outCp*comb_init;
+        % Computing u1 and u2 are key steps in reachability analysis
+        u1 = ycp(1); % Except for sqrt, everything else could be done with AffineMap
+        u2 = set_angleRange(ycp(2)); % atan2?
+        u3 = set_angleRange(ycp(3)); % All ready for reachability analysis
+        % Normalize inputs
+        uN = [u1 u2 u3 u4 u5];
+        uNN = uN - scale_mean;
+        uNN = uNN./scale_range;
+        uNN = uNN';
+        % NN controller
+        % 4) Compute outputs of NN controller
+        if prev_adv == 0
+            yNN = acasxu11.evaluate(uNN);
+        elseif prev_adv == deg2rad(1.5)
+            yNN = acasxu21.evaluate(uNN);
+        elseif prev_adv == deg2rad(-1.5)
+            yNN = acasxu31.evaluate(uNN);
+        elseif prev_adv == deg2rad(3.0)
+            yNN = acasxu41.evaluate(uNN);
+        elseif prev_adv == deg2rad(-3.0)
+            yNN = acasxu51.evaluate(uNN);
+        else
+            error('The previous advisory to the ownship is invalid')
+        end
+        % Normalize outputs (Do not really need it, the order is the same)
+        adv_own = argmin_advise(yNN); % Key step in reachability analysis
+        data = [comb_init' uN prev_adv, adv_own, yNN'];
+        data4(i,:) = data; % store data
+    end
+    toc;
+    
+    % --------------------- Simulation 5 --------------------
+    
+    tic;
+    disp('Simulation 5');
+    % Setup the scenario
+    [a,b,c] = environment(own0,int0); 
+    comb_init = [own0; int0; a; b; c];
+    adv_own = 0; % Initial advisory
+    data5 = zeros(length(time)-1,21); % Memory allocation
+
+    % Begin simulation
+    for i=1:length(time)-1
+    prev_adv = adv_own;
+        % plants
+         [~, yp] = dyn2D_dt_eps.evaluate([time(i) time(i+1)], comb_init, adv_own);
+        comb_init = yp(end,:)';
+        % Compute inputs
+        ycp =  outCp*comb_init;
+        % Computing u1 and u2 are key steps in reachability analysis
+        u1 = ycp(1); % Except for sqrt, everything else could be done with AffineMap
+        u2 = set_angleRange(ycp(2)); % atan2?
+        u3 = set_angleRange(ycp(3)); % All ready for reachability analysis
+        % Normalize inputs
+        uN = [u1 u2 u3 u4 u5];
+        uNN = uN - scale_mean;
+        uNN = uNN./scale_range;
+        uNN = uNN';
+        % NN controller
+        % 4) Compute outputs of NN controller
+        if prev_adv == 0
+            yNN = acasxu11.evaluate(uNN);
+        elseif prev_adv == deg2rad(1.5)
+            yNN = acasxu21.evaluate(uNN);
+        elseif prev_adv == deg2rad(-1.5)
+            yNN = acasxu31.evaluate(uNN);
+        elseif prev_adv == deg2rad(3.0)
+            yNN = acasxu41.evaluate(uNN);
+        elseif prev_adv == deg2rad(-3.0)
+            yNN = acasxu51.evaluate(uNN);
+        else
+            error('The previous advisory to the ownship is invalid')
+        end
+        % Normalize outputs (Do not really need it, the order is the same)
+        adv_own = argmin_advise(yNN); % Key step in reachability analysis
+        data = [comb_init' uN prev_adv, adv_own, yNN'];
+        data5(i,:) = data; % store data
+    end
+    toc;
 
     %% Visualize simulations
 
@@ -195,38 +318,41 @@ function compareSimulations(own_init, int_init, time, sn)
     plot(data1(:,1),data1(:,2),'-r');
     hold on;
     plot(data2(:,1),data2(:,2),'ob');
-    plot(data3(:,1),data3(:,2), '--g');
+%     plot(data3(:,1),data3(:,2), '--g');
+    plot(data4(:,1),data4(:,2), '-dm');
+    plot(data5(:,1),data5(:,2), '--g');
     plot(data1(:,4),data1(:,5),'--k');
     scatter(data1(1,1),data1(1,2), 200, 'x', 'r', 'LineWidth',5);
     scatter(data1(1,4),data1(1,5), 200, 'x', 'k','LineWidth',5);
     title('Ownship Trajectories');
     xlabel('X Position (ft)');
     ylabel('Y Position (ft)');
-    legend('Simulation 1','Simulation 2','Simulation 3','intruder');
-    saveas(f,['../data_sim/compareSims/ownshipTrajectory' num2str(sn)],'png'); % Save Plot
-    save(['../data_sim/compareSims/dataCP' num2str(sn)],'data1','data2','data3'); % Save simulation data
+    legend('Env','dyn2D','dyn2d_dt','dyn2d_dt_eps','intruder');
+%     saveas(f,['../data_sim/compareSims/ownshipTrajectory' num2str(sn)],'png'); % Save Plot
+%     save(['../data_sim/compareSims/dataCP' num2str(sn)],'data1','data2','data3'); % Save simulation data
 
-% Check if any simulation has violated the safety property (distance < 500ft)
-if any(data1(:,7) <= 500)
-    a = false;
-    warning('Simulation 1 violates the safety property. The minimum distance between the ownship and intruder is %f',min(data1(:,7))');
-else
-    a = true;
-end
-if any(data2(:,7) <= 500)
-    b = false;
-    warning('Simulation 2 violates the safety property. The minimum distance between the ownship and intruder is %f',min(data2(:,7))');
-else
-    b = true;
-end
-if any(data3(:,7) <= 500)
-    c = false;
-    warning('Simulation 3 violates the safety property. The minimum distance between the ownship and intruder is %f',min(data3(:,7)));
-else
-    c = true;
-end
-
-if all([a b c] == true)
-    disp('All simulations satisfy the safety property')
+% % Check if any simulation has violated the safety property (distance < 500ft)
+% if any(data1(:,7) <= 500)
+%     a = false;
+%     warning('Simulation 1 violates the safety property. The minimum distance between the ownship and intruder is %f',min(data1(:,7))');
+% else
+%     a = true;
+% end
+% if any(data2(:,7) <= 500)
+%     b = false;
+%     warning('Simulation 2 violates the safety property. The minimum distance between the ownship and intruder is %f',min(data2(:,7))');
+% else
+%     b = true;
+% end
+% if any(data3(:,7) <= 500)
+%     c = false;
+%     warning('Simulation 3 violates the safety property. The minimum distance between the ownship and intruder is %f',min(data3(:,7)));
+% else
+%     c = true;
+% end
+% 
+% % if all([a b c] == true)
+% if all([a c] == true)
+%     disp('All simulations satisfy the safety property')
 end
 

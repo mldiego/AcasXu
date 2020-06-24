@@ -20,11 +20,11 @@ timingO = cell(1,m);
 Sets2D = cell(1,m);
 timing2D = cell(1,m);
 
-parfor i=1:m
+for i=1:m
     disp('     Scenario ' + string(i));
     disp('-------------------------');
     t = tic;
-    SetsO{i} = SetSimulationNNCS(init_set(i),1,2,'approx-star');
+%     SetsO{i} = SetSimulationNNCS(init_set(i),1,2,'approx-star');
     timingO{i} = toc(t);
     t = tic;
     Sets2D{i} = ReachACASXuNNCS(init_set(i),1,2,'approx-star');
@@ -32,4 +32,4 @@ parfor i=1:m
     disp(' ');
 end
 
-save('../data_reach/comparison/TestSets_dynamics');
+% save('../data_reach/comparison/TestSets_dynamics');

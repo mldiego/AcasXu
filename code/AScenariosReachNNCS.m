@@ -77,11 +77,11 @@ Experiments = cell(1,m);
 timing = cell(1,m);
 
 % 6 cases at a time
-parfor i=13:m 
+parfor i=1:m 
     disp('     Scenario ' + string(i));
     disp('-------------------------');
     t = tic;
-    Experiments{i} = ReachACASXuNNCS(init_set(i),1,10,'approx-star');
+    Experiments{i} = ReachACASXuNNCS(init_set(i),1,2,'approx-star');
     timing{i} = toc(t);
     disp(' ');
 end
