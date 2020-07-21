@@ -1,4 +1,4 @@
-function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
+function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMethod,v_own, v_int)
 %% Reachability analysis of the closedLoop system of AcasXu with Dubins model
 % We use the original 5 NNs corresponding to the vertical time = 0
 % 
@@ -20,15 +20,15 @@ function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
     %% Load components
     
     % Plant dynamics
-    reachStep = 0.01;
+    reachStep = 0.005;
     controlPeriod = 1;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
-    plant = NonLinearODE(9,1,@dynamics2D_dt_eps,reachStep,controlPeriod,outputMat);
+    plant = NonLinearODE(9,1,test_point,reachStep,controlPeriod,outputMat);
     % Plant reach parameters
-    error = 0.05;
-    errorMat = error*ones(9,1);
-    plant.options.maxError = errorMat;
+%     error = 0.05;
+%     errorMat = error*ones(9,1);
+%     plant.options.maxError = errorMat;
     
     % Controllers
     acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
@@ -60,7 +60,7 @@ function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
         % Output set
         Ro = PlantOutSet(init_set, outputMat);
         % Normalize inputs
-        Unn = normalizeInputsNN(Ro);
+        Unn = normalizeInputsNN(Ro,v_own,v_int);
         % Compute NN outputs
         yNN = reachAcasXu(minIdx,Unn,acasxuNNs,reachMethod);
         % Compute advisory command
@@ -110,11 +110,13 @@ function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
         end
     end
 % Normalize inputs
-    function UNN = normalizeInputsNN(Ro)
+    function UNN = normalizeInputsNN(Ro,v_own,v_int)
         % Constants
         scale_mean = [19791.0910000000,0,0,650,600];
         scale_range = [60261,6.28318530718000,6.28318530718000,1100,1200];
-        Unn45 = Star([0.142727;0.142727],[0.142727;0.142727]);
+        Unn45 = Star([v_own;v_own],[v_int;v_int]);
+        Unn45 = Unn45.affineMap(eye(2),-1*scale_mean(4:5)');
+        Unn45 = Unn45.affineMap(diag(1./scale_range(4:5)),[]);
         % normalize
         UNN = [];
         for i=1:length(Ro)

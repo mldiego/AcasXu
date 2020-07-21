@@ -37,7 +37,7 @@ int_init = [14750 0 1.65;
 m = size(own_init,1);
 % time for all simulations
 tf = 25; % Final time of simulation
-st = 0.1; % Step size
+st = 1; % Step size
 time = 0:st:tf; % Time to simulate
 % Simulate all
 for i=1:m

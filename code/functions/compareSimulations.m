@@ -1,10 +1,11 @@
-function compareSimulations(own_init, int_init, time, sn)
+function compareSimulations(own_init, int_init, time, sn, titles)
 %% Compare all equivalent simulations
 % Inputs:
 %    - own_init: ownship initial stayes (column vector)
 %    - int_init: intruder initial states (column vector)
 %    - time: time vector used for all simulations
 %    - sn: scenario number
+%    - titles: figure title
 %
 % Outputs:
 %    - Saves all trajectory data and a figure of the trajectories under the
@@ -322,14 +323,14 @@ function compareSimulations(own_init, int_init, time, sn)
     plot(data4(:,1),data4(:,2), '-dm');
     plot(data5(:,1),data5(:,2), '--g');
     plot(data1(:,4),data1(:,5),'--k');
-    scatter(data1(1,1),data1(1,2), 200, 'x', 'r', 'LineWidth',5);
-    scatter(data1(1,4),data1(1,5), 200, 'x', 'k','LineWidth',5);
-    title('Ownship Trajectories');
+    scatter(own0(1),own0(2), 200, 'x', 'r', 'LineWidth',5);
+    scatter(int0(1),int0(2), 200, 'x', 'k','LineWidth',5);
+    title(titles);
     xlabel('X Position (ft)');
     ylabel('Y Position (ft)');
-    legend('Env','dyn2D','dyn2d_dt','dyn2d_dt_eps','intruder');
-    saveas(f,['../data_sim/compareSims/ownshipTrajectory' num2str(sn)],'png'); % Save Plot
-    save(['../data_sim/compareSims/dataCP' num2str(sn)],'data1','data2','data3'); % Save simulation data
+    legend('Env','dyn2D','dyn2d_{dt}','dyn2d_{dt}_{eps}','intruder');
+    saveas(f,['../data_sim/compareSims/ownshipTrajectory' titles '_' num2str(sn)],'png'); % Save Plot
+    save(['../data_sim/compareSims/dataCP_' titles '_' num2str(sn)],'data1','data2','data3'); % Save simulation data
 
 % % Check if any simulation has violated the safety property (distance < 500ft)
 % if any(data1(:,7) <= 500)
