@@ -53,10 +53,12 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
     allReach.minIdx = cell(1,length(times));
     allReach.Up = cell(1,length(times));
     allReach.init_set{1} = init_set;
+    step_sets = [init_set];
     % Start reachability loop
     for k=1:length(times)-1
         % First reachability step
         init_set = plantReach(plant, init_set, Up);
+        step_sets = [step_sets init_set];
         % Output set
         Ro = PlantOutSet(init_set, outputMat);
         % Normalize inputs
@@ -74,7 +76,7 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
         allReach.minIdx{k} = minIdx;
         allReach.Up{k} = Up;
     end
-
+    allReach.step_sets = step_sets;
     allReach.int_reachSet = plant.intermediate_reachSet;
     %% Helper functions (simplify main code)
     % Compute state sets for the plant (all possible combs)
@@ -114,7 +116,7 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
         % Constants
         scale_mean = [19791.0910000000,0,0,650,600];
         scale_range = [60261,6.28318530718000,6.28318530718000,1100,1200];
-        Unn45 = Star([v_own;v_own],[v_int;v_int]);
+        Unn45 = Star([v_own;v_int],[v_own;v_int]);
         Unn45 = Unn45.affineMap(eye(2),-1*scale_mean(4:5)');
         Unn45 = Unn45.affineMap(diag(1./scale_range(4:5)),[]);
         % normalize

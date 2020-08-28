@@ -62,11 +62,11 @@ function data = sim_TestPoints(init_set, test_point, timeV, titles,v_own, v_int)
     
         % Plot ownship trajectories
     f = figure;
-    plot(data(:,1),data(:,2),'-or');
+    plot(data(:,1),data(:,2),'--r');
     hold on;
     plot(data(:,4),data(:,5),'--k');
-    scatter(init_set(1),init_set(2), 200, 'x', 'r', 'LineWidth',5);
-    scatter(init_set(4),init_set(5), 200, 'x', 'k','LineWidth',5);
+    scatter(init_set(1),init_set(2), 50, 'd', 'r', 'LineWidth',1);
+    scatter(init_set(4),init_set(5), 50, 'd', 'k','LineWidth',1);
     title(titles);
     xlabel('X Position (ft)');
     ylabel('Y Position (ft)');
