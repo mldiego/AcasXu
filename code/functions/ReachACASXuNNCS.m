@@ -24,7 +24,7 @@ function [allReach] = ReachACASXuNNCS(init_set, minIdx,tf,reachMethod)
     controlPeriod = 1;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
-    plant = NonLinearODE(9,1,@dynamics2D_dt_eps,reachStep,controlPeriod,outputMat);
+    plant = NonLinearODE(9,1,@dynamics2D_dt_eps_new,reachStep,controlPeriod,outputMat);
     % Plant reach parameters
     error = 0.05;
     errorMat = error*ones(9,1);

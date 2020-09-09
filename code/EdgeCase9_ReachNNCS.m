@@ -31,7 +31,7 @@ for i=1:6
     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i));
 end
 grid;
-title('Edge Case 3');
+% title('Edge Case 9');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
 % Scenario 2
@@ -43,16 +43,16 @@ for i=7:12
     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i-6));
 end
 grid;
-title('Edge Case 3');
+% title('Edge Case 9');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
 
 % Save resutls
-if ~exist('../data_reach','dir')
-    mkdir('../data_reach')
-end
-saveas(f1,'../data_reach/EdgeCase3_pos.png');
-saveas(f2,'../data_reach/EdgeCase3_neg.png');
-save('../data_reach/EdgeCase3','Experiments','timing','init_set');
+% if ~exist('../data_reach','dir')
+%     mkdir('../data_reach')
+% end
+% saveas(f1,'../data_reach/EdgeCase9_pos.png');
+% saveas(f2,'../data_reach/EdgeCase9_neg.png');
+% save('../data_reach/EdgeCase9','Experiments','timing','init_set');
 
 

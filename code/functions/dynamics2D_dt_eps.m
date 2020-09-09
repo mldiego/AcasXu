@@ -1,4 +1,4 @@
-function dx = dynamics2D_dt_eps(t,x,u)
+function dx = dynamics2D_dt_eps(x,u)
 %Combined dynamics of 2 Dubins airplanes
     v = 807; % ft/s
     % Ownship

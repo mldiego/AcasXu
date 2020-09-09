@@ -1,4 +1,4 @@
-function dx = dyns_tp9(t,x,u)
+function dx = dyns_tp9(x,u)
 %Combined dynamics of 2 Dubins airplanes
     v = 497.56; % ft/s
     % Ownship

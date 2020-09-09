@@ -6,11 +6,11 @@
 % as having 10 neurons instead of 5
 
 % Controllers
-acasxu11 = LoadAcasXu('../networks/ACASXU_run2a_1_1_batch_2000.mat');
-acasxu21 = LoadAcasXu('../networks/ACASXU_run2a_2_1_batch_2000.mat');
-acasxu31 = LoadAcasXu('../networks/ACASXU_run2a_3_1_batch_2000.mat');
-acasxu41 = LoadAcasXu('../networks/ACASXU_run2a_4_1_batch_2000.mat');
-acasxu51 = LoadAcasXu('../networks/ACASXU_run2a_5_1_batch_2000.mat');
+acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
+acasxu21 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_2_1_batch_2000.mat');
+acasxu31 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_3_1_batch_2000.mat');
+acasxu41 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_4_1_batch_2000.mat');
+acasxu51 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_5_1_batch_2000.mat');
 
 % Create big net (acasxu_big_1)
 net = feedforwardnet([255 255 255 255 255 255 30]);
@@ -162,8 +162,8 @@ net.b{8} = ones(25,1)*(20);
 % not be using are large positive numbers, whereas the ones we care about
 % are small (the actual outputs of the NNs)
 
-save('nn_new/acasxu1_afterswitch_net','net');
-net_to_mat('nn_new/acasxu1_afterswitch_net.mat','nn_new/acasxu1_afterswitch.mat')
+% save('nn_new/acasxu1_afterswitch_net','net');
+% net_to_mat('nn_new/acasxu1_afterswitch_net.mat','nn_new/acasxu1_afterswitch.mat')
 
 
 

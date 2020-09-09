@@ -39,9 +39,9 @@ grid;
 title('AcasXu Closed-Loop');
 pause(0.5);
 axis equal
-saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'png');
+% saveas(gcf,['../data_sim/m_1/exp' int2str(1)],'png');
 % Save simulation info
-save(['../data_sim/m_1/exp' int2str(1)]);
+% save(['../data_sim/m_1/exp' int2str(1)]);
 
 % Scenario 2
 x1_i = 0; x2_i = 25000; x3_i = -pi/2; 
@@ -66,9 +66,9 @@ grid;
 title('AcasXu Closed-Loop');
 pause(0.5);
 axis equal
-saveas(gcf,['../data_sim/m_1/exp' int2str(2)],'png');
+% saveas(gcf,['../data_sim/m_1/exp' int2str(2)],'png');
 % Save simulation info
-save(['../data_sim/m_1/exp' int2str(2)]);
+% save(['../data_sim/m_1/exp' int2str(2)]);
 
 % Scenario 3
 x1_i = 100; x2_i = 2000; x3_i = pi/2;
@@ -93,9 +93,9 @@ grid;
 title('AcasXu Closed-Loop');
 pause(0.5);
 axis equal
-saveas(gcf,['../data_sim/m_1/exp' int2str(3)],'png');
+% saveas(gcf,['../data_sim/m_1/exp' int2str(3)],'png');
 % Save simulation info
-save(['../data_sim/m_1/exp' int2str(3)]);
+% save(['../data_sim/m_1/exp' int2str(3)]);
 
 % Scenario 3
 x1_i = 1000; x2_i = 1500; x3_i = -pi/3;
@@ -120,9 +120,9 @@ grid;
 title('AcasXu Closed-Loop');
 pause(0.5);
 axis equal
-saveas(gcf,['../data_sim/m_1/exp' int2str(4)],'png');
+% saveas(gcf,['../data_sim/m_1/exp' int2str(4)],'png');
 % Save simulation info
-save(['../data_sim/m_1/exp' int2str(4)]);
+% save(['../data_sim/m_1/exp' int2str(4)]);
 
 pause;
 rng = 23; % Set random seed
@@ -153,9 +153,9 @@ for i=5:200
     pause(1);
     axis equal
     % Save figure
-    saveas(gcf,['../data_sim/m_1/exp' int2str(i)],'png');
+%     saveas(gcf,['../data_sim/m_1/exp' int2str(i)],'png');
     % Save simulation info
-    save(['../data_sim/m_1/exp' int2str(i)]);
+%     save(['../data_sim/m_1/exp' int2str(i)]);
     if any(dist <= 500)
         warning('Safety property violated in simulation %f', i)
     end

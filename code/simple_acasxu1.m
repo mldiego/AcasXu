@@ -115,8 +115,8 @@ net.b{7}(16:20) = acasxu41.Layers(7).b;
 net.b{7}(21:25) = acasxu51.Layers(7).b;
 
 % This network is like simulating in parallel all the networks
-save('nn_new/simple_acasxu1_net','net');
-net_to_mat('nn_new/simple_acasxu1_net.mat','nn_new/simple_acasxu1.mat');
+% save('nn_new/simple_acasxu1_net','net');
+% net_to_mat('nn_new/simple_acasxu1_net.mat','nn_new/simple_acasxu1.mat');
 
 
 

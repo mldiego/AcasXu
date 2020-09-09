@@ -21,6 +21,7 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
     
     % Plant dynamics
     reachStep = 0.005;
+%     reachStep = 0.01;
     controlPeriod = 1;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
@@ -56,6 +57,7 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
     step_sets = [init_set];
     % Start reachability loop
     for k=1:length(times)-1
+        disp('........................');
         % First reachability step
         init_set = plantReach(plant, init_set, Up);
         step_sets = [step_sets init_set];

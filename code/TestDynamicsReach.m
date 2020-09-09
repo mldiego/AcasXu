@@ -1,5 +1,5 @@
 %% Run multiple scenarios using NNV reachability analysis
-% Compare both dynamical functions for fater executions
+% Compare both dynamical functions for faster executions
 clc;clear;close all;
 % --- Setup scenarios ---
 lb1 = [10000; 5234; 0.2; 10030; 3450; 0.7; 17783; -1.7674; 0.4900];
@@ -24,7 +24,7 @@ for i=1:m
     disp('     Scenario ' + string(i));
     disp('-------------------------');
     t = tic;
-%     SetsO{i} = SetSimulationNNCS(init_set(i),1,2,'approx-star');
+    SetsO{i} = SetSimulationNNCS(init_set(i),1,2,'approx-star');
     timingO{i} = toc(t);
     t = tic;
     Sets2D{i} = ReachACASXuNNCS(init_set(i),1,2,'approx-star');

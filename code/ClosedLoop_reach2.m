@@ -28,12 +28,11 @@ scale_mean = [19791.0910000000,0,0,650,600];
 scale_range = [60261,6.28318530718000,6.28318530718000,1100,1200];
 Unn45 = Star([0.142727;0.142727],[0.142727;0.142727]);
 
-%% Setup verification scenario
-% Experiment 1
+%% Experiment 2
 % Ownship
-x1 = 25000; x2 = 10234; x3 = 0.3;
+x1 = 10000; x2 = 5234; x3 = 0.2;
 % Intruder
-x4 = 10030; x5 = 3450; x6 = 0.7;
+x4 = 10030; x5 = 3450; x6 = 0.2;
 % "Environment"
 [x7, x8, x9] = environment([x1 x2 x3],[x4 x5 x6]);
 % Initial state set
@@ -74,6 +73,7 @@ end
 
 %% Plot results
 % Plot trajectories
+times = 0:reachStep:tf+reachStep;
 f1 = figure;
 Star.plotBoxes_2D(allReach(1),1,2,'r');
 hold on;
@@ -86,13 +86,13 @@ ylabel('Y position (ft)');
 legend('Ownship','Intruder')
 
 % Plot distance
-times = 0:reachStep:tf+reachStep;
 pdSet = [];
 timeSet = [];
 distSet = [];
 for i=1:length(times)-1
     X = Star(times(i),times(i)+1);
     timeSet= [timeSet X];
+%     Y = allReach(i).affineMap([0 0 0 0 0 0 1 0 0],[]);
     Y = plant.intermediate_reachSet(i).affineMap([0 0 0 0 0 0 1 0 0],[]);
     distSet = [distSet Y];
     pdSet = [pdSet X.concatenate(Y)];
@@ -101,15 +101,14 @@ f2 = figure;
 Star.plotBoxes_2D(pdSet,1,2,'r')
 ylabel('Distance (ft)');
 xlabel('Time (s)');
-% title('Distance to intruder');
 
 if ~exist('../data_reach','dir')
     mkdir('../data_reach')
 end
 
-saveas(f1,'../data_reach/exp1_trajectories','png');
-saveas(f2,'../data_reach/exp1_distance','png');
-save('../data_reach/exp1reach.mat', 'allReach','lb','ub');
+saveas(f1,'../data_reach/exp2_trajectories','png');
+saveas(f2,'../data_reach/exp2_distance','png');
+save('../data_reach/exp2reach.mat', 'allReach','lb','ub');
 
 
 

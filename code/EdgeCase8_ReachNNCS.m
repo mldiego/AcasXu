@@ -2,9 +2,9 @@
 % Execute multiple scenarios in parallel
 clc;clear;close all;
 % --- Setup scenarios ---
-Init_set = create_regions(4500,5500,70,180,100,1);
+init_set = create_regions(4500,5500,70,180,100,1);
 % Number of simulations
-m = size(Init_set,2);
+m = size(init_set,2);
 %% Simulate all
 Experiments = cell(1,m);
 timing = cell(1,m);
@@ -31,7 +31,7 @@ for i=1:6
     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i));
 end
 grid;
-title('Edge Case 3');
+% title('Edge Case 8');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
 % Scenario 2
@@ -43,7 +43,7 @@ for i=7:12
     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i-6));
 end
 grid;
-title('Edge Case 3');
+% title('Edge Case 8');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
 
@@ -51,8 +51,8 @@ ylabel('Y position (ft)');
 if ~exist('../data_reach','dir')
     mkdir('../data_reach')
 end
-saveas(f1,'../data_reach/EdgeCase3_pos.png');
-saveas(f2,'../data_reach/EdgeCase3_neg.png');
-save('../data_reach/EdgeCase3','Experiments','timing','init_set');
+% saveas(f1,'../data_reach/EdgeCase8_pos.png');
+% saveas(f2,'../data_reach/EdgeCase8_neg.png');
+% save('../data_reach/EdgeCase8','Experiments','timing','init_set');
 
 

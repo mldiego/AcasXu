@@ -98,7 +98,7 @@ Experiments = cell(1,m);
 timing = cell(1,m);
 
 % 6 scases at a time
-parfor i=13:m
+parfor i=1:m
     disp('     Scenario ' + string(i));
     disp('-------------------------');
     t = tic;
@@ -111,25 +111,25 @@ end
 % Colors for plots
 pc = ['r', 'b', 'g', 'y', 'c', 'm'];
 % Scenarios 1
-% f1 = figure;
-% Star.plotBoxes_2D_noFill(Experiments{1}.int_reachSet,4,5,'k')
-% for i=1:6
-%     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i));
-% end
-% grid;
-% title('ACAS Xu aircraft set trajectories');
-% xlabel('X position (ft)');
-% ylabel('Y position (ft)');
+f1 = figure;
+Star.plotBoxes_2D_noFill(Experiments{1}.int_reachSet,4,5,'k')
+for i=1:6
+    Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i));
+end
+grid;
+xlabel('X position (ft)');
+ylabel('Y position (ft)');
+
 % Scenarios 2
-% f2 = figure;
-% Star.plotBoxes_2D_noFill(Experiments{7}.int_reachSet,4,5,'k')
-% for i=7:12
-%     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i-6));
-% end
-% grid;
-% title('ACAS Xu aircraft set trajectories');
-% xlabel('X position (ft)');
-% ylabel('Y position (ft)');
+f2 = figure;
+Star.plotBoxes_2D_noFill(Experiments{7}.int_reachSet,4,5,'k')
+for i=7:12
+    Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i-6));
+end
+grid;
+xlabel('X position (ft)');
+ylabel('Y position (ft)');
+
 % Scenarios 3
 f3 = figure;
 Star.plotBoxes_2D_noFill(Experiments{13}.int_reachSet,4,5,'k')
@@ -137,7 +137,6 @@ for i=13:18
     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i-12));
 end
 grid;
-title('ACAS Xu aircraft set trajectories');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
 % Scenarios 4
@@ -151,13 +150,13 @@ ylabel('Y position (ft)');
 % xlabel('X position (ft)');
 % ylabel('Y position (ft)');
 % Save resutls
-% if ~exist('../data_reach','dir')
-%     mkdir('../data_reach')
-% end
-% saveas(f1,'../data_reach/StanSets25000.png');
-% saveas(f2,'../data_reach/StanSets15000.png');
-% saveas(f3,'../data_reach/StanSets10000.png');
+if ~exist('../data_reach','dir')
+    mkdir('../data_reach')
+end
+saveas(f1,'../data_reach/StanSets25000.png');
+saveas(f2,'../data_reach/StanSets15000.png');
+saveas(f3,'../data_reach/StanSets10000.png');
 % saveas(f4,'../data_reach/StanSets5000.png');
-% save('../data_reach/StanSets','Experiments','timing','init_set');
+save('../data_reach/StanSets','Experiments','timing','init_set');
 
 

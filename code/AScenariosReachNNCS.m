@@ -96,10 +96,9 @@ for i=1:6
     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i));
 end
 grid;
-title('ACAS Xu aircraft set trajectories');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
-% saveas(f1,'Asets25000.png');
+
 % Scenarios 2
 f2 = figure;
 Star.plotBoxes_2D_noFill(Experiments{7}.int_reachSet,4,5,'k')
@@ -107,10 +106,8 @@ for i=7:12
     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i-6));
 end
 grid;
-title('ACAS Xu aircraft set trajectories');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
-% saveas(f2,'Asets15000.png');
 
 % Scenarios 3
 f3 = figure;
@@ -119,7 +116,6 @@ for i=13:18
     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i-12));
 end
 grid;
-title('ACAS Xu aircraft set trajectories');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
 

@@ -1,4 +1,4 @@
-function dx = dubindynamics(t,x,u)
+function dx = dubindynamics(x,u)
 
 v = 807; % ft/s
 

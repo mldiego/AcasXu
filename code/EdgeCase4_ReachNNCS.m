@@ -38,7 +38,7 @@ for i=1:6
     Star.plotBoxes_2D_noFill(Experiments{i}.int_reachSet,1,2,pc(i));
 end
 grid;
-title('Edge Case 4');
+% title('Edge Case 4');
 xlabel('X position (ft)');
 ylabel('Y position (ft)');
 % Scenario 2

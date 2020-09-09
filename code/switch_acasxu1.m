@@ -31,5 +31,5 @@ w(:,1) = 1;
 net.IW{1} = w;
 net.b{1} = b;
 
-save('nn_new/switch_acasxu1_net','net');
-net_to_mat('nn_new/switch_acasxu1_net.mat','nn_new/switch_acasxu1.mat');
+% save('nn_new/switch_acasxu1_net','net');
+% net_to_mat('nn_new/switch_acasxu1_net.mat','nn_new/switch_acasxu1.mat');

@@ -43,4 +43,4 @@ out_sim(8).data = sim_TestPoints(init_dyn(8,:),@dyns_tp8,timeV,'TestPoint8',636.
 out_sim(9).data = sim_TestPoints(init_dyn(9,:),@dyns_tp9,timeV,'TestPoint9',497.56,60);
 % Test 10
 out_sim(10).data = sim_TestPoints(init_dyn(10,:),@dyns_tp10,timeV,'TestPoint10',600,600);
-save('../data_sim/testPoints.mat','out_sim');
+% save('../data_sim/testPoints.mat','out_sim');
