@@ -3,8 +3,20 @@ clc;clear;close all;
 %% --- Setup scenarios ---
 % Choose corners and random points from the edge cases regions
 % Initial states for each test point
+% init_dyn = [0 0 0 0 43736 -0.43 43736 pi/2 -0.43; % Test point 1
+%     0 0 0 -43736 0 0 43736 pi 0; % Test point 2
+%     0 0 0 -7071.1 -7071.1 0.49 10000 -(3*pi)/4 0.49; % Test point 3
+%     0 0 0 -30926 30926 -0.5418 43736 3*pi/4 -0.5418; % Test point 4
+%     0 0 0 7071.1 7071.1 -0.24 10000 pi/4 -0.24; % Test point 5
+%     0 0 0 0 -43736 0.62 43736 -pi/2 0.62; % Test point 6
+%     0 0 0 33474 -80814 0.78 87472 -3*pi/8 0.78; % Test point 7
+%     0 0 0 30926 -30926 0.76 43736 -pi/4 0.76; % Test point 8
+%     0 0 0 43736 0 0 43736 0 0; % Test point 9
+%     0 0 0 120000 0 pi 120000 0 pi; % Test point 10
+%     ];  
+% Change coordinates for scenario 2
 init_dyn = [0 0 0 0 43736 -0.43 43736 pi/2 -0.43; % Test point 1
-    0 0 0 -43736 0 0 43736 pi 0; % Test point 2
+    30000 40000 0.785398163397448 -926.020000000000 9073.98000000000 0.785398163397448 43735.9969142216 -3.14159265358979 0; % Test Point 2
     0 0 0 -7071.1 -7071.1 0.49 10000 -(3*pi)/4 0.49; % Test point 3
     0 0 0 -30926 30926 -0.5418 43736 3*pi/4 -0.5418; % Test point 4
     0 0 0 7071.1 7071.1 -0.24 10000 pi/4 -0.24; % Test point 5

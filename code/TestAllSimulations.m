@@ -2,7 +2,8 @@
 clc;clear;close all;
 % --- Setup scenarios ---
 % Initial states for ownship
-own_init = [1400 4300 0.5 ; 
+own_init = [0 0 pi/2;
+    1400 4300 0.5 ; 
     0 25000 -pi/2;
     500 25000 -pi/2;
     1400 4300 0.5;
@@ -18,7 +19,8 @@ own_init = [1400 4300 0.5 ;
     5000 -1000 3.05;
     5000 -500 3.05];
 % Initial states for intruder
-int_init = [14750 0 1.65; 
+int_init = [0 25000 -pi/2;
+    14750 0 1.65; 
     0 0 pi/2; 
     100 2000 pi/2;
     100 2000 pi/2;
@@ -40,9 +42,9 @@ tf = 25; % Final time of simulation
 st = 1; % Step size
 time = 0:st:tf; % Time to simulate
 % Simulate all
-for i=1:m
+for i=1:1
     disp('     Scenario ' + string(i));
     disp('-------------------------');
-    compareSimulations(own_init(i,:)',int_init(i,:)',time,i);
+    compareSimulations(own_init(i,:)',int_init(i,:)',time,i,'compareToStan');
     disp(' ');
 end

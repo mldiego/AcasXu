@@ -31,7 +31,7 @@ function compareSimulations(own_init, int_init, time, sn, titles)
     %% Section 1. Load all networks and dynamical models
     % Plant dynamics
     tr = 0.01; % reachability time step for plant
-    tc = 0.2; % control period of the plant
+    tc = 1; % control period of the plant
     outC = [1 0 0; 0 1 0; 0 0 1]; % Output matrix
     ownship = NonLinearODE(3,1,@dubindynamics, tr, tc, outC);
     intruder = NonLinearODE(3,1,@dubindynamics, tr, tc, outC);

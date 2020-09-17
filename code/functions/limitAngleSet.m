@@ -8,8 +8,16 @@ function [angSetout] = limitAngleSet(inputAngSet)
         error('Wrong input format. Input set must be a single Star set')
     end
     [a1,a2] = inputAngSet.getRanges;
-    a3 = set_angleRange(a1);
-    a4 = set_angleRange(a2);
+    if abs(a1) > (pi+1e10*eps)
+        a3 = set_angleRange(a1);
+    else
+        a3 = a1;
+    end
+    if abs(a2) > (pi+1e10*eps)
+        a4 = set_angleRange(a2);
+    else
+        a4 = a2;
+    end
     if a3 > a4
         'Means that we need to split the set into 2';
         angSetout = Star(a3,pi/2);
