@@ -1,4 +1,4 @@
-function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMethod,v_own, v_int)
+function [allReach] = reach_TestPointsb(init_set, test_point, minIdx,tf,reachMethod,v_own, v_int)
 %% Reachability analysis of the closedLoop system of AcasXu with Dubins model
 % We use the original 5 NNs corresponding to the vertical time = 0
 % 

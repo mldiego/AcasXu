@@ -40,13 +40,15 @@ init_dyn = [44884.9999999997,0,0,44857.4597464554,23163.4259001182,-0.4300000000
 %     ];
 % Number of test points
 m = size(init_dyn,1);
-tf = 25; % Currently saved data
-% tf = 10; % Final time of simulation
+% tf = 25; % Currently saved data
+tf = 10; % Final time of simulation
 st = 1; % Step size
 timeV = 0:st:tf; % Time to simulate
 output = struct('data',cell(1,10),'tT',cell(1,10));
 %% Simulate all
-parpool(6);
+[~, cores] = evalc('feature(''numcores'')');
+
+parpool(cores);
 parfor K = 1 : 10
     if K == 1
         % Test 1
