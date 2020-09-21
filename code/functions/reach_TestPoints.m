@@ -20,9 +20,9 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
     %% Load components
     
     % Plant dynamics
-    reachStep = 0.005;
+    reachStep = 0.05;
 %     reachStep = 0.01;
-    controlPeriod = 1;
+    controlPeriod = 2;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
     plant = NonLinearODE(9,1,test_point,reachStep,controlPeriod,outputMat);
@@ -57,10 +57,6 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
     step_sets = [init_set];
     % Start reachability loop
     for k=1:length(times)-1
-        disp('........................');
-        % First reachability step
-        init_set = plantReach(plant, init_set, Up);
-        step_sets = [step_sets init_set];
         % Output set
         Ro = PlantOutSet(init_set, outputMat);
         % Normalize inputs
@@ -70,6 +66,8 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
         % Compute advisory command
         minIdx = getMinIndexes(yNN);
         Up = advisoryACAS(minIdx);
+        % Reachability step plant
+        init_set = plantReach(plant, init_set, Up);
         % End cycle
         allReach.init_set{k+1} = init_set;
         allReach.Ro{k} = Ro;
@@ -77,6 +75,26 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
         allReach.yNN{k} = yNN;
         allReach.minIdx{k} = minIdx;
         allReach.Up{k} = Up;
+%         disp('........................');
+%         % First reachability step
+%         init_set = plantReach(plant, init_set, Up);
+%         step_sets = [step_sets init_set];
+%         % Output set
+%         Ro = PlantOutSet(init_set, outputMat);
+%         % Normalize inputs
+%         Unn = normalizeInputsNN(Ro,v_own,v_int);
+%         % Compute NN outputs
+%         yNN = reachAcasXu(minIdx,Unn,acasxuNNs,reachMethod);
+%         % Compute advisory command
+%         minIdx = getMinIndexes(yNN);
+%         Up = advisoryACAS(minIdx);
+%         % End cycle
+%         allReach.init_set{k+1} = init_set;
+%         allReach.Ro{k} = Ro;
+%         allReach.Unn{k} = Unn;
+%         allReach.yNN{k} = yNN;
+%         allReach.minIdx{k} = minIdx;
+%         allReach.Up{k} = Up;
     end
     allReach.step_sets = step_sets;
     allReach.int_reachSet = plant.intermediate_reachSet;

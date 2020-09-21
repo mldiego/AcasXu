@@ -20,7 +20,7 @@ m = size(init_dyn,3);
 % tf = 62; % Points 1,7,8 and 10
 tf = 4; % Final time of simulation
 % st = 1; % Step size
-st = 2;
+st = 1;
 timeV = 0:st:tf; % Time to simulate
 output = struct('data',cell(1,10),'tT',cell(1,10));
 %% Simulate all

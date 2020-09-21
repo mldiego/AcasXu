@@ -21,7 +21,7 @@ function [allReach] = reach_TestPointsb(init_set, test_point, minIdx,tf,reachMet
     
     % Plant dynamics
     reachStep = 0.05;
-    controlPeriod = 1;
+    controlPeriod = 2;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
     plant = NonLinearODE(9,1,test_point,reachStep,controlPeriod,outputMat);
@@ -56,10 +56,6 @@ function [allReach] = reach_TestPointsb(init_set, test_point, minIdx,tf,reachMet
     step_sets = [init_set];
     % Start reachability loop
     for k=1:length(times)-1
-        disp('........................');
-        % First reachability step
-        init_set = plantReach(plant, init_set, Up);
-        step_sets = [step_sets init_set];
         % Output set
         Ro = PlantOutSet(init_set, outputMat);
         % Normalize inputs
@@ -69,6 +65,8 @@ function [allReach] = reach_TestPointsb(init_set, test_point, minIdx,tf,reachMet
         % Compute advisory command
         minIdx = getMinIndexes(yNN);
         Up = advisoryACAS(minIdx);
+        % Reachability step plant
+        init_set = plantReach(plant, init_set, Up);
         % End cycle
         allReach.init_set{k+1} = init_set;
         allReach.Ro{k} = Ro;

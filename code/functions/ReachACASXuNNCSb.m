@@ -20,8 +20,8 @@ function [allReach] = ReachACASXuNNCSb(init_set, minIdx,tf,reachMethod)
     %% Load components
     
     % Plant dynamics
-    reachStep = 0.01;
-    controlPeriod = 1;
+    reachStep = 0.05;
+    controlPeriod = 2;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
     plant = NonLinearODE(9,1,@dynamics2D_dt_eps_new,reachStep,controlPeriod,outputMat);

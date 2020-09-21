@@ -17,9 +17,9 @@ clc;clear;close all;
 % Change coordinates for scenario 2
 init_dyn = [0 0 0 0 43736 -0.43 43736 pi/2 -0.43; % Test point 1
     30000 40000 0.785398163397448 -926.020000000000 9073.98000000000 0.785398163397448 43735.9969142216 -3.14159265358979 0; % Test Point 2
-    0 0 0 -7071.1 -7071.1 0.49 10000 -(3*pi)/4 0.49; % Test point 3
+    0 0 0 -30926 -30926 0.49 43736 -(3*pi)/4 0.49; % Test point 3
     0 0 0 -30926 30926 -0.5418 43736 3*pi/4 -0.5418; % Test point 4
-    0 0 0 7071.1 7071.1 -0.24 10000 pi/4 -0.24; % Test point 5
+    0 0 0 21213 21213 -0.24 10000 pi/4 -0.24; % Test point 5
     0 0 0 0 -43736 0.62 43736 -pi/2 0.62; % Test point 6
     0 0 0 33474 -80814 0.78 87472 -3*pi/8 0.78; % Test point 7
     0 0 0 30926 -30926 0.76 43736 -pi/4 0.76; % Test point 8
@@ -40,7 +40,7 @@ out_sim(1).data = sim_TestPoints(init_dyn(1,:),@dyns_tp1,timeV,'TestPoint1',955,
 % Test 2
 out_sim(2).data = sim_TestPoints(init_dyn(2,:),@dyns_tp2,timeV,'TestPoint2',463,900);
 % Test 3
-out_sim(3).data = sim_TestPoints(init_dyn(3,:),@dyns_tp3,timeV,'TestPoint3',61.57,150);
+out_sim(3).data = sim_TestPoints(init_dyn(3,:),@dyns_tp3,0:1:200,'TestPoint3',61.57,150);
 % Test 4
 out_sim(4).data = sim_TestPoints(init_dyn(4,:),@dyns_tp4,timeV,'TestPoint4',204.76,600);
 % Test 5

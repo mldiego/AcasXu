@@ -13,8 +13,8 @@ function data = sim_TestPoints(init_set, test_point, timeV, titles,v_own, v_int)
     scale_range = [60261,6.28318530718000,6.28318530718000,1100,1200];
     data = zeros(length(timeV)-1,21); % Memory allocation
     % Plant parameters
-    tr = 0.01; % reachability time step for plant
-    tc = 1; % control period of the plant
+    tr = 0.05; % reachability time step for plant
+    tc = 2; % control period of the plant
     outCp = [0,0,0,0,0,0,1,0,0;0,0,0,0,0,0,0,1,0;0,0,0,0,0,0,0,0,1]; % Output matrix (distance,theta,head_diff)
     plant= NonLinearODE(9,1,test_point, tr, tc, outCp);
     % Simulation Parameters
