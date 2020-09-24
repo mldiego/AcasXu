@@ -1,13 +1,7 @@
 %% Reachability analysis of all test points
 clc;clear;close all;
 %% --- Setup scenarios ---
-% Choose corners and random points from the edge cases regions
-% Initial states for each test point
-% x_own = [30005 40000 pi/4];
-% x_int = [-926.02 9073.98 pi/4];
-% [x7,x8,x9] = environment(x_own,x_int);
-% init_dyn = [x_own x_int x7 x8 x9]';
-% init_dyn = [36547.81;46547.81;pi/4;11801.9;21801.9;pi/4;34996;-pi;0];
+% Divide initial state into 2 sets along the x-axis
 init_dyn = [0,9260.00000000002,1.57079632679490,0,-25736,1.57079632679490,34995.9999999999,pi,0;
     -0.001,9260.00000000002,1.57079632679490,1.10218211923262e-12,-25736,1.57079632679490,34995.9999999999,3.14159265358979,0;
 ];
@@ -16,7 +10,6 @@ st = 1; % Initial advisory command
 output = struct('data',cell(1,2),'t',cell(1,2));
 %% Simulate Test Point 2
 delete(gcp('nocreate'))
-% [~, cores] = evalc('feature(''numcores'')');
 parpool(2);
 parfor K = 1:2
     if K==1

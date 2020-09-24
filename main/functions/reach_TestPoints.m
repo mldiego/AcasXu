@@ -4,10 +4,13 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
 % 
 % --- INPUTS ---
 %   1) init_set: initial state set for the plant (9 dimensional StarSet)
-%   2) minIdx: previous advisory (index) of the ACASXu NNs
-%   3) tf: final time for the set simulations (seconds)
-%   4) reachMethod: reachability method for the neural networks 
+%   2) test_point: dynamics function to corresponding test point case
+%   3) minIdx: previous advisory (index) of the ACASXu NNs
+%   4) tf: final time for the set simulations (seconds)
+%   5) reachMethod: reachability method for the neural networks 
 %                  (exact-star or approx-star)
+%   6) v_own: ownship velocity
+%   7) v_int: intruder velocity
 % --- OUTPUT ---
 %   1) allReach: all reachable sets of the plant states during the set
 %   simulation and summary of the reach computation (splits, advisories...)
@@ -15,21 +18,16 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
 % --- EXAMPLE ---
 %   lb  = [x1;x2;x3;x4;x5;x6;x7;x8;x9];  (lower bound vector)
 %   ub = [X1;X2;X3;X4;X5;X6;X7;X8;X9];   (upper bound vector)
-%   allReach = ReachACASXuNNCS(Star(lb,ub), 1, 5, 'approx-star');
+%   allReach = reach_TestPoints(Star(lb,ub), @dyns_tp8, 1, 10, 'approx-star',636.2,450);
 
     %% Load components
     
     % Plant dynamics
     reachStep = 0.05;
-%     reachStep = 0.01;
     controlPeriod = 2;
     outputMat = eye(9);
     outputMat = outputMat(7:9,:);
     plant = NonLinearODE(9,1,test_point,reachStep,controlPeriod,outputMat);
-    % Plant reach parameters
-%     error = 0.05;
-%     errorMat = error*ones(9,1);
-%     plant.options.maxError = errorMat;
     
     % Controllers
     acasxu11 = LoadAcasXu('../networks/nnv_format/ACASXU_run2a_1_1_batch_2000.mat');
@@ -76,26 +74,6 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
         allReach.yNN{k} = yNN;
         allReach.minIdx{k} = minIdx;
         allReach.Up{k} = Up;
-%         disp('........................');
-%         % First reachability step
-%         init_set = plantReach(plant, init_set, Up);
-%         step_sets = [step_sets init_set];
-%         % Output set
-%         Ro = PlantOutSet(init_set, outputMat);
-%         % Normalize inputs
-%         Unn = normalizeInputsNN(Ro,v_own,v_int);
-%         % Compute NN outputs
-%         yNN = reachAcasXu(minIdx,Unn,acasxuNNs,reachMethod);
-%         % Compute advisory command
-%         minIdx = getMinIndexes(yNN);
-%         Up = advisoryACAS(minIdx);
-%         % End cycle
-%         allReach.init_set{k+1} = init_set;
-%         allReach.Ro{k} = Ro;
-%         allReach.Unn{k} = Unn;
-%         allReach.yNN{k} = yNN;
-%         allReach.minIdx{k} = minIdx;
-%         allReach.Up{k} = Up;
     end
     allReach.step_sets = step_sets;
     allReach.int_reachSet = plant.intermediate_reachSet;

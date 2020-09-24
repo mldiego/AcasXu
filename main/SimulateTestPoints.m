@@ -1,20 +1,19 @@
 %% Simulate all test points
 clc;clear;close all;
 %% --- Setup scenarios ---
-% Choose corners and random points from the edge cases regions
-% Initial states for each test point (opp)
-% init_dyn = [0 1000 pi/2 -43736 0 pi/2-0.4296 43747.43 pi/2 -0.4296; % Test point 1
-%     30000 40000 0.785398163397448 -926.020000000000 9073.98000000000 0.785398163397448 43735.9969142216 -3.14159265358979 0; % Test point 2
-%     0 0 pi/2 30926 -30926 pi/2+0.3617 43736 -(3*pi)/4 0.3617; % Test point 3
-%     0 0 pi/2 -30926 -30926 pi/2-0.5415 43736 3*pi/4 -0.5415; % Test point 4
-%     0 0 pi/2 -30926 30926 pi/2-0.2379 43736 pi/4 -0.2379; % Test point 5
-%     0 0 pi/2 43736 0 pi/2+0.6226 43736 -pi/2 0.6226; % Test point 6
-%     0 0 pi/2 80814 33474 pi/2+0.7835 87472 -3*pi/8 0.7835; % Test point 7
-%     0 0 pi/2 30926 30926 pi/2+0.7577 43736 -pi/4 0.7577; % Test point 8
-%     0 0 pi/2 0 43736 pi/2 43736 0 0; % Test point 9
-%     0 0 pi/2 0 120000 -pi/2 120000 0 pi; % Test point 10
-%     ];  
-% Change coordinates for scenario 2 (how I had it originally)
+% Test case initial states (original)
+init_dyn = [0 1000 pi/2 -43736 0 pi/2-0.4296 43747.43 pi/2 -0.4296; % Test point 1
+    0 0 pi/2 0 -43736 pi/2 43736 -3.14159265358979 0; % Test point 2
+    0 0 pi/2 30926 -30926 pi/2+0.3617 43736 -(3*pi)/4 0.3617; % Test point 3
+    0 0 pi/2 -30926 -30926 pi/2-0.5415 43736 3*pi/4 -0.5415; % Test point 4
+    0 0 pi/2 -30926 30926 pi/2-0.2379 43736 pi/4 -0.2379; % Test point 5
+    0 0 pi/2 43736 0 pi/2+0.6226 43736 -pi/2 0.6226; % Test point 6
+    0 0 pi/2 80814 33474 pi/2+0.7835 87472 -3*pi/8 0.7835; % Test point 7
+    0 0 pi/2 30926 30926 pi/2+0.7577 43736 -pi/4 0.7577; % Test point 8
+    0 0 pi/2 0 43736 pi/2 43736 0 0; % Test point 9
+    0 0 pi/2 0 120000 -pi/2 120000 0 pi; % Test point 10
+    ];
+% Test case initial states (rotated)
 % init_dyn = [0 0 0 0 43736 -0.43 43736 pi/2 -0.43; % Test point 1
 %     30000 40000 0.785398163397448 -926.020000000000 9073.98000000000 0.785398163397448 43735.9969142216 -3.14159265358979 0; % Test Point 2
 %     0 0 0 -30926 -30926 0.3617 43736 -(3*pi)/4 0.3617; % Test point 3
@@ -26,18 +25,6 @@ clc;clear;close all;
 %     0 0 0 43736 0 0 43736 0 0; % Test point 9
 %     0 0 0 120000 0 pi 120000 0 pi; % Test point 10
 %     ];
-% Paper
-init_dyn = [0 1000 pi/2 -43736 0 pi/2-0.4296 43747.43 pi/2 -0.4296; % Test point 1
-    0 0 pi/2 0 -43736 pi/2 43736 -3.14159265358979 0; % Test point 2
-    0 0 pi/2 30926 -30926 pi/2+0.3617 43736 -(3*pi)/4 0.3617; % Test point 3
-    0 0 pi/2 -30926 -30926 pi/2-0.5415 43736 3*pi/4 -0.5415; % Test point 4
-    0 0 pi/2 -30926 30926 pi/2-0.2379 43736 pi/4 -0.2379; % Test point 5
-    0 0 pi/2 43736 0 pi/2+0.6226 43736 -pi/2 0.6226; % Test point 6
-    0 0 pi/2 80814 33474 pi/2+0.7835 87472 -3*pi/8 0.7835; % Test point 7
-    0 0 pi/2 30926 30926 pi/2+0.7577 43736 -pi/4 0.7577; % Test point 8
-    0 0 pi/2 0 43736 pi/2 43736 0 0; % Test point 9
-    0 0 pi/2 0 120000 -pi/2 120000 0 pi; % Test point 10
-    ];  
 
 % Number of simulations
 m = size(init_dyn,1);
@@ -67,4 +54,3 @@ out_sim(8).data = sim_TestPoints(init_dyn(8,:),@dyns_tp8,timeV,'TestPoint8',636.
 out_sim(9).data = sim_TestPoints(init_dyn(9,:),@dyns_tp9,timeV,'TestPoint9',497.56,60);
 % Test 10
 out_sim(10).data = sim_TestPoints(init_dyn(10,:),@dyns_tp10,timeV,'TestPoint10',600,600);
-% save('../data_sim/testPoints.mat','out_sim');

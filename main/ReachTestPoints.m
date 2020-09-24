@@ -3,33 +3,29 @@
 %% --- Setup scenarios ---
 
 % Test points a few steps before making a decision other than COC
-init_dyn = [2.57298292500859e-12,43020,1.57079632679490,-24493.3681551309,42001.9180476659,1.14119632679490,24514.5168901961,1.58947758085803,-0.429600000000000; % Test point 1
-    35893.0279144087,45893.0279144087,0.785398163397448,10529.1098552221,20529.1098552220,0.785398163397448,35869.9969142215,-3.14159265358979,0; % Test point 2
-    1.65327317884897e-12,27000,1.57079632679490,11817.3036040667,19580.0166915592,1.93249632679490,13953.6981558167,-2.13147179977319,0.361700000000000; % Test point 3
-    1.50455207156047e-13,2457.12000000000,1.57079632679490,-27214.9617743134,-24756.0571082470,1.02929632679490,38486.5374819606,2.35616193707089,-0.541500000000000; % Test point 4
-    7.71934556058857e-12,126066.480000003,1.57079632679490,-6322.85650169227,132385.574856207,1.33289632679490,8939.24129837534,0.785688971941065,-0.237900000000000; % Test point 5
-    9.69552870884960e-13,15834.0000000000,1.57079632679490,32364.5890742658,15841.1178127712,2.19339632679490,32364.5898569618,-1.57057640085547,0.622600000000000; % Test point 6
-    2.94466322854982e-12,48090,1.57079632679490,46873.8427144232,67543.2504089879,2.35429632679490,50749.8865816395,-1.17741187939997,0.783500000000000; % Test point 7
-    1.32450449914983e-12,21630.8000000000,1.57079632679490,20411.0367261430,42040.2047556014,2.32849632679490,28864.4423758876,-0.785438295691109,0.757700000000000; % Test point 8
-    7.92135839798884e-13,12936.5600000000,1.57079632679490,9.55224503334934e-14,45296,1.57079632679490,32359.4399999998,9.42921199566535e-16,0; % Test point 9
-    1.54305496692567e-12,25200,1.57079632679490,1.54305496692567e-12,94800,-1.57079632679490,69600,2.52291482330984e-17,3.14159265358979; % Test point 10
+init_dyn = [44884.9999999997,0,0,44857.4597464554,23163.4259001182,-0.430000000000000,23163.4422721634,1.57198528047930,-0.430000000000000; % Test point 1
+    11112.0000000000,0,0,-22136.0000000001,0,0,33248.0000000006,-pi,0; % Test point 2
+    20400, 0, 0, 5073.2, -11724.5, 0.49,19297.04,-2.489,0.49; % Test point 3
+    0, 0, 0, -20926, 30926, -0.5418, 43736, 3*pi/4, -0.5418; % Test point 4
+    126066.48,0,0,132333.68,6109.85,-0.24,8752.63,0.7727,-0.24; % Test point 5
+    15834, 0, 0, 15870.63, -32405.8, 0.62, 32405, -1.5697, 0.62; % Test point 6
+    53814.9999999996,0,0,71731.8120481306,-42967.0180557308,0.780000000000000,46552.6003870736,-1.17572944847083,0.780000000000000; % Test point 7
+    24811.8000000002,0,0,43646.8719885023,-18835.4286383100,0.760000000000000,26637.0978151548,-0.785407440292358,0.760000000000000; % Test point 8
+    15424.3600000000,0,0,45596.0000000000,0,0,30171.6399999997,0,0; % Test point 9
+    26999.9999999998,0,0,93000.0000000004,3.30654635769789e-12,3.14159265358979,66000.0000000004,5.00991872378461e-17,3.14159265358979; % Test point 10
     ];
-
 
 % Number of test points
 m = size(init_dyn,1);
-% tf = 2; % Final time of simulation
-% tf = [30;0;24;38;30;30;30;30;30;30]; % Previously saved symmetry
-tf = [12;0;24;18;18;18;18;18;18;18];
+tf = [30;0;24;38;30;30;30;30;30;30]; % t final for each test case
 st = 1; % Initial advisory
 output = struct('data',cell(1,10),'tT',cell(1,10));
 %% Simulate all
 delete(gcp('nocreate')); % End previous parallel session
 [~, cores] = evalc('feature(''numcores'')');
 
-% parpool(cores);
-% parfor K = 1 : m
-for K = 3:m
+parpool(cores);
+parfor K = 1 : m
     if K == 1
         % Test 1
         [lb,ub] = calc_uncB(init_dyn(1,:)',100);
@@ -38,14 +34,6 @@ for K = 3:m
         output(K).data = reach_TestPointsb(init_set,@dyns_tp1,st,tf(K),'approx-star',955,1050);
         output(K).tT = toc(t1);
     end
-%     if K == 2
-%         % Test 2
-%         t2 = tic;
-%         [lb,ub] = calc_unc(init_dyn(2,:)',10);
-%         init_set = Star(lb,ub);
-%         output(K).data = reach_TestPoints(init_set,@dyns_tp2,st,tf(K),'approx-star',463,900);
-%         output(K).tT = toc(t2);
-%     end
     if K == 3
         % Test 3
         [lb,ub] = calc_uncB(init_dyn(3,:)',100);
@@ -54,7 +42,6 @@ for K = 3:m
         output(K).data  = reach_TestPointsb(init_set,@dyns_tp3,st,tf(K),'approx-star',100,200);
         output(K).tT = toc(t3);
     end
-    pause;
     if K == 4
         % Test 4
         [lb,ub] = calc_uncB(init_dyn(4,:)',100);
@@ -63,7 +50,6 @@ for K = 3:m
         output(K).data = reach_TestPointsb(init_set,@dyns_tp4,st,tf(K),'approx-star',204.76,600);
         output(K).tT = toc(t4);
     end
-    pause;
     if K == 5
         % Test 5
         [lb,ub] = calc_uncB(init_dyn(5,:)',100);
@@ -72,7 +58,6 @@ for K = 3:m
         output(K).data = reach_TestPointsb(init_set,@dyns_tp5,st,tf(K),'approx-star',362.26,300);
         output(K).tT = toc(t5);
     end
-    pause;
     if K == 6
         % Test 6
         [lb,ub] = calc_uncB(init_dyn(6,:)',100);
@@ -81,7 +66,6 @@ for K = 3:m
         output(K).data = reach_TestPointsb(init_set,@dyns_tp6,st,tf(K),'approx-star',609,750);
         output(K).tT = toc(t6);
     end
-    pause;
     if K == 7
         % Test 7
         [lb,ub] = calc_uncB(init_dyn(7,:)',100);
@@ -90,7 +74,6 @@ for K = 3:m
         output(K).data = reach_TestPointsb(init_set,@dyns_tp7,st,tf(K),'approx-star',1145,1145);
         output(K).tT = toc(t7);
     end
-    pause;
     if K == 8
         % Test 8
         [lb,ub] = calc_uncB(init_dyn(8,:)',100);
@@ -99,7 +82,6 @@ for K = 3:m
         output(K).data = reach_TestPointsb(init_set,@dyns_tp8,st,tf(K),'approx-star',636.2,450);
         output(K).tT = toc(t8);
     end
-    pause;
     if K == 9
         % Test 9
         [lb,ub] = calc_uncB(init_dyn(9,:)',100);
@@ -108,7 +90,6 @@ for K = 3:m
         output(K).data = reach_TestPointsb(init_set,@dyns_tp9,st,tf(K),'approx-star',497.56,60);
         output(K).tT = toc(t9);
     end
-    pause;
     if K == 10
         % Test 10
         [lb,ub] = calc_uncB(init_dyn(10,:)',100);
@@ -118,15 +99,11 @@ for K = 3:m
         output(K).tT = toc(t10);
     end
 end
-% [lb,ub] = calc_uncB(init_dyn(1,:)',100);
-% init_set = Star(lb,ub);
-% t1 = tic;
-% output(1).data = reach_TestPointsb(init_set,@dyns_tp1,st,14,'approx-star',955,1050);
-% output(1).tT = toc(t1);
-save('../data_reach/testPoints_opp.mat','output','-v7.3');
+
+save('../data_reach/testPoints.mat','output','-v7.3');
 %% Visualize results
 plot_all = false;
-for i=3:3
+for i=1:m
     if i==2
         disp('Working on it');
     else
@@ -150,9 +127,9 @@ for i=3:3
         ax.XAxis.FontSize = 15; % Set font size of axis
         ax.YAxis.FontSize = 15;
         if plot_all
-            saveas(f,"../data_reach/TestPoint"+string(i)+"all_opp.png");
+            saveas(f,"../data_reach/TestPoint"+string(i)+"all.png");
         else
-            saveas(f,"../data_reach/TestPoint"+string(i)+"_opp.png");
+            saveas(f,"../data_reach/TestPoint"+string(i)+".png");
         end
         f4 = figure('Color',[17 17 17]/18);
         hold on;
@@ -168,7 +145,7 @@ for i=3:3
         ax.GridColor = 'w'; % Set grid lines color
         ax.XAxis.FontSize = 15; % Set font size of axis
         ax.YAxis.FontSize = 15;
-        saveas(f4,"../data_reach/TestPoint"+string(i)+"both_opp.png");
+        saveas(f4,"../data_reach/TestPoint"+string(i)+"both.png");
 
     end
 end

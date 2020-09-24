@@ -1,13 +1,11 @@
-function [lb,ub] = calc_uncB(init_state,unc)
-%CALC_UNC 
+function [lb,ub] = calc_unc3(init_state,unc)
+%calc_unc3
 % Compute the bounds for an initial state given some uncertainty in the
-% ownship's positions
+% ownship y position in only one direction
 lb = init_state;
 ub = init_state;
-ub(1) = ub(1) + unc;
+% ub(1) = ub(1) + unc;
 ub(2) = ub(2) + unc;
-lb(1) = lb(1) - unc;
-lb(2) = lb(2) - unc;
 a = zeros(1,4); b = a; c = a;
 [a(1), b(1), c(1)] = environment(lb(1:3), lb(4:6));
 [a(2), b(2), c(2)] = environment(lb(1:3), ub(4:6));

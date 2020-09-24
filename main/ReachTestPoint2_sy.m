@@ -1,7 +1,7 @@
 %% Reachability analysis of all test points
 clc;clear;close all;
 %% --- Setup scenarios ---
-
+% Divide initial state into 2 sets along the x-axis
 init_dyn = [0,-9260.00000000002,-1.57079632679490,0,25736,-1.57079632679490,34995.9999999999,pi,0;
     -0.001,-9260.00000000002,-1.57079632679490,0,25736,-1.57079632679490,34995.9999999999,3.14159265358979,0;
 ];
@@ -10,7 +10,6 @@ st = 1; % Initial advisory command
 output = struct('data',cell(1,2),'t',cell(1,2));
 %% Simulate Test Point 2
 delete(gcp('nocreate'))
-% [~, cores] = evalc('feature(''numcores'')');
 parpool(2);
 parfor K = 1:2
     if K==1
@@ -30,10 +29,9 @@ parfor K = 1:2
     end
 end
 
-% save('../data_reach/testPointsOrigin_2sy.mat','output','-v7.3');
+save('../data_reach/testPointsOrigin_2sy.mat','output','-v7.3');
 %% Visualize results
 plot_all = false;
-% Right half
 f = figure('Color',[17 17 17]/18);
 hold on;
 grid;
@@ -55,11 +53,11 @@ ax = gca; % Get current axis
 ax.GridColor = 'w'; % Set grid lines color
 ax.XAxis.FontSize = 15; % Set font size of axis
 ax.YAxis.FontSize = 15;
-% if plot_all
-%     saveas(f,"../data_reach/TestPoint2allsy.png");
-% else
-%     saveas(f,"../data_reach/TestPoint2sy.png");
-% end
+if plot_all
+    saveas(f,"../data_reach/TestPoint2allsy.png");
+else
+    saveas(f,"../data_reach/TestPoint2sy.png");
+end
 % Plot end of trajectory
 f3 = figure('Color',[17 17 17]/18);
 hold on;
@@ -77,4 +75,4 @@ ax = gca; % Get current axis
 ax.GridColor = 'w'; % Set grid lines color
 ax.XAxis.FontSize = 15; % Set font size of axis
 ax.YAxis.FontSize = 15;
-% saveas(f3,'../data_reach/TestPoint2all_endsy.png');
+saveas(f3,'../data_reach/TestPoint2all_endsy.png');
