@@ -17,9 +17,13 @@ The last 2 are only needed in order to execute [Simulink models](https://github.
 
 Before executing any code, please install [NNV](https://github.com/verivital/nnv), instructions can be found [here](https://github.com/verivital/nnv/blob/master/README.md). 
 
-Run [startup_nnv.m](https://github.com/verivital/nnv/blob/master/code/nnv/startup_nnv.m) before running any files.
+Run [startup_nnv.m](https://github.com/verivital/nnv/blob/master/code/nnv/startup_nnv.m) before running any files. Also need to add the functions to MATLAB path: Open a MATLAB terminal and run the following under the AcasXu directory:
 
-Copy all the files under the [utils](https://github.com/dieman95/AcasXu/tree/master/utils) folder, and copy into the your MATLAB root folder under the specific toolbox. An example: */usr/local/MATLAB/R2018b/toolbox/nnet/nnet/nntransfer* .
+```
+addpath(('main');
+addpath(genpath(other/functions));
+```
+(Optional) Copy all the files under the [utils](https://github.com/dieman95/AcasXu/tree/master/utils) folder, and copy into the your MATLAB root folder under the specific toolbox. An example: */usr/local/MATLAB/R2018b/toolbox/nnet/nnet/nntransfer* .
 
 ### Repository Overview
 
