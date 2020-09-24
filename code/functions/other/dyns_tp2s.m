@@ -1,4 +1,4 @@
-function dx = dyns_tp2(x,u)
+function dx = dyns_tp2s(x,u)
 %Combined dynamics of 2 Dubins airplanes
     v = 463; % ft/s
     % Ownship
@@ -12,8 +12,8 @@ function dx = dyns_tp2(x,u)
     dx(6,1) = 0; % Constant heading (rad)
     % nn inputs (environment)
     dx(7,1) = ((x(5)-x(2))*(dx(5,1)-dx(2,1)) + (x(4)-x(1))*(dx(4,1)-dx(1,1)))/(sqrt((x(4)-x(1))^2+(x(5)-x(2))^2));
-    dx(8,1) = (2*(dx(5,1)-dx(2,1))*(x(4)-x(1)+x(7)) - 2*(x(5)-x(2))*(dx(4,1)-dx(1,1)+dx(7,1)))/((x(5)-x(2))^2 + (x(4)-x(1)+x(7))^2);
-%     dx(8,1) = (2*(dx(5,1)-dx(2,1))*(x(4)-x(1)+x(7)) - 2*(x(5)-x(2))*(dx(4,1)-dx(1,1)+dx(7,1)))/(eps +(x(5)-x(2))^2 + (x(4)-x(1)+x(7))^2) - dx(3,1);
+%     dx(8,1) = (2*(dx(5,1)-dx(2,1))*(x(4)-x(1)+x(7)) - 2*(x(5)-x(2))*(dx(4,1)-dx(1,1)+dx(7,1)))/((x(5)-x(2))^2 + (x(4)-x(1)+x(7))^2);
+    dx(8,1) = (2*(dx(5,1)-dx(2,1))*(x(4)-x(1)+x(7)) - 2*(x(5)-x(2))*(dx(4,1)-dx(1,1)+dx(7,1)))/(eps +(x(5)-x(2))^2 + (x(4)-x(1)+x(7))^2) - dx(3,1);
     dx(9,1) = dx(6,1) - dx(3,1); % psi (rad)
 %     disp(dx(8));
 %     disp(dx(7));

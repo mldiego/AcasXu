@@ -1,15 +1,9 @@
 %% Reachability analysis of all test points
 clc;clear;close all;
 %% --- Setup scenarios ---
-% Choose corners and random points from the edge cases regions
-% Initial states for each test point
-% x_own = [30005 40000 pi/4];
-% x_int = [-926.02 9073.98 pi/4];
-% [x7,x8,x9] = environment(x_own,x_int);
-% init_dyn = [x_own x_int x7 x8 x9]';
-% init_dyn = [36547.81;46547.81;pi/4;11801.9;21801.9;pi/4;34996;-pi;0];
-init_dyn = [0,9260.00000000002,1.57079632679490,0,-25736,1.57079632679490,34995.9999999999,pi,0;
-    -0.001,9260.00000000002,1.57079632679490,1.10218211923262e-12,-25736,1.57079632679490,34995.9999999999,3.14159265358979,0;
+
+init_dyn = [0,-9260.00000000002,-1.57079632679490,0,25736,-1.57079632679490,34995.9999999999,pi,0;
+    -0.001,-9260.00000000002,-1.57079632679490,0,25736,-1.57079632679490,34995.9999999999,3.14159265358979,0;
 ];
 tf = 18; % Final time of simulation
 st = 1; % Initial advisory command
@@ -22,21 +16,21 @@ parfor K = 1:2
     if K==1
         % Test 2
         t1 = tic;
-        [lb,ub] = calc_unc2(init_dyn(1,:)',100);
+        [lb,ub] = calc_unc2(init_dyn(1,:)',+100);
         init_set = Star(lb,ub);
-        output(K).data = reach_TestPointsb(init_set,@dyns_tp2,st,tf,'exact-star',463,900);
+        output(K).data = reach_TestPoints(init_set,@dyns_tp2s,st,tf,'exact-star',463,900);
         output(K).t = toc(t1);
     end
     if K == 2
         t2 = tic;
         [lb2,ub2] = calc_unc2(init_dyn(2,:)',-100);
         init_set2 = Star(lb2,ub2);
-        output(K).data = reach_TestPoints(init_set2,@dyns_tp2,st,tf,'exact-star',463,900);
+        output(K).data = reach_TestPointsb(init_set2,@dyns_tp2s,st,tf,'exact-star',463,900);
         output(K).t = toc(t2);
     end
 end
 
-save('../data_reach/testPointsOrigin_2.mat','output','-v7.3');
+% save('../data_reach/testPointsOrigin_2sy.mat','output','-v7.3');
 %% Visualize results
 plot_all = false;
 % Right half
@@ -61,11 +55,11 @@ ax = gca; % Get current axis
 ax.GridColor = 'w'; % Set grid lines color
 ax.XAxis.FontSize = 15; % Set font size of axis
 ax.YAxis.FontSize = 15;
-if plot_all
-    saveas(f,"../data_reach/TestPoint2all.png");
-else
-    saveas(f,"../data_reach/TestPoint2.png");
-end
+% if plot_all
+%     saveas(f,"../data_reach/TestPoint2allsy.png");
+% else
+%     saveas(f,"../data_reach/TestPoint2sy.png");
+% end
 % Plot end of trajectory
 f3 = figure('Color',[17 17 17]/18);
 hold on;
@@ -83,4 +77,4 @@ ax = gca; % Get current axis
 ax.GridColor = 'w'; % Set grid lines color
 ax.XAxis.FontSize = 15; % Set font size of axis
 ax.YAxis.FontSize = 15;
-saveas(f3,'../data_reach/TestPoint2all_end.png');
+% saveas(f3,'../data_reach/TestPoint2all_endsy.png');

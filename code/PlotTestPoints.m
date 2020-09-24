@@ -21,7 +21,7 @@ for i=1:10
 end
 %% Plot reach sets for the ownship
 for i=1:10
-    if i==2
+    if i==2 || I==1
         disp('Working on it');
     else
         f = figure;

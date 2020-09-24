@@ -71,7 +71,7 @@ function data = sim_TestPoints(init_set, test_point, timeV, titles,v_own, v_int)
     xlabel('X Position (ft)');
     ylabel('Y Position (ft)');
     legend('ownship','intruder');
-    saveas(f,['../data_sim/TestPoints_Sim/' titles],'png'); % Save Plot
-    save(['../data_sim/TestPoints_Sim/' titles],'data'); % Save simulation data
+%     saveas(f,['../data_sim/TestPoints_Sim/' titles],'png'); % Save Plot
+%     save(['../data_sim/TestPoints_Sim/' titles],'data'); % Save simulation data
 end
 

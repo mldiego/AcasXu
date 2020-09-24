@@ -13,7 +13,7 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
 %   simulation and summary of the reach computation (splits, advisories...)
 %
 % --- EXAMPLE ---
-%   lb  = [x1;x2;x3;x4;x5;x6;x7;x8;x9];         (lower bound vector)
+%   lb  = [x1;x2;x3;x4;x5;x6;x7;x8;x9];  (lower bound vector)
 %   ub = [X1;X2;X3;X4;X5;X6;X7;X8;X9];   (upper bound vector)
 %   allReach = ReachACASXuNNCS(Star(lb,ub), 1, 5, 'approx-star');
 
@@ -68,6 +68,7 @@ function [allReach] = reach_TestPoints(init_set, test_point, minIdx,tf,reachMeth
         Up = advisoryACAS(minIdx);
         % Reachability step plant
         init_set = plantReach(plant, init_set, Up);
+        step_sets = [step_sets init_set];
         % End cycle
         allReach.init_set{k+1} = init_set;
         allReach.Ro{k} = Ro;
