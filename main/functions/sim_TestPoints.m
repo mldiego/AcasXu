@@ -26,7 +26,7 @@ function data = sim_TestPoints(init_set, test_point, timeV, titles,v_own, v_int)
     for i=1:length(timeV)-1
         prev_adv = adv_own;
         % plants
-         [~, yp] = plant.evaluate([timeV(i) timeV(i+1)], comb_init, adv_own);
+         [~, yp] = plant.evaluate(comb_init, adv_own);
         comb_init = yp(end,:)';
         % Compute inputs
         ycp =  outCp*comb_init;

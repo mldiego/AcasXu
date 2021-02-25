@@ -29,7 +29,7 @@ init_dyn = [0 1000 pi/2 -43736 0 pi/2-0.4296 43747.43 pi/2 -0.4296; % Test point
 % Number of simulations
 m = size(init_dyn,1);
 % time for all simulations
-tf = 100; % Final time of simulation
+tf = 200; % Final time of simulation
 st = 1; % Step size
 timeV = 0:st:tf; % Time to simulate
 out_sim = struct('data',cell(1,10));
@@ -54,3 +54,4 @@ out_sim(8).data = sim_TestPoints(init_dyn(8,:),@dyns_tp8,timeV,'TestPoint8',636.
 out_sim(9).data = sim_TestPoints(init_dyn(9,:),@dyns_tp9,timeV,'TestPoint9',497.56,60);
 % Test 10
 out_sim(10).data = sim_TestPoints(init_dyn(10,:),@dyns_tp10,timeV,'TestPoint10',600,600);
+save('../data_sim/TestPoints_opp.mat');
