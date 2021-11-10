@@ -1,13 +1,13 @@
-function [lb,ub] = calc_uncB(init_state,unc)
+function [lb,ub] = calc_uncB(init_state,uncx,uncy)
 %calc_uncB
 % Compute the bounds for an initial state given some uncertainty in the
 % ownship x-y positions in both directions
 lb = init_state;
 ub = init_state;
-ub(1) = ub(1) + unc;
-ub(2) = ub(2) + unc;
-lb(1) = lb(1) - unc;
-lb(2) = lb(2) - unc;
+ub(1) = ub(1) + uncx;
+ub(2) = ub(2) + uncy;
+lb(1) = lb(1) - uncx;
+lb(2) = lb(2) - uncy;
 a = zeros(1,4); b = a; c = a;
 [a(1), b(1), c(1)] = environment(lb(1:3), lb(4:6));
 [a(2), b(2), c(2)] = environment(lb(1:3), ub(4:6));
@@ -16,7 +16,7 @@ a = zeros(1,4); b = a; c = a;
 aMax = max(a); aMin = min(a); % x7 bounds
 bMax = max(b); bMin = min(b); % x8 bounds
 cMax = max(c); cMin = min(c); % x9 bounds
-lb(7:9) = [aMin; bMin; cMin]; % Lower bound with uncertainty
-ub(7:9) = [aMax; bMax; cMax]; % Upper bound with uncertainty
+% lb(7:9) = [aMin; bMin; cMin]; % Lower bound with uncertainty
+% ub(7:9) = [aMax; bMax; cMax]; % Upper bound with uncertainty
 end
 

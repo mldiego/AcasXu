@@ -20,8 +20,10 @@ function [angSetout] = limitAngleSet(inputAngSet)
     end
     if a3 > a4
         'Means that we need to split the set into 2';
-        angSetout = Star(a3,pi/2);
-        angSetout = [angSetout Star(-pi/2,a4)];
+%         angSetout = Star(a3,pi/2);
+%         angSetout = [angSetout Star(-pi/2,a4)];
+        angSetout = Star(a3,pi);
+        angSetout = [angSetout Star(-pi,a4)];
     else
         angSetout = Star(a3,a4);
     end

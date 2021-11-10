@@ -31,48 +31,54 @@ m = size(init_dyn,1);
 % time for all simulations
 tf = [41,34,165,33,188,36,42,33,38,40]*2; % Final time of simulation
 st = 2; % Step size
-N = 50; % Number of random simulations from initial set under uncertainty
+N = 100000; % Number of random simulations from initial set under uncertainty
 random_sim = cell(10,N);
+time_sim = zeros(10,N);
 % out_sim = struct('data',cell(1,10));
 %% Simulate all
 rng(10); % random seed
-x0 = -100 + 200 .* rand(N,1);
-y0 = -100 + 200 .* rand(N,1);
+x0 = -5000 + 10000 .* rand(N,1);
+y0 = -200 + 400 .* rand(N,1);
 set(groot,'defaultFigureVisible','off');
 for ex=1:N
     % Test 1
     init_dyn1 = init_dyn(1,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
-    random_sim{1,ex} = sim_TestPoints(init_dyn1,@dyns_tp1,0:st:tf(1),'TestPoint1',955,1050);
+    [random_sim{1,ex}, time_sim(1,ex)] = sim_TestPoints(init_dyn1,@dyns_tp1,0:st:tf(1),'TestPoint1',955,1050);
     % Test 2
     init_dyn2 = init_dyn(2,:)+[x0(ex) 0 0 0 0 0 0 0 0];
-    random_sim{2,ex} = sim_TestPoints(init_dyn2,@dyns_tp2,0:st:tf(2),'TestPoint2',463,900);
+    [random_sim{2,ex}, time_sim(2,ex)]= sim_TestPoints(init_dyn2,@dyns_tp2,0:st:tf(2),'TestPoint2',463,900);
     % Test 3
     init_dyn3 = init_dyn(3,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
-    random_sim{3,ex} = sim_TestPoints(init_dyn3,@dyns_tp3,0:st:tf(3),'TestPoint3',100,200);
+    [random_sim{3,ex}, time_sim(3,ex)] = sim_TestPoints(init_dyn3,@dyns_tp3,0:st:tf(3),'TestPoint3',100,200);
     % Test 4
     init_dyn4 = init_dyn(4,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
-    random_sim{4,ex} = sim_TestPoints(init_dyn4,@dyns_tp4,0:st:tf(4),'TestPoint4',204.76,600);
+    [random_sim{4,ex}, time_sim(4,ex)] = sim_TestPoints(init_dyn4,@dyns_tp4,0:st:tf(4),'TestPoint4',204.76,600);
     % Test 5
     init_dyn5 = init_dyn(5,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
-    random_sim{5,ex} = sim_TestPoints(init_dyn5,@dyns_tp5,0:st:tf(5),'TestPoint5',362.26,300);
+    [random_sim{5,ex}, time_sim(5,ex)] = sim_TestPoints(init_dyn5,@dyns_tp5,0:st:tf(5),'TestPoint5',362.26,300);
     % Test 6
     init_dyn6 = init_dyn(6,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
-    random_sim{6,ex} = sim_TestPoints(init_dyn6,@dyns_tp6,0:st:tf(6),'TestPoint6',609,750);
+    [random_sim{6,ex}, time_sim(6,ex)] = sim_TestPoints(init_dyn6,@dyns_tp6,0:st:tf(6),'TestPoint6',609,750);
     % Test 7
     init_dyn7 = init_dyn(7,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
-    random_sim{7,ex} = sim_TestPoints(init_dyn7,@dyns_tp7,0:st:tf(7),'TestPoint7',1145,1145);
+    [random_sim{7,ex},time_sim(7,ex)] = sim_TestPoints(init_dyn7,@dyns_tp7,0:st:tf(7),'TestPoint7',1145,1145);
     % Test 8
     init_dyn8 = init_dyn(8,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
-    random_sim{8,ex} = sim_TestPoints(init_dyn8,@dyns_tp8,0:st:tf(8),'TestPoint8',636.2,450);
+    [random_sim{8,ex}, time_sim(8,ex)] = sim_TestPoints(init_dyn8,@dyns_tp8,0:st:tf(8),'TestPoint8',636.2,450);
     % Test 9
     init_dyn9 = init_dyn(9,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
-    random_sim{9,ex} = sim_TestPoints(init_dyn9,@dyns_tp9,0:st:tf(9),'TestPoint9',497.56,60);
+    [random_sim{9,ex}, time_sim(9,ex)] = sim_TestPoints(init_dyn9,@dyns_tp9,0:st:tf(9),'TestPoint9',497.56,60);
     % Test 10
     init_dyn10 = init_dyn(10,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
-    random_sim{10,ex} = sim_TestPoints(init_dyn10,@dyns_tp10,0:st:tf(10),'TestPoint10',600,600);
+    [random_sim{10,ex}, time_sim(10,ex)] = sim_TestPoints(init_dyn10,@dyns_tp10,0:st:tf(10),'TestPoint10',600,600);
 end
-save('../data_sim/SimRandom_opp.mat','random_sim','N');
+save('../data_sim/SimRandom_opp_nnenum.mat','random_sim','time_sim','N');
 set(groot,'defaultFigureVisible','on')
+
+% Print results
+disp("Total simulation time for "+string(N) + " simulations.");
+total_time = sum(time_sim,2);
+disp(total_time);
 
 % %% Plot Simulations
 % load('../data_sim/SimRandom_opp.mat');

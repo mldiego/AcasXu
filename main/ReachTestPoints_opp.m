@@ -24,12 +24,14 @@ output = struct('data',cell(1,10),'tT',cell(1,10));
 %% Simulate all
 delete(gcp('nocreate')); % End previous parallel session
 [~, cores] = evalc('feature(''numcores'')');
+uncc = [5000; 200];
 
 % parpool(cores);
-parfor K = 1 : m
+% parfor K = 1 : m
+for K = 1 : m
     if K == 1
         % Test 1
-        [lb,ub] = calc_uncB(init_dyn(1,:)',100);
+        [lb,ub] = calc_uncB(init_dyn(1,:)',uncc(1),uncc(2));
         init_set = Star(lb,ub);
         t1 = tic;
         output(K).data = reach_TestPointsb(init_set,@dyns_tp1,st,tf(K),'approx-star',955,1050);
@@ -38,7 +40,7 @@ parfor K = 1 : m
     end
     if K == 3
         % Test 3
-        [lb,ub] = calc_uncB(init_dyn(3,:)',100);
+        [lb,ub] = calc_uncB(init_dyn(3,:)',uncc(1),uncc(2));
         init_set = Star(lb,ub);
         t3 =tic;
         output(K).data  = reach_TestPointsb(init_set,@dyns_tp3,st,tf(K),'approx-star',100,200);
@@ -47,7 +49,7 @@ parfor K = 1 : m
     end
     if K == 4
         % Test 4
-        [lb,ub] = calc_uncB(init_dyn(4,:)',100);
+        [lb,ub] = calc_uncB(init_dyn(4,:)',uncc(1),uncc(2));
         init_set = Star(lb,ub);
         t4 = tic;
         output(K).data = reach_TestPointsb(init_set,@dyns_tp4,st,tf(K),'approx-star',204.76,600);
@@ -56,7 +58,7 @@ parfor K = 1 : m
     end
     if K == 5
         % Test 5
-        [lb,ub] = calc_uncB(init_dyn(5,:)',100);
+        [lb,ub] = calc_uncB(init_dyn(5,:)',uncc(1),uncc(2));
         init_set = Star(lb,ub);
         t5 = tic;
         output(K).data = reach_TestPointsb(init_set,@dyns_tp5,st,tf(K),'approx-star',362.26,300);
@@ -65,7 +67,7 @@ parfor K = 1 : m
     end
     if K == 6
         % Test 6
-        [lb,ub] = calc_uncB(init_dyn(6,:)',100);
+        [lb,ub] = calc_uncB(init_dyn(6,:)',uncc(1),uncc(2));
         init_set = Star(lb,ub);
         t6 = tic;
         output(K).data = reach_TestPointsb(init_set,@dyns_tp6,st,tf(K),'approx-star',609,750);
@@ -74,7 +76,7 @@ parfor K = 1 : m
     end
     if K == 7
         % Test 7
-        [lb,ub] = calc_uncB(init_dyn(7,:)',100);
+        [lb,ub] = calc_uncB(init_dyn(7,:)',uncc(1),uncc(2));
         init_set = Star(lb,ub);
         t7 = tic;
         output(K).data = reach_TestPointsb(init_set,@dyns_tp7,st,tf(K),'approx-star',1145,1145);
@@ -83,7 +85,7 @@ parfor K = 1 : m
     end
     if K == 8
         % Test 8
-        [lb,ub] = calc_uncB(init_dyn(8,:)',100);
+        [lb,ub] = calc_uncB(init_dyn(8,:)',uncc(1),uncc(2));
         init_set = Star(lb,ub);
         t8 = tic;
         output(K).data = reach_TestPointsb(init_set,@dyns_tp8,st,tf(K),'approx-star',636.2,450);
@@ -92,7 +94,7 @@ parfor K = 1 : m
     end
     if K == 9
         % Test 9
-        [lb,ub] = calc_uncB(init_dyn(9,:)',100);
+        [lb,ub] = calc_uncB(init_dyn(9,:)',uncc(1),uncc(2));
         init_set = Star(lb,ub);
         t9 = tic;
         output(K).data = reach_TestPointsb(init_set,@dyns_tp9,st,tf(K),'approx-star',497.56,60);
@@ -101,7 +103,7 @@ parfor K = 1 : m
     end
     if K == 10
         % Test 10
-        [lb,ub] = calc_uncB(init_dyn(10,:)',100);
+        [lb,ub] = calc_uncB(init_dyn(10,:)',uncc(1),uncc(2));
         init_set = Star(lb,ub);
         t10 = tic;
         output(K).data = reach_TestPointsb(init_set,@dyns_tp10,st,tf(K),'approx-star',600,600);
@@ -113,7 +115,7 @@ end
 save('../data_reach/testPoints_opp.mat','output','-v7.3');
 %% Visualize results
 load('../data_reach/testPoints_opp.mat');
-load('../data_sim/TestPoints_opp.mat');
+% load('../data_sim/TestPoints_opp.mat');
 % Ownship plots
 xp = {[-40000 -20000 0 20000];
     [-20000 0 20000 40000];
@@ -261,27 +263,27 @@ for i=1:m
         set(gcf,'inverthardcopy','off'); % Enable saving the figure as it is
         Star.plotBoxes_2D_noFill(output(i).data.step_sets,1,2,'r');
         Star.plotBoxes_2D_noFill(output(i).data.int_reachSet,1,2,[1 0.4 0.6],0.1);
-        plot(out_sim(i).data(1:sim_limits(i),4),out_sim(i).data(1:sim_limits(i),5),'k');
+%         plot(out_sim(i).data(1:sim_limits(i),4),out_sim(i).data(1:sim_limits(i),5),'k');
         xlabel('X Position (ft)');
         ylabel('Y Position (ft)');
-        xlim(xl(i,:));
-        ylim(yl(i,:));
-        xticks(xp{i});
-        yticks(yp{i});
-        xticklabels(xp_label{i,:});
-        yticklabels(yp_label{i,:});
+%         xlim(xl(i,:));
+%         ylim(yl(i,:));
+%         xticks(xp{i});
+%         yticks(yp{i});
+%         xticklabels(xp_label{i,:});
+%         yticklabels(yp_label{i,:});
         ax = gca; % Get current axis
         ax.GridColor = 'w'; % Set grid lines color
         ax.XAxis.FontSize = 15; % Set font size of axis
         ax.YAxis.FontSize = 15;
-        outerpos = ax.OuterPosition;
-        ti = ax.TightInset; 
-        left = outerpos(1) + ti(1);
-        bottom = outerpos(2) + ti(2);
-        ax_width = outerpos(3) - ti(1) - ti(3);
-        ax_height = outerpos(4) - ti(2) - ti(4);
-        ax.Position = [left bottom ax_width ax_height];
-        saveas(f,"../data_reach/jat/TestPoint"+string(i)+"_opp.png");
+%         outerpos = ax.OuterPosition;
+%         ti = ax.TightInset; 
+%         left = outerpos(1) + ti(1);
+%         bottom = outerpos(2) + ti(2);
+%         ax_width = outerpos(3) - ti(1) - ti(3);
+%         ax_height = outerpos(4) - ti(2) - ti(4);
+%         ax.Position = [left bottom ax_width ax_height];
+%         saveas(f,"../data_reach/jat/TestPoint"+string(i)+"_opp.png");
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         f4 = figure;
         hold on;
@@ -292,26 +294,26 @@ for i=1:m
         set(gcf,'inverthardcopy','off'); % Enable saving the figure as it is
         Star.plotBoxes_2D_noFill(output(i).data.int_reachSet,1,2,[1 0.4 0.6],0.1);
         Star.plotBoxes_2D_noFill(output(i).data.step_sets,1,2,'r');
-        xlim(xl_zoom(i,:));
-        ylim(yl_zoom(i,:));
-        xticks(xp_zoom{i});
-        yticks(yp_zoom{i});
-        xticklabels(xpz_label{i,:});
-        yticklabels(ypz_label{i,:});
+%         xlim(xl_zoom(i,:));
+%         ylim(yl_zoom(i,:));
+%         xticks(xp_zoom{i});
+%         yticks(yp_zoom{i});
+%         xticklabels(xpz_label{i,:});
+%         yticklabels(ypz_label{i,:});
         xlabel('X Position (ft)');
         ylabel('Y Position (ft)');
         ax = gca; % Get current axis
         ax.GridColor = 'w'; % Set grid lines color
         ax.XAxis.FontSize = 15; % Set font size of axis
         ax.YAxis.FontSize = 15;
-        outerpos = ax.OuterPosition;
-        ti = ax.TightInset; 
-        left = outerpos(1) + ti(1);
-        bottom = outerpos(2) + ti(2);
-        ax_width = outerpos(3) - ti(1) - ti(3);
-        ax_height = outerpos(4) - ti(2) - ti(4);
-        ax.Position = [left bottom ax_width ax_height];
-        saveas(f4,"../data_reach/jat/TestPoint"+string(i)+"both_opp.png");
+%         outerpos = ax.OuterPosition;
+%         ti = ax.TightInset; 
+%         left = outerpos(1) + ti(1);
+%         bottom = outerpos(2) + ti(2);
+%         ax_width = outerpos(3) - ti(1) - ti(3);
+%         ax_height = outerpos(4) - ti(2) - ti(4);
+%         ax.Position = [left bottom ax_width ax_height];
+%         saveas(f4,"../data_reach/jat/TestPoint"+string(i)+"both_opp.png");
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         fsq = figure;
         hold on;
@@ -324,30 +326,30 @@ for i=1:m
         Star.plotBoxes_2D_noFill(output(i).data.step_sets,1,2,'r');
         xlabel('X Position (ft)');
         ylabel('Y Position (ft)');
-        xticks(xp_sq{i});
-        yticks(yp_sq{i});
-        xticklabels(xsq_label{i,:});
-        yticklabels(ysq_label{i,:});
+%         xticks(xp_sq{i});
+%         yticks(yp_sq{i});
+%         xticklabels(xsq_label{i,:});
+%         yticklabels(ysq_label{i,:});
         ax = gca; % Get current axis
         ax.GridColor = 'w'; % Set grid lines color
         ax.XAxis.FontSize = 15; % Set font size of axis
         ax.YAxis.FontSize = 15;
-        axis(ax,'equal');
-        xlim(ax, xlim(ax) + [-1,1]*range(xlim(ax)).* 0.02)
-        ylim(ax, ylim(ax) + [-1,1]*range(ylim(ax)).* 0.02)
-        outerpos = ax.OuterPosition;
-        ti = ax.TightInset; 
-        left = outerpos(1) + ti(1);
-        bottom = outerpos(2) + ti(2);
-        ax_width = outerpos(3) - ti(1) - ti(3);
-        ax_height = outerpos(4) - ti(2) - ti(4);
-        ax.Position = [left bottom ax_width ax_height];
-        saveas(fsq,"../data_reach/jat/TestPoint"+string(i)+"both_opp_sq.png");
-%         width = 10;
-%         height = 10;
-%         fsq.Units = 'inches';
-%         figure_position = fsq.Position;
-%         fsq.Position = [figure_position(1),figure_position(2), width, height];
-%         print(fsq, "../data_reach/jat/TestPoint"+string(i)+"both_opp_sq.pdf", '-dpdf')
+%         axis(ax,'equal');
+%         xlim(ax, xlim(ax) + [-1,1]*range(xlim(ax)).* 0.02)
+%         ylim(ax, ylim(ax) + [-1,1]*range(ylim(ax)).* 0.02)
+%         outerpos = ax.OuterPosition;
+%         ti = ax.TightInset; 
+%         left = outerpos(1) + ti(1);
+%         bottom = outerpos(2) + ti(2);
+%         ax_width = outerpos(3) - ti(1) - ti(3);
+%         ax_height = outerpos(4) - ti(2) - ti(4);
+%         ax.Position = [left bottom ax_width ax_height];
+%         saveas(fsq,"../data_reach/jat/TestPoint"+string(i)+"both_opp_sq.png");
+% %         width = 10;
+% %         height = 10;
+% %         fsq.Units = 'inches';
+% %         figure_position = fsq.Position;
+% %         fsq.Position = [figure_position(1),figure_position(2), width, height];
+% %         print(fsq, "../data_reach/jat/TestPoint"+string(i)+"both_opp_sq.pdf", '-dpdf')
     end
 end

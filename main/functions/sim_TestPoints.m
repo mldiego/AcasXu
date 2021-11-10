@@ -1,4 +1,4 @@
-function data = sim_TestPoints(init_set, test_point, timeV, titles,v_own, v_int)
+function [data,tsim] = sim_TestPoints(init_set, test_point, timeV, titles,v_own, v_int)
 
 % --------------------- Simulation --------------------
     % Setup the scenario
@@ -21,7 +21,7 @@ function data = sim_TestPoints(init_set, test_point, timeV, titles,v_own, v_int)
     u4 = v_own; u5 = v_int;
     comb_init = init_set;
     adv_own = 0; % Initial advisory
-    
+    tsim = tic;
     % Begin simulation
     for i=1:length(timeV)-1
         prev_adv = adv_own;
@@ -59,17 +59,18 @@ function data = sim_TestPoints(init_set, test_point, timeV, titles,v_own, v_int)
         data_t = [comb_init' uN prev_adv, adv_own, yNN'];
         data(i,:) = data_t; % store data
     end
+    tsim = toc(tsim); % Keep track of time per simulation
     
     % Plot ownship trajectories
-    f = figure;
-    plot(data(:,1),data(:,2),'--r');
-    hold on;
-    plot(data(:,4),data(:,5),'--k');
-    scatter(init_set(1),init_set(2), 50, 'd', 'r', 'LineWidth',1);
-    scatter(init_set(4),init_set(5), 50, 'd', 'k','LineWidth',1);
-    title(titles);
-    xlabel('X Position (ft)');
-    ylabel('Y Position (ft)');
-    legend('ownship','intruder');
+%     f = figure;
+%     plot(data(:,1),data(:,2),'--r');
+%     hold on;
+%     plot(data(:,4),data(:,5),'--k');
+%     scatter(init_set(1),init_set(2), 50, 'd', 'r', 'LineWidth',1);
+%     scatter(init_set(4),init_set(5), 50, 'd', 'k','LineWidth',1);
+%     title(titles);
+%     xlabel('X Position (ft)');
+%     ylabel('Y Position (ft)');
+%     legend('ownship','intruder');
 end
 
