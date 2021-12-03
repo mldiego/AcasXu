@@ -163,7 +163,7 @@ function [allReach] = reach_TestPointsb(init_set, test_point, minIdx,tf,reachMet
 %         end
         for kc = 1:size(combos,1)
             xSs = star_set{kc};
-            if length(star_set) > 1
+            if length(xSs) > 1
                 Xi = Star.merge_stars(xSs,1,'single');
             else
                 Xi = xSs;

@@ -2,74 +2,63 @@
 clc;clear;close all;
 %% --- Setup scenarios ---
 % Test case initial states (original)
-init_dyn = [0 1000 pi/2 -43736 0 pi/2-0.4296 43747.43 pi/2 -0.4296; % Test point 1
-    0 0 pi/2 0 -43736 pi/2 43736 -3.14159265358979 0; % Test point 2
-    0 0 pi/2 30926 -30926 pi/2+0.3617 43736 -(3*pi)/4 0.3617; % Test point 3
-    0 0 pi/2 -30926 -30926 pi/2-0.5415 43736 3*pi/4 -0.5415; % Test point 4
-    0 0 pi/2 -30926 30926 pi/2-0.2379 43736 pi/4 -0.2379; % Test point 5
-    0 0 pi/2 43736 0 pi/2+0.6226 43736 -pi/2 0.6226; % Test point 6
-    0 0 pi/2 80814 33474 pi/2+0.7835 87472 -3*pi/8 0.7835; % Test point 7
-    0 0 pi/2 30926 30926 pi/2+0.7577 43736 -pi/4 0.7577; % Test point 8
-    0 0 pi/2 0 43736 pi/2 43736 0 0; % Test point 9
-    0 0 pi/2 0 120000 -pi/2 120000 0 pi; % Test point 10
+init_dyn = [2.10516784773430e-12,35380,1.57079632679490,-27992.0284905617,34365.2056753629,1.14119632679490,28010.4163715414,1.58417297809507,-0.429600000000000; % Test point 1
+    6.23712614805748e-13,10186.0000000000,1.57079632679490,1.21240033115588e-12,-23936.0000000000,1.57079632679490,34121.9999999999,-3.14159265358979,0; % Test point 2
+    1.22464679914738e-12,20000,1.57079632679490,16771.4100770869,6485.86421596979,1.93249632679490,21538.6492914250,-2.24905401248807,0.361700000000000; % Test point 3
+    7.52276035780236e-14,1228.56000000000,1.57079632679490,-29070.4808871567,-27841.0285541235,1.02929632679490,41111.2687354777,2.35617925279970,-0.541500000000000; % Test point 4
+    7.32006906607536e-12,119545.800000003,1.57079632679490,-7595.43288953584,127137.665811920,1.33289632679490,10739.0735659618,0.785627712887557,-0.237900000000000; % Test point 5
+    6.71228910612664e-13,10962.0000000000,1.57079632679490,35863.4847437225,10966.9277165339,2.19339632679490,35863.4850822618,-1.57065892473991,0.622600000000000; % Test point 6
+    2.94466322854982e-12,48090,1.57079632679490,46873.8427144232,67543.2504089879,2.35429632679490,50749.8865816395,-1.17741187939997,0.783500000000000; % Test point 7
+    1.48032855787334e-12,24175.6000000001,1.57079632679490,19173.9822233363,43347.7582562604,2.32849632679490,27114.8473661786,-0.785445911342076,0.757700000000000; % Test point 8
+    8.53069365937260e-13,13931.6800000000,1.57079632679490,1.02870331128378e-13,45416.0000000000,1.57079632679490,31484.3199999998,1.22282681129676e-15,0; % Test point 9
+    1.76349139077220e-12,28800,1.57079632679490,1.76349139077220e-12,91200.0000000000,-1.57079632679490,62400.0000000000,-2.47377049887484e-16,3.14159265358979; % Test point 10
     ];
-% Test case initial states (rotated)
-% init_dyn = [0 0 0 0 43736 -0.43 43736 pi/2 -0.43; % Test point 1
-%     30000 40000 0.785398163397448 -926.020000000000 9073.98000000000 0.785398163397448 43735.9969142216 -3.14159265358979 0; % Test Point 2
-%     0 0 0 -30926 -30926 0.3617 43736 -(3*pi)/4 0.3617; % Test point 3
-%     0 0 0 -30926 30926 -0.5415 43736 3*pi/4 -0.5415; % Test point 4
-%     0 0 0 30926 30926 -0.24 43736 pi/4 -0.24; % Test point 5
-%     0 0 0 0 -43736 0.62 43736 -pi/2 0.62; % Test point 6
-%     0 0 0 33474 -80814 0.78 87472 -3*pi/8 0.78; % Test point 7
-%     0 0 0 30926 -30926 0.76 43736 -pi/4 0.76; % Test point 8
-%     0 0 0 43736 0 0 43736 0 0; % Test point 9
-%     0 0 0 120000 0 pi 120000 0 pi; % Test point 10
-%     ];
 
 % Number of simulations
 m = size(init_dyn,1);
 % time for all simulations
-tf = [41,34,165,33,188,36,42,33,38,40]*2; % Final time of simulation
+tf = [44,44,130,60,42,50,42,28,44,30]+2; % Final time of simulation (add one step from reachability to match plots)
 st = 2; % Step size
-N = 10000*400; % Number of random simulations from initial set under uncertainty (One per sqft)
+% N = 10000*400; % Number of random simulations from initial set under uncertainty (One per sqft)
+N = 1000;
 random_sim = cell(10,N);
 time_sim = zeros(10,N);
 % out_sim = struct('data',cell(1,10));
 %% Simulate all
 rng(10); % random seed
-x0 = -5000 + 10000 .* rand(N,1);
-y0 = -200 + 400 .* rand(N,1);
+xunc = -5000 + 10000 .* rand(N,1); % Modify initial x by x0
+yunc = -200 + 400 .* rand(N,1); %  Modify initial y by y0
 set(groot,'defaultFigureVisible','off');
 for ex=1:N
     % Test 1
-    init_dyn1 = init_dyn(1,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
+    init_dyn1 = compute_initX(init_dyn(1,:), xunc(ex), yunc(ex));
     [random_sim{1,ex}, time_sim(1,ex)] = sim_TestPoints(init_dyn1,@dyns_tp1,0:st:tf(1),'TestPoint1',955,1050);
     % Test 2
-    init_dyn2 = init_dyn(2,:)+[x0(ex) 0 0 0 0 0 0 0 0];
+    init_dyn2 = compute_initX(init_dyn(2,:), xunc(ex), yunc(ex));
     [random_sim{2,ex}, time_sim(2,ex)]= sim_TestPoints(init_dyn2,@dyns_tp2,0:st:tf(2),'TestPoint2',463,900);
     % Test 3
-    init_dyn3 = init_dyn(3,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
+    init_dyn3 = compute_initX(init_dyn(3,:), xunc(ex), yunc(ex));
     [random_sim{3,ex}, time_sim(3,ex)] = sim_TestPoints(init_dyn3,@dyns_tp3,0:st:tf(3),'TestPoint3',100,200);
     % Test 4
-    init_dyn4 = init_dyn(4,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
+    init_dyn4 = compute_initX(init_dyn(4,:), xunc(ex), yunc(ex));
     [random_sim{4,ex}, time_sim(4,ex)] = sim_TestPoints(init_dyn4,@dyns_tp4,0:st:tf(4),'TestPoint4',204.76,600);
     % Test 5
-    init_dyn5 = init_dyn(5,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
+    init_dyn5 = compute_initX(init_dyn(5,:), xunc(ex), yunc(ex));
     [random_sim{5,ex}, time_sim(5,ex)] = sim_TestPoints(init_dyn5,@dyns_tp5,0:st:tf(5),'TestPoint5',362.26,300);
     % Test 6
-    init_dyn6 = init_dyn(6,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
+    init_dyn6 = compute_initX(init_dyn(6,:), xunc(ex), yunc(ex));
     [random_sim{6,ex}, time_sim(6,ex)] = sim_TestPoints(init_dyn6,@dyns_tp6,0:st:tf(6),'TestPoint6',609,750);
     % Test 7
-    init_dyn7 = init_dyn(7,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
+    init_dyn7 = compute_initX(init_dyn(7,:), xunc(ex), yunc(ex));
     [random_sim{7,ex},time_sim(7,ex)] = sim_TestPoints(init_dyn7,@dyns_tp7,0:st:tf(7),'TestPoint7',1145,1145);
     % Test 8
-    init_dyn8 = init_dyn(8,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
+    init_dyn8 = compute_initX(init_dyn(8,:), xunc(ex), yunc(ex));
     [random_sim{8,ex}, time_sim(8,ex)] = sim_TestPoints(init_dyn8,@dyns_tp8,0:st:tf(8),'TestPoint8',636.2,450);
     % Test 9
-    init_dyn9 = init_dyn(9,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
+    init_dyn9 = compute_initX(init_dyn(9,:), xunc(ex), yunc(ex));
     [random_sim{9,ex}, time_sim(9,ex)] = sim_TestPoints(init_dyn9,@dyns_tp9,0:st:tf(9),'TestPoint9',497.56,60);
     % Test 10
-    init_dyn10 = init_dyn(10,:)+[x0(ex) y0(ex) 0 0 0 0 0 0 0];
+    init_dyn10 = compute_initX(init_dyn(10,:), xunc(ex), yunc(ex));
     [random_sim{10,ex}, time_sim(10,ex)] = sim_TestPoints(init_dyn10,@dyns_tp10,0:st:tf(10),'TestPoint10',600,600);
 end
 save('../data_sim/SimRandom_opp_nnenum.mat','random_sim','time_sim','N');
@@ -79,8 +68,40 @@ set(groot,'defaultFigureVisible','on')
 disp("Total simulation time for "+string(N) + " simulations.");
 total_time = sum(time_sim,2);
 disp(total_time);
+disp("Average simulation time for each test");
+total_time_avg = total_time/N;
+disp(total_time_avg);
+disp("Average simulation time for each test per control period");
+total_time_avg_cp = total_time_avg./tf';
+disp(total_time_avg_cp);
 
-% %% Plot Simulations
+% Estimate simulation time for 400 million simulations
+disp("Estimated simulation time for 400 million simulations");
+total_time_400m = total_time_avg * 400000000/N; % 100 per 1 sqft
+disp(total_time_400m);
+
+%% Plot example figure to compare reach sets and simulation time
+avg_nnenum = 3000; % Could add std later (values, recorded, this is just made up)
+avg_nnv = 10000; % Made up value, not sure exactly what this may come up to
+f = figure;
+grid;
+hold on;
+plot([0;1;400000000],[0;sum(total_time_avg)/10;sum(total_time_400m)/10],'r','DisplayName','Sim');
+plot([0;400000000],[avg_nnv;avg_nnv],'k','DisplayName','NNV');
+plot([0;400000000],[avg_nnenum;avg_nnenum],'b','DisplayName','nnenum');
+set(gcf,'Color',[1 1 1]);
+set(gca, 'GridAlpha', 1); % Set transparency of grid
+set(gca, 'color', [17 17 17]/19); % Set background color
+legend('Location', 'Best');
+xlabel('Number of Simulations');
+ylabel('Time (s)');
+ax = gca; % Get current axis
+ax.GridColor = 'w'; % Set grid lines color
+ax.XAxis.FontSize = 15; % Set font size of axis
+ax.YAxis.FontSize = 15;
+saveas(f,"../data_reach/figs/sim_vs_reach.png");
+
+%% Plot Simulations
 % load('../data_sim/SimRandom_opp.mat');
 % 
 % % Ownship plots
@@ -175,20 +196,20 @@ disp(total_time);
 %     [9000 43000];[45000 95000];[23500 43500];[13500 36500];[27500 48500]];
 % % set(groot,'defaultFigureVisible','on')
 % % Start one plot per test case
-% for i=1:10
-%     f = figure;
-%     hold on;
-%     grid;
-%     set(gcf,'Color',[1 1 1]);
-%     set(gca, 'GridAlpha', 1); % Set transparency of grid
-%     set(gca, 'color', [17 17 17]/19); % Set background color 
-%     set(gcf,'inverthardcopy','off'); % Enable saving the figure as it is
+for i=1:10
+    f = figure;
+    hold on;
+    grid;
+    set(gcf,'Color',[1 1 1]);
+    set(gca, 'GridAlpha', 1); % Set transparency of grid
+    set(gca, 'color', [17 17 17]/19); % Set background color 
+    set(gcf,'inverthardcopy','off'); % Enable saving the figure as it is
 %     plot(random_sim{i,1}(:,4),random_sim{i,1}(:,5),'k');
-%     for k=1:N
-%         plot(random_sim{i,k}(:,1),random_sim{i,k}(:,2),'b');
-%     end
-%     xlabel('X Position (ft)');
-%     ylabel('Y Position (ft)');
+    for k=1:N
+        plot(random_sim{i,k}(:,1),random_sim{i,k}(:,2),'b');
+    end
+    xlabel('X Position (ft)');
+    ylabel('Y Position (ft)');
 %     xlim(xl(i,:));
 %     ylim(yl(i,:));
 %     xticks(xp{i});
@@ -206,7 +227,8 @@ disp(total_time);
 %     ax_width = outerpos(3) - ti(1) - ti(3);
 %     ax_height = outerpos(4) - ti(2) - ti(4);
 %     ax.Position = [left bottom ax_width ax_height];
-%     saveas(f,"../data_sim/jat/TestPoint"+string(i)+"_opp.png");
+    saveas(f,"../data_reach/figs//TestPoint"+string(i)+"_sim.png");
+end
 %     f4 = figure;
 %     hold on;
 %     grid;
@@ -238,3 +260,13 @@ disp(total_time);
 %     ax.Position = [left bottom ax_width ax_height];
 %     saveas(f4,"../data_sim/jat/TestPoint"+string(i)+"both_opp.png");
 % end
+
+%% Helper functions
+function initX = compute_initX(init_point, xunc, yunc)
+    xi = init_point(4:6)';
+    x0 = init_point(1) + xunc;
+    y0 = init_point(2) + yunc;
+    xo = [x0;y0;init_point(3)];
+    [x7,x8,x9] = environment(xo,xi);
+    initX = [xo;xi;x7;x8;x9];
+end
