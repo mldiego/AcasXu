@@ -11,17 +11,20 @@ function [data,tsim] = sim_TestPoints(init_set, test_point, timeV, titles,v_own,
     % Normalization parameters
     scale_mean = [19791.0910000000,0,0,650,600];
     scale_range = [60261,6.28318530718000,6.28318530718000,1100,1200];
-    data = zeros(length(timeV)-1,21); % Memory allocation
+%     data = zeros(length(timeV)-1,21); % Memory allocation
+    data = zeros(length(timeV),21); % Memory allocation
     % Plant parameters
     tr = 0.05; % reachability time step for plant
     tc = 2; % control period of the plant
     outCp = [0,0,0,0,0,0,1,0,0;0,0,0,0,0,0,0,1,0;0,0,0,0,0,0,0,0,1]; % Output matrix (distance,theta,head_diff)
-    plant= NonLinearODE(9,1,test_point, tr, tc, outCp);
+    plant = NonLinearODE(9,1,test_point, tr, tc, outCp);
     % Simulation Parameters
     u4 = v_own; u5 = v_int;
     comb_init = init_set;
     adv_own = 0; % Initial advisory
     tsim = tic;
+    data_t = [comb_init, [0 0 0 0 0], adv_own, adv_own, [0 0 0 0 0]];
+    data(1,:) = data_t; % store data
     % Begin simulation
     for i=1:length(timeV)-1
         prev_adv = adv_own;
@@ -57,7 +60,8 @@ function [data,tsim] = sim_TestPoints(init_set, test_point, timeV, titles,v_own,
         % Normalize outputs (Do not really need it, the order is the same)
         adv_own = argmin_advise(yNN); % Key step in reachability analysis
         data_t = [comb_init' uN prev_adv, adv_own, yNN'];
-        data(i,:) = data_t; % store data
+%         data(i,:) = data_t; % store data
+        data(i+1,:) = data_t; % store data
     end
     tsim = toc(tsim); % Keep track of time per simulation
     
