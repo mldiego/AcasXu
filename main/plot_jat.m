@@ -50,6 +50,10 @@ yl = [[30500 79900];[9000 33000];[19200 34070];[0 14300];[118750 136300];
 f = figure;
 hold on;
 grid;
+set(gcf,'Color',[1 1 1]);
+set(gca, 'GridAlpha', 1); % Set transparency of grid
+set(gca, 'color', [17 17 17]/19); % Set background color 
+set(gcf,'inverthardcopy','off'); % Enable saving the figure as it is
 for k=3:length(data_files)
     aaa = load(string(data_files(k).folder)+ "/" + string(data_files(k).name)); % variables: output
     output = aaa.output;
@@ -57,19 +61,17 @@ for k=3:length(data_files)
 %     f = figure;
 %     hold on;
 %     grid;
-    set(gcf,'Color',[1 1 1]);
-    set(gca, 'GridAlpha', 1); % Set transparency of grid
-    set(gca, 'color', [17 17 17]/19); % Set background color 
-    set(gcf,'inverthardcopy','off'); % Enable saving the figure as it is
+%     set(gcf,'Color',[1 1 1]);
+%     set(gca, 'GridAlpha', 1); % Set transparency of grid
+%     set(gca, 'color', [17 17 17]/19); % Set background color 
+%     set(gcf,'inverthardcopy','off'); % Enable saving the figure as it is
     ii = 1; % Select set
     for i=1:length(output.minIdx)
-        for kk=1:length(output.combos(i))
-            disp(kk)
+        Nc = size(output.combos{i});
+        for kk=1:Nc(1)
             temp = output.combos{i};
-            Star.plotBoxes_2D_noFill(output.step_sets(ii),1,2,set_color(temp(kk,2)));
+            Star.plotBoxes_2D_noFill(output.step_sets(ii),1,2,set_color(temp(kk,1)));
             ii = ii+1;
-            disp(ii)
-            disp(i)
         end
     %     Star.plotBoxes_2D_noFill(output(i).data.int_reachSet,1,2,[1 0.4 0.6],0.1);
     end
