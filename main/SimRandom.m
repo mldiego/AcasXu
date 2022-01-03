@@ -1,8 +1,9 @@
 %% Simulate all test points
 clc;clear;close all;
 %% --- Setup scenarios ---
-% Test case initial states (original)
-init_dyn = [0 0 pi/2 -43736 0 pi/2-0.4296 43747.43 pi/2 -0.4296; % Test point 1
+% Test case initial states (original) 
+init_dyn = [%0 0 pi/2 -43736 0 pi/2-0.4296 43747.43 pi/2 -0.4296; % Test point 1
+    0 0 0 0 43736 -0.43 43736 pi/2 -0.43
     0 0 pi/2 0 -43736 pi/2 43736 -3.14159265358979 0; % Test point 2
     0 0 pi/2 30926 -30926 pi/2+0.3617 43736 -(3*pi)/4 0.3617; % Test point 3
     0 0 pi/2 -30926 -30926 pi/2-0.5415 43736 3*pi/4 -0.5415; % Test point 4
@@ -32,7 +33,7 @@ m = size(init_dyn,1);
 % tf = [41,34,165,33,188,36,42,33,38,40]*2; % Final time of simulation
 tf = [40,33,165,33,186,34,42,33,36,39]*2; % Final time of simulation
 st = 2; % Step size
-N = 500;
+N = 1000;
 random_sim = cell(10,N);
 time_sim = zeros(10,N);
 % out_sim = struct('data',cell(1,10));
@@ -40,10 +41,10 @@ time_sim = zeros(10,N);
 rng(10); % random seed
 xunc = -5000 + 10000 .* rand(N,1); % Modify initial x by x0
 yunc = -200 + 400 .* rand(N,1); %  Modify initial y by y0
-set(groot,'defaultFigureVisible','off');
+set(groot,'defaultFigureVisible','on');
 for ex=1:N
     % Test 1
-    init_dyn1 = compute_initX(init_dyn(1,:), xunc(ex), yunc(ex));
+    init_dyn1 = compute_initX(init_dyn(1,:), yunc(ex), xunc(ex));
     [random_sim{1,ex}, time_sim(1,ex)] = sim_TestPoints(init_dyn1,@dyns_tp1,0:st:tf(1),'TestPoint1',955,1050);
     % Test 2
     init_dyn2 = compute_initX(init_dyn(2,:), xunc(ex), yunc(ex));
@@ -74,7 +75,7 @@ for ex=1:N
     [random_sim{10,ex}, time_sim(10,ex)] = sim_TestPoints(init_dyn10,@dyns_tp10,0:st:tf(10),'TestPoint10',600,600);
 end
 save('../data_sim/SimRandom_all.mat','random_sim','time_sim','N');
-set(groot,'defaultFigureVisible','on')
+% set(groot,'defaultFigureVisible','off')
 
 % Print results
 disp("Total simulation time for "+string(N) + " simulations.");

@@ -23,7 +23,7 @@ function [data,tsim] = sim_TestPoints(init_set, test_point, timeV, titles,v_own,
     comb_init = init_set;
     adv_own = 0; % Initial advisory
     tsim = tic;
-    data_t = [comb_init, [0 0 0 0 0], adv_own, adv_own, [0 0 0 0 0]];
+    data_t = [comb_init', [0 0 0 0 0], adv_own, adv_own, [0 0 0 0 0]];
     data(1,:) = data_t; % store data
     % Begin simulation
     for i=1:length(timeV)-1

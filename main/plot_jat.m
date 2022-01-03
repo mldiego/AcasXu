@@ -46,7 +46,7 @@ xl = [[-20500 26000];[-12000 11400];[-7000 7000];[-6000 8000];[-8000 8000];
     [-19900 13500];[-33000 15000];[-11700 8500];[-13000 12000];[-8200 12500]];
 yl = [[30500 79900];[9000 33000];[19200 34070];[0 14300];[118750 136300];
     [9000 43000];[47000 96000];[23200 43700];[13000 37500];[27600 48500]];
-% % set(groot,'defaultFigureVisible','on')
+set(groot,'defaultFigureVisible','off')
 f = figure;
 hold on;
 grid;
@@ -55,6 +55,7 @@ set(gca, 'GridAlpha', 1); % Set transparency of grid
 set(gca, 'color', [17 17 17]/19); % Set background color 
 set(gcf,'inverthardcopy','off'); % Enable saving the figure as it is
 for k=3:length(data_files)
+% for k=3:10
     aaa = load(string(data_files(k).folder)+ "/" + string(data_files(k).name)); % variables: output
     output = aaa.output;
 %     N = length(output);
@@ -75,6 +76,12 @@ for k=3:length(data_files)
         end
     %     Star.plotBoxes_2D_noFill(output(i).data.int_reachSet,1,2,[1 0.4 0.6],0.1);
     end
+%     if ii < length(output.step_sets)
+%         for ik=ii:length(output.step_sets)
+%             Star.plotBoxes_2D_noFill(output.step_sets(ik),1,2,[0.4, 0.4, 0.4]);
+%         end
+%     end
+    Star.plotBoxes_2D_noFill(output.step_sets(ii:end),1,2,[0.4, 0.4, 0.4]);
 %     xlim(xl(tc,:));
 %     ylim(yl(tc,:));
 %     xticks(xp{tc});
@@ -139,7 +146,7 @@ saveas(f,"../data_reach/figs/TestPoint"+string(tc)+"reach.png");
 % saveas(f,"../data_reach/figs/TestPoint"+string(tc)+"reach_sim.png");
 
 function cl = set_color(min_idx)
-    if min_idx == 1 % COC
+    if min_idx == 1 % COC (gray)
         cl = [0.4, 0.4, 0.4];
     elseif min_idx == 2 % Weak left (cyan)
         cl = [0, 0.7, 1];
@@ -149,6 +156,8 @@ function cl = set_color(min_idx)
         cl = [0, 0, 1];
     elseif min_idx == 5 % Strong right (red)
         cl = [1, 0, 0];
+    else
+        cl = [0.4, 0.4, 0.4]; % COC
     end
 end
 

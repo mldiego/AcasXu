@@ -75,6 +75,7 @@ for k=3:length(data_files)
         end
     %     Star.plotBoxes_2D_noFill(output(i).data.int_reachSet,1,2,[1 0.4 0.6],0.1);
     end
+    Star.plotBoxes_2D_noFill(output.step_sets(ii:end),1,2,[0.4, 0.4, 0.4]);
 %     xlim(xl(tc,:));
 %     ylim(yl(tc,:));
 %     xticks(xp{tc});
@@ -141,7 +142,7 @@ saveas(f,"../data_reach/figs/TestPoint"+string(tc)+"reach.png");
 % saveas(f,"../data_reach/figs/TestPoint"+string(tc)+"reach_sim.png");
 
 function cl = set_color(min_idx)
-    if min_idx == 1 % COC
+    if min_idx == 1 % COC (gray)
         cl = [0.4, 0.4, 0.4];
     elseif min_idx == 2 % Weak left (cyan)
         cl = [0, 0.7, 1];
@@ -151,6 +152,8 @@ function cl = set_color(min_idx)
         cl = [0, 0, 1];
     elseif min_idx == 5 % Strong right (red)
         cl = [1, 0, 0];
+    else % COC
+        cl = [0.4, 0.4, 0.4];
     end
 end
 

@@ -1,6 +1,6 @@
 function dx = dyns_tp2(x,u)
 %Combined dynamics of 2 Dubins airplanes
-    v = 463; % ft/s
+    v = 462.6; % ft/s
     % Ownship
     dx(1,1) = v*cos(x(3)); % x (ft)
     dx(2,1) = v*sin(x(3)); % y (ft)
